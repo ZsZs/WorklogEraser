@@ -15,6 +15,7 @@ import org.mockito.internal.util.reflection.Whitebox;
 import com.atlassian.jira.rest.client.domain.User;
 import com.atlassian.jira.rest.client.domain.Worklog;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 import com.kn.jira.worklogeraser.pdmadapter.PdmAdapter;
 import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
 import com.kn.jira.worklogeraser.sharedresources.JiraAdapterFixture;
@@ -53,7 +54,7 @@ public abstract class EmployeeMatchingStrategyTest {
 
    //Test methods
    @Test
-   public void performErase_forEachWorklog_retrievesPersonFromPdm() {
+   public void performErase_forEachWorklog_retrievesPersonFromPdm() throws JiraAdapterException {
       employeeMatchingStrategy.perforErase( subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){
@@ -64,7 +65,7 @@ public abstract class EmployeeMatchingStrategyTest {
    }
 
    @Test
-   public void performErase_whenWorklogPerformerIsGermanEmployee_deteletesWorklog() {
+   public void performErase_whenWorklogPerformerIsGermanEmployee_deteletesWorklog() throws JiraAdapterException {
       employeeMatchingStrategy.perforErase( subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){
@@ -76,7 +77,7 @@ public abstract class EmployeeMatchingStrategyTest {
    }
 
    @Test
-   public void performErase_whenWorklogPerformerIsGermanEmployee_logsDeleteAction() {
+   public void performErase_whenWorklogPerformerIsGermanEmployee_logsDeleteAction() throws JiraAdapterException {
       employeeMatchingStrategy.perforErase( subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){
@@ -90,7 +91,7 @@ public abstract class EmployeeMatchingStrategyTest {
    }
 
    @Test
-   public void performErase_whenWorklogWasDeleted_addsCommentToTheIssue() {
+   public void performErase_whenWorklogWasDeleted_addsCommentToTheIssue() throws JiraAdapterException {
       employeeMatchingStrategy.perforErase( subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){

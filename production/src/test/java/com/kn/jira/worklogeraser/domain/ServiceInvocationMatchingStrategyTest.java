@@ -7,12 +7,13 @@ import org.junit.Test;
 
 import com.atlassian.jira.rest.client.domain.User;
 import com.atlassian.jira.rest.client.domain.Worklog;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
 
 public class ServiceInvocationMatchingStrategyTest extends EmployeeMatchingStrategyTest{
    //Test methods
    @Test
-   public void performErase_whenWorklogPerformerIsInPdm_veryfiesPerson() {
+   public void performErase_whenWorklogPerformerIsInPdm_veryfiesPerson() throws JiraAdapterException {
       employeeMatchingStrategy.perforErase( subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){

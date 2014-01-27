@@ -24,6 +24,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.kn.jira.worklogeraser.domain.WorklogEraser;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 
 public class JiraAdapterFixture {
    private ApplicationContext applicationContext;
@@ -60,6 +61,8 @@ public class JiraAdapterFixture {
          createJiraIssues();
       }catch( URISyntaxException e ){
          e.printStackTrace();
+      }catch( JiraAdapterException e ){
+         e.printStackTrace();
       }
    }
    
@@ -86,7 +89,7 @@ public class JiraAdapterFixture {
       obsolatedWorklogDate = dateFormat.format( calculatedDate ); 
    }
    
-   private void createJiraIssues(){
+   private void createJiraIssues() throws JiraAdapterException{
       BasicStatus mockOpenStatus = mock( BasicStatus.class );
       when( mockOpenStatus.getName() ).thenReturn( "Open" );
       BasicStatus mockClosedStatus = mock( BasicStatus.class );

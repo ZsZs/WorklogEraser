@@ -13,12 +13,13 @@ import com.atlassian.jira.rest.client.domain.BasicUser;
 import com.atlassian.jira.rest.client.domain.User;
 import com.atlassian.jira.rest.client.domain.Worklog;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 import com.kn.jira.worklogeraser.pdmadapter.PdmAdapter;
 import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
    
 public abstract class EmployeeMatchingStrategy implements ApplicationContextAware{
    public static final String EXPECTED_COUNTRY_CODE = "DE";
-   public static final String EXPECTED_COMPANY_NAME = "Kühne + Nagel (AG & Co.) KG";
+   public static final String EXPECTED_COMPANY_NAME = "K\u00fchne + Nagel (AG & Co.) KG";
    public static final String EXPECTED_STUFF_MEMBER_VALUE = "Y";
    protected final Logger programLogger = LoggerFactory.getLogger( this.getClass() );
    protected EraseActionLogger actionLogger;
@@ -31,7 +32,7 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
       this.actionLogger = actionLogger;      
    }
    
-   public void perforErase( List<Worklog> subjectWorklogs ){
+   public void perforErase( List<Worklog> subjectWorklogs ) throws JiraAdapterException{
       instantiateAdapters();
       this.subjectWorklogs = subjectWorklogs;
       checkAllWorklogs();
@@ -44,13 +45,13 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
    }
    
    //Protected, private helper methods
-   protected void deleteWorklog( Worklog worklog, PersonInPdm person ){
+   protected void deleteWorklog( Worklog worklog, PersonInPdm person ) throws JiraAdapterException{
       jiraAdapter.deleteWorklog( worklog );
       actionLogger.worklogDeleted( worklog.getIssueUri().toString(), person.getEmailAddress(), worklog.getComment() );
       programLogger.debug( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " is deleted.");
    }
    
-   protected void checkAllWorklogs(){
+   protected void checkAllWorklogs() throws JiraAdapterException{
       URI manipulatedIssueUri = null;
       for( Worklog jiraWorklog : subjectWorklogs ){
          BasicUser jiraUserSummary = jiraWorklog.getAuthor();

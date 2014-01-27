@@ -23,10 +23,10 @@ import com.kn.jira.worklogeraser.sharedresources.TestConfigurationFixture;
 
 public class JiraAdapterTest {
    private static final String PROJECT_NAME = "WORKLOG";
-   private static final String QUERY_CLOSED_AND_OBSOLATE_ISSUES = "project=\"WORKLOG\" AND status=\"Closed\" AND status CHANGED BEFORE \"2013/12/18\"";
-   private static final String QUERY_CLOSED_ISSUES = "project=\"WORKLOG\" AND status=\"Closed\"";
+   private static final String QUERY_CLOSED_AND_OBSOLATE_ISSUES = "project=\"WORKLOG\" AND status=\"CLOSED\" AND status CHANGED BEFORE \"2013/12/18\"";
+   private static final String QUERY_CLOSED_ISSUES = "project=\"WORKLOG\" AND status=\"CLOSED\"";
    private static final String QUERY_ALL_ISSUES = "project=\"WORKLOG\"";
-   private static final String STATUS_NAME = "Closed";
+   private static final String STATUS_NAME = "CLOSED";
    private TestConfigurationFixture testConfiguration;
    private JiraAdapter jiraAdapter;
 
@@ -40,7 +40,7 @@ public class JiraAdapterTest {
       testConfiguration.tearDown();
    }
    
-   @Test public void deleteWorklog_removesWorklogFromIssue(){
+   @Test public void deleteWorklog_removesWorklogFromIssue() throws JiraAdapterException{
       Issue subjectIssue = findTheFirstSubjectIssue();
       List<Worklog> worklogs = Lists.newArrayList( subjectIssue.getWorklogs() );
       Worklog subjectWorklog = worklogs.get( 0 );
@@ -57,20 +57,20 @@ public class JiraAdapterTest {
       assertThat( projects.size(), greaterThan( 0 ));
    }
 
-   @Test public void findIssuesByQuery_returnsListOfJiraIssues(){
+   @Test public void findIssuesByQuery_returnsListOfJiraIssues() throws JiraAdapterException{
       List<Issue> allIssues = jiraAdapter.findIssuesByQuery( QUERY_ALL_ISSUES );
       
       assertThat( allIssues.size(), greaterThan( 0 ));
    }
    
-   @Test public void findIssuesByQuery_considersIssueStatus(){
+   @Test public void findIssuesByQuery_considersIssueStatus() throws JiraAdapterException{
       List<Issue> allIssues = jiraAdapter.findIssuesByQuery( QUERY_ALL_ISSUES );
       List<Issue> closedIssues = jiraAdapter.findIssuesByQuery( QUERY_CLOSED_ISSUES );
       
       assertThat( closedIssues.size(), lessThan( allIssues.size() ));
    }
    
-   @Test public void findIssuesByQuery_considersIssueStatusAndObsolation(){
+   @Test public void findIssuesByQuery_considersIssueStatusAndObsolation() throws JiraAdapterException{
       List<Issue> closedIssues = jiraAdapter.findIssuesByQuery( QUERY_CLOSED_ISSUES );
       List<Issue> obsolatedIssues = jiraAdapter.findIssuesByQuery( QUERY_CLOSED_AND_OBSOLATE_ISSUES );
       
@@ -83,7 +83,7 @@ public class JiraAdapterTest {
       assertThat( userDetails.getName(), equalTo( "admin" ));
    }
    
-   @Test public void signIssueAsManipulated_addsCommentToIssue(){
+   @Test public void signIssueAsManipulated_addsCommentToIssue() throws JiraAdapterException{
       //SETUP:
       Issue subjectIssue = findTheFirstSubjectIssue();
       List<Worklog> worklogs = Lists.newArrayList( subjectIssue.getWorklogs() );
@@ -99,7 +99,7 @@ public class JiraAdapterTest {
    }
 
    //Private helper methods
-   private Issue findTheFirstSubjectIssue() {
+   private Issue findTheFirstSubjectIssue() throws JiraAdapterException {
       SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogEraser.DATE_FORMAT );
       DateTime currentDate = new DateTime();
       String tomorrow = dateFormat.format( currentDate.plusDays( 1 ).withTimeAtStartOfDay().toDate() );

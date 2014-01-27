@@ -25,6 +25,7 @@ import com.atlassian.jira.rest.client.domain.Issue;
 import com.atlassian.jira.rest.client.domain.Worklog;
 import com.google.common.collect.Lists;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 
 public class WorklogEraser implements ApplicationContextAware{
    public static final String DEFAULT_APPLICATION_CONFIGURATION = "file:Configuration/BeanContainerDefinition.xml";
@@ -74,7 +75,7 @@ public class WorklogEraser implements ApplicationContextAware{
          collectAllProjects();
          collectAllSubjectIssues();
          collectAllSubjectWorklogsAndPerformErase();
-      }catch( SAXException | IOException | ParserConfigurationException | TransformerException e ){
+      }catch( WorklogEraserException | SAXException | IOException | ParserConfigurationException | TransformerException e ){
          programLogger.error( "Error occured while performing jira worklog erasure.", e );
       }finally{
          try{
@@ -119,7 +120,7 @@ public class WorklogEraser implements ApplicationContextAware{
       programLogger.debug( "Number of Jira Projects found is: " + allJiraProjects.size() );
    }
    
-   protected void collectAllSubjectIssues() {
+   protected void collectAllSubjectIssues() throws JiraAdapterException {
       programLogger.info( "Collecting all subject issues from Jira." );
       for( BasicProject jiraProject : allJiraProjects ){
          actionLogger.considerProject( jiraProject.getName() );
@@ -134,7 +135,7 @@ public class WorklogEraser implements ApplicationContextAware{
       }
    }
    
-   protected void collectAllSubjectWorklogsAndPerformErase() {
+   protected void collectAllSubjectWorklogsAndPerformErase() throws JiraAdapterException {
       programLogger.info( "Collecting all worklogs of all subject issues." );
       for( Issue jiraIssue : subjectIssues ){
          actionLogger.considerIssue( jiraIssue.getKey(), jiraIssue.getStatus().getName() );
@@ -144,7 +145,7 @@ public class WorklogEraser implements ApplicationContextAware{
       }
    }
 
-   protected void performErase( List<Worklog> subjectWorklogs ){
+   protected void performErase( List<Worklog> subjectWorklogs ) throws JiraAdapterException{
       employeeMatchingStrategy.perforErase( subjectWorklogs );
    }
    

@@ -9,9 +9,7 @@
   <artifactId>worklog-eraser-domain</artifactId>
   
    <dependencies>
-      <dependency><groupId>com.kn.jira</groupId><artifactId>worklog-eraser-domain</artifactId><version>0.0.1-SNAPSHOT</version></dependency>
-      
-      <dependency><groupId>com.atlassian.jira</groupId><artifactId>jira-rest-java-client</artifactId><version>LATEST</version></dependency>
+      <dependency><groupId>com.atlassian.jira</groupId><artifactId>jira-rest-java-client</artifactId><version>2.0.0-m2</version></dependency>
       <dependency><groupId>com.google.guava</groupId><artifactId>guava</artifactId><version>14.0.1</version></dependency>
       <dependency><groupId>commons-logging</groupId><artifactId>commons-logging</artifactId><version>1.1.1</version></dependency>
       <dependency><groupId>dom4j</groupId><artifactId>dom4j</artifactId><version>1.6.1</version></dependency>
@@ -64,12 +62,13 @@
             <artifactId>appassembler-maven-plugin</artifactId>
             <version>1.7</version>
             <configuration>
+               <binFolder>binaries</binFolder>
                <configurationDirectory>Configuration</configurationDirectory>
                <configurationSourceDirectory>Configuration</configurationSourceDirectory>
                <copyConfigurationDirectory>true</copyConfigurationDirectory>
                <includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
                <useWildcardClassPath>true</useWildcardClassPath>
-               <repositoryName>lib</repositoryName>
+               <repositoryName>libraries</repositoryName>
                <repositoryLayout>flat</repositoryLayout>
                <platforms>
                   <platform>windows</platform>

@@ -41,13 +41,13 @@ public class JiraAdapterTest {
       assertThat( projects.size(), greaterThan( 0 ));
    }
    
-    @Ignore @Test public void findClosedObsolatedIssues(){
+    @Ignore @Test public void findClosedObsolatedIssues() throws JiraAdapterException{
       List<Issue> issues = jiraAdapter.findClosedObsolatedIssues( "WORKLOG", "CLOSED", "2013/12/13" );
       
       assertThat( issues.size(), greaterThan( 0 ));
    }
 
-   @Ignore @Test public void findIssuesByQuery_returnsListOfJiraIssues(){
+   @Ignore @Test public void findIssuesByQuery_returnsListOfJiraIssues() throws JiraAdapterException{
       List<Issue> issues = jiraAdapter.findIssuesByQuery( "project=\"ADMIN\"" );
       
       assertThat( issues.size(), greaterThan( 0 ));

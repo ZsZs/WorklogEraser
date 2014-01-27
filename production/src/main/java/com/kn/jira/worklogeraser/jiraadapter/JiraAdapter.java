@@ -39,12 +39,14 @@ public class JiraAdapter {
    private RestTemplate httpClient;
    private JiraRestClient jiraClient;
    private final String password;
+   private final String restServicesUri;
    private final String serverUriString;
    private final String userName;
 
    //Constructors
    public JiraAdapter( final String serverUriString, final String userName, final String password ) {
-      this.serverUriString = serverUriString + "/api/2/";
+      this.serverUriString = serverUriString;
+      this.restServicesUri = this.serverUriString + "/api/2/";
       this.userName = userName;
       this.password = password;
       instantiateJiraRestClient();
@@ -52,11 +54,15 @@ public class JiraAdapter {
    }
    
    //Public accessors and mutators
-   public void deleteWorklog( Worklog worklog ) {
+   public void deleteWorklog( Worklog worklog ) throws JiraAdapterException {
       String issueId = StringUtils.substringAfterLast( worklog.getIssueUri().toString(), "/" );
       String worklogId = StringUtils.substringAfterLast( worklog.getSelf().toString(), "/" );
-      UriBuilder worklogUri = UriBuilder.fromUri( serverUriString ).path( "issue" ).path( issueId ).path( "worklog" ).path( worklogId );
-      httpClient.delete( worklogUri.build() );
+      UriBuilder worklogUri = UriBuilder.fromUri( restServicesUri ).path( "issue" ).path( issueId ).path( "worklog" ).path( worklogId );
+      try{
+         httpClient.delete( worklogUri.build() );
+      }catch( Exception e ){
+         throw new JiraAdapterDeleteWorklogException( worklogId, issueId, e );
+      }
    }
 
    public List<BasicProject> findAllProjects() {
@@ -70,22 +76,27 @@ public class JiraAdapter {
       return foundProjects;
    }
    
-   public List<Issue> findClosedObsolatedIssues( String project, String status, String date ) {
-      String queryTemplate = "project=\"{0}\" AND status=\"{1}\" AND status CHANGED BEFORE \"{2}\"";
+   public List<Issue> findClosedObsolatedIssues( String project, String status, String date ) throws JiraAdapterException {
+      String queryTemplate = "project={0} AND status={1} AND status CHANGED BEFORE {2}";
       String query = MessageFormat.format( queryTemplate, new Object[]{ project, status, date });
-      
+      query = StringUtils.replace( query, "/", "\\u002f" );
       return findIssuesByQuery( query );
    }
    
-   public List<Issue> findIssuesByQuery( String query ) {
+   public List<Issue> findIssuesByQuery( String query ) throws JiraAdapterException {
       List<Issue> foundIssues = Lists.newArrayList();
       
       SearchRestClient searchClient = jiraClient.getSearchClient();
       IssueRestClient issueClient = jiraClient.getIssueClient();
-      SearchResult searchResult = searchClient.searchJql( query ).claim();
-      for( final BasicIssue issueSummary : searchResult.getIssues() ){
-         Issue jiraIssue = issueClient.getIssue( issueSummary.getKey() ).claim();
-         foundIssues.add( jiraIssue );
+      SearchResult searchResult = null;
+      try{
+         searchResult = searchClient.searchJql( query ).claim();
+         for( final BasicIssue issueSummary : searchResult.getIssues() ){
+            Issue jiraIssue = issueClient.getIssue( issueSummary.getKey() ).claim();
+            foundIssues.add( jiraIssue );
+         }
+      }catch( Exception e ){
+         throw new JiraAdapterException( "findIssuesByQuery", e );
       }
       
       return foundIssues;
