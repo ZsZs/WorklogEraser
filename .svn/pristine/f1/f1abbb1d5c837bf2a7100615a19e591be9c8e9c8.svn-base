@@ -1,0 +1,5 @@
+package com.kn.jira.worklogeraser.sharedresources;
+
+public class TestConfigurationWithRealAdaptersFixture extends TestConfigurationFixture {
+
+}

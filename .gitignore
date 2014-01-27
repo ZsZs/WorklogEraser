@@ -1,0 +1,7 @@
+/acceptance-tests/target
+/integration-tests/target
+/local-jira/target
+/production/target
+/Configuration
+/Logs
+/target

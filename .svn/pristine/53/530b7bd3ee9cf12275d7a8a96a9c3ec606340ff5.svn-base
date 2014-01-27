@@ -1,0 +1,5 @@
+#put any key/value pairs here
+worklogeraser.user.name = worklogeraser.admin
+worklogeraser.user.password = admin
+worklogeraser.log.name = /Configuration/worklogeraser.log.xml
+worklogeraser.obsolescenceTimePeriod = 60

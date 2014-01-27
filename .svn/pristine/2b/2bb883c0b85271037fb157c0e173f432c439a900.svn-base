@@ -1,0 +1,16 @@
+package com.kn.jira.worklogeraser.pdmadapter;
+
+public class PdmAdapter {
+   private PdmPersonServiceClient pdmClient;
+   
+   public PdmAdapter(){}
+   
+   public PersonInPdm findPersonByEmail( String email ){
+      return pdmClient.findEmployeeByEmail( email ).getFoundedPerson();
+   }
+   
+   //Properties
+   public void setPdmClient( PdmPersonServiceClient pdmClient ){
+      this.pdmClient = pdmClient;
+   }
+}

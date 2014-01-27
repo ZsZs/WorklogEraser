@@ -1,0 +1,54 @@
+package com.kn.jira.worklogeraser.domain;
+
+import java.util.List;
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+import com.atlassian.jira.rest.client.domain.BasicUser;
+import com.atlassian.jira.rest.client.domain.User;
+import com.atlassian.jira.rest.client.domain.Worklog;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
+import com.kn.jira.worklogeraser.pdmadapter.PdmAdapter;
+   
+public abstract class EmployeeMatchingStrategy implements ApplicationContextAware{
+   protected ApplicationContext applicationContext;
+   protected JiraAdapter jiraAdapter;
+   protected PdmAdapter pdmAdapter;
+   protected List<Worklog> subjectWorklogs;
+   
+   public void perforErase( List<Worklog> subjectWorklogs ){
+      instantiateAdapters();
+      this.subjectWorklogs = subjectWorklogs;
+      checkAllWorklogs();
+   }
+   
+   //Properties
+   @Override
+   public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException {
+      this.applicationContext = applicationContext;
+   }
+   
+   //Protected, private helper methods
+   protected void deleteWorklog( Worklog worklog ){
+      jiraAdapter.deleteWorklog( worklog );
+   }
+   
+   protected void checkAllWorklogs(){
+      for( Worklog jiraWorklog : subjectWorklogs ){
+         BasicUser jiraUserSummary = jiraWorklog.getAuthor();
+         User jiraUser = jiraAdapter.findUser( jiraUserSummary );
+         if( verifyPerformer( jiraUser ) ){
+            deleteWorklog( jiraWorklog );
+         }
+      }
+   }
+   
+   protected void instantiateAdapters(){
+      pdmAdapter = applicationContext.getBean( "pdmAdapter", PdmAdapter.class );
+      jiraAdapter = applicationContext.getBean( "jiraAdapter", JiraAdapter.class );
+   }
+   
+   protected abstract Boolean verifyPerformer( User jiraUser );
+}

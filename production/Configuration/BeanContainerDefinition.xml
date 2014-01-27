@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+   <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+     <property name="location" value="classpath:worklogeraser.properties"/>
+   </bean>
+   
+   <bean id="eraseActionLog" class="com.kn.jira.worklogeraser.domain.EraseActionLogger">
+      <constructor-arg value="file:Logs/WorklogEraser.log.xml" />
+   </bean>
+   
+   <bean id="employeeMatchingStrategy" class="com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy">
+      <constructor-arg ref="eraseActionLog" />
+   </bean>
+   
+   <bean id="worklogEraser" class="com.kn.jira.worklogeraser.domain.WorklogEraser">
+      <constructor-arg ref="configProperties" />
+   </bean>
+   
+   <!-- PDM++ Service Client Configuration -->
+   <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory" />
+   <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller"/> 
+
+   <bean id="jaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>com.kn.jira.worklogeraser.pdmadapter.FindEmployeeByEmailRequest</value>            
+                <value>com.kn.jira.worklogeraser.pdmadapter.SearchEmployeeByStringRequest</value>            
+            </list>
+        </property>
+    </bean>
+           
+   <bean id="jaxb2Unmarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>com.kn.jira.worklogeraser.pdmadapter.FindEmployeeByEmailResponse</value>                
+                <value>com.kn.jira.worklogeraser.pdmadapter.PersonInPdm</value>                
+                <value>com.kn.jira.worklogeraser.pdmadapter.SearchEmployeeByStringResponse</value>                
+            </list>
+        </property>
+    </bean>
+    
+   <bean id="pdmServiceClientTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+      <constructor-arg ref="messageFactory"/>
+      <property name="marshaller" ref="jaxb2Marshaller"/>
+      <property name="unmarshaller" ref="jaxb2Unmarshaller"/>
+   </bean>
+       
+   <bean id="pdmServiceClient" class="com.kn.jira.worklogeraser.pdmadapter.PdmPersonServiceClient">
+      <constructor-arg ref="pdmServiceClientTemplate"/>
+      <property name="defaultUri" value="http://dcepdmpp01:8080/pdmplusplus-server/webServices/PersonWebService"/>
+   </bean>
+   
+   <bean id="searchForZsolt" class="com.kn.jira.worklogeraser.pdmadapter.SearchEmployeeByStringRequest">
+      <constructor-arg value="Zsolt"/>
+   </bean>
+   
+   <bean id="pdmAdapter" class="com.kn.jira.worklogeraser.pdmadapter.PdmAdapter">
+      <property name="personServiceClient" ref="pdmServiceClient" />
+   </bean>
+   
+   <!-- Jira Service Client Configuration -->
+    
+   <bean id="jiraAdapter" class="com.kn.jira.worklogeraser.jiraadapter.JiraAdapter">
+      <constructor-arg name="serverUriString" value="http://localhost:2990/jira"/>
+      <constructor-arg name="userName" value="admin" />
+      <constructor-arg name="password" value="admin" />
+   </bean>
+   
+</beans>

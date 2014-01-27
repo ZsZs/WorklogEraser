@@ -1,0 +1,51 @@
+package com.kn.jira.worklogeraser.jiraadapter;
+
+import static org.hamcrest.Matchers.greaterThan;
+import static org.junit.Assert.assertThat;
+
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.atlassian.jira.rest.client.domain.BasicProject;
+import com.atlassian.jira.rest.client.domain.Issue;
+import com.kn.jira.worklogeraser.sharedresources.TestConfigurationFixture;
+import com.kn.jira.worklogeraser.sharedresources.TestConfigurationWithMockAdaptersFixture;
+
+public class JiraAdapterTest {
+   private TestConfigurationFixture testConfiguration;
+   private JiraAdapter webServiceClient;
+
+   @Before public void beforeEachTest(){
+      testConfiguration = new TestConfigurationWithMockAdaptersFixture();
+      testConfiguration.setUp();
+      webServiceClient = testConfiguration.getJiraAdapter();
+   }
+   
+   @After public void afterEachTest(){
+      testConfiguration.tearDown();
+   }
+   
+   @Test public void findAllProjects_returnsListOfJiraProjects(){
+      List<BasicProject> projects = webServiceClient.findAllProjects();
+      
+      assertThat( projects.size(), greaterThan( 0 ));
+      
+      //dumpProjectsToConsole( projects );
+   }
+
+   @Test public void findIssuesByQuery_returnsListOfJiraIssues(){
+      List<Issue> issues = webServiceClient.findIssuesByQuery( "project=\"ADMIN\"" );
+      
+      assertThat( issues.size(), greaterThan( 0 ));
+   }
+   
+   //Private helper methods
+   private void dumpProjectsToConsole( List<BasicProject> projects ) {
+      for( BasicProject project : projects ){
+         System.out.println( "\n" + project.getKey() );
+      }
+   }
+}

@@ -1,0 +1,25 @@
+package com.kn.jira.worklogeraser.pdmadapter;
+
+import org.springframework.ws.client.core.WebServiceTemplate;
+
+public class PdmPersonServiceClient {
+   private WebServiceTemplate webServiceTemplate;
+
+   public PdmPersonServiceClient( final WebServiceTemplate webServiceTemplate ) {
+      this.webServiceTemplate = webServiceTemplate;
+   }
+
+   public void setDefaultUri( String defaultUri ) {
+      webServiceTemplate.setDefaultUri( defaultUri );
+   }
+
+   public SearchEmployeeByStringResponse findEmployeeByString(String searchString) {
+      SearchEmployeeByStringRequest request = new SearchEmployeeByStringRequest( searchString );
+      SearchEmployeeByStringResponse response = (SearchEmployeeByStringResponse) webServiceTemplate.marshalSendAndReceive( request );
+      return response;
+   }
+
+   public PersonInPdm findPersonByEmail( String email ) {
+      return null;
+   }
+}

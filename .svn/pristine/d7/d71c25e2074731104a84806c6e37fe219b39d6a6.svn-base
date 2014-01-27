@@ -1,0 +1,150 @@
+package com.kn.jira.worklogeraser.domain;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.isEmptyOrNullString;
+import static org.hamcrest.Matchers.not;
+import static org.junit.Assert.assertThat;
+
+import java.io.IOException;
+import java.io.StringWriter;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.powermock.reflect.Whitebox;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import com.atlassian.jira.rest.client.domain.Worklog;
+import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
+import com.kn.jira.worklogeraser.sharedresources.JiraAdapterFixture;
+import com.kn.jira.worklogeraser.sharedresources.PdmAdapterFixture;
+import com.kn.jira.worklogeraser.sharedresources.TestConfigurationWithMockAdaptersFixture;
+
+public class EraseActionLoggerTest {
+   private static final String EXECUTION_ELEMENTS_SELECTOR = "/worklogEraser/execution";
+   private static final String DELETITION_ELEMENTS_SELECTOR = "deletition";
+   private Document log;
+   private EraseActionLogger actionLogger;
+   protected JiraAdapterFixture jiraAdapterFixture;
+   protected PdmAdapterFixture pdmAdapterFixture;
+   private TestConfigurationWithMockAdaptersFixture testConfiguration;
+   private XPath xPath;
+
+   @Before
+   public void beforeEachTest() throws SAXException, IOException, ParserConfigurationException, TransformerException {
+      testConfiguration = new TestConfigurationWithMockAdaptersFixture();
+      testConfiguration.setUp();
+      jiraAdapterFixture = testConfiguration.getJiraAdapterFixture();
+      pdmAdapterFixture = testConfiguration.getPdmAdapterFixture();
+      
+      actionLogger = testConfiguration.getActionLog();
+      actionLogger.setUp();
+
+      log = actionLogger.getLog();
+      xPath = XPathFactory.newInstance().newXPath();
+   }
+
+   @After
+   public void afterEachTest() throws TransformerException, XPathExpressionException, IOException {
+      printLastContentOfLog();
+      emptyLogDocument();
+      actionLogger.tearDown();
+      testConfiguration.tearDown();
+   }
+
+   //Test methods
+   @Test
+   public void executionStart_addsContainerElementForAllOtherElements() throws XPathExpressionException {
+      NodeList nodes = (NodeList) xPath.evaluate( EXECUTION_ELEMENTS_SELECTOR, log.getDocumentElement(), XPathConstants.NODESET );
+      Integer numberOfExecutionElementsBefore = nodes.getLength();
+      
+      actionLogger.executionStart();
+
+      nodes = (NodeList) xPath.evaluate( EXECUTION_ELEMENTS_SELECTOR, log.getDocumentElement(), XPathConstants.NODESET );
+      assertThat( nodes.getLength(), equalTo( numberOfExecutionElementsBefore + 1 ) );
+   }
+
+   @Test public void executionStart_logsStartTime() {
+      actionLogger.executionStart();
+
+      Element currentExecutionElement = Whitebox.getInternalState( actionLogger, "currentExecutionElement" );
+      String executionStart = currentExecutionElement.getAttribute( EraseActionLogger.EXECUTION_START_ATTRIBUTE_NAME );
+      assertThat( executionStart, not( isEmptyOrNullString() ));
+   }
+
+   @Test public void executionEnd_logsFinishTime() {
+      actionLogger.executionStart();
+      actionLogger.executionEnd();
+
+      Element currentExecutionElement = Whitebox.getInternalState( actionLogger, "currentExecutionElement" );
+      String executionEnd = currentExecutionElement.getAttribute( EraseActionLogger.EXECUTION_END_ATTRIBUTE_NAME );
+      assertThat( executionEnd, not( isEmptyOrNullString() ));
+   }
+   
+   @Test public void deleteWorklog_addsDeletitionElement() throws XPathExpressionException{
+      //SETUP:
+      actionLogger.executionStart();
+      Worklog worklog = findTheFirstWorklogNeedsToBeDeleted();
+      PersonInPdm person = testConfiguration.determinePersonInPdm( worklog );
+      
+      //EXECUTION:
+      actionLogger.worklogDeleted( worklog, person );
+      
+      //VERIFY:
+      Element currentExecutionElement = Whitebox.getInternalState( actionLogger, "currentExecutionElement" );
+      NodeList nodes = (NodeList) xPath.evaluate( DELETITION_ELEMENTS_SELECTOR, currentExecutionElement, XPathConstants.NODESET );
+      Node deletitionElement = nodes.item( 0 );
+      
+      assertThat( nodes.getLength(), equalTo( 1 ));
+      assertThat( deletitionElement.getAttributes().getNamedItem( "issueUri" ).getNodeValue(), equalTo( worklog.getIssueUri().toString() ));
+      assertThat( deletitionElement.getAttributes().getNamedItem( "email" ).getNodeValue(), equalTo( person.getEmailAddress() ));
+      
+      //TEAR DOWN:
+      actionLogger.executionEnd();
+   }
+
+   //Protected, private helper methods
+   private void emptyLogDocument() throws XPathExpressionException {
+      Element rootElement = log.getDocumentElement();
+      NodeList executionNodes = (NodeList) xPath.evaluate( EXECUTION_ELEMENTS_SELECTOR, log.getDocumentElement(), XPathConstants.NODESET );
+      for( int i = 0; i < executionNodes.getLength(); ++i ){
+         Element executionNode = (Element) executionNodes.item( i );
+         rootElement.removeChild( executionNode );
+      }
+   }
+   
+   private Worklog findTheFirstWorklogNeedsToBeDeleted(){
+      for( Worklog worklog : jiraAdapterFixture.getExpectedSubjectWorklogs() ){
+         if( testConfiguration.determinePersonInPdm( worklog ) != null ){
+            return worklog;
+         }
+      }
+      
+      return null;
+   }
+   
+   private void printLastContentOfLog() throws TransformerException{
+      TransformerFactory transformerFactory = TransformerFactory.newInstance();
+      Transformer transformer = transformerFactory.newTransformer();
+      DOMSource source = new DOMSource( log );
+      StringWriter writer = new StringWriter();
+      transformer.transform( source, new StreamResult( writer ));
+      
+      System.out.println( writer.getBuffer().toString() );
+   }
+}

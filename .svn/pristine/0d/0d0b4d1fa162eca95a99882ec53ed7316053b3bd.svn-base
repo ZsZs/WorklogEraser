@@ -1,0 +1,53 @@
+package com.kn.jira.worklogeraser.sharedresources;
+
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.when;
+
+import org.powermock.reflect.Whitebox;
+import org.springframework.context.ApplicationContext;
+
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
+import com.kn.jira.worklogeraser.pdmadapter.PdmAdapter;
+
+
+public class TestConfigurationWithMockAdaptersFixture extends TestConfigurationFixture{
+   private JiraAdapterFixture jiraAdapterFixture;
+   private ApplicationContext mockApplicationContext;
+   private JiraAdapter mockJiraAdapter;
+   private PdmAdapter mockPdmAdapter;
+   private PdmAdapterFixture pdmAdapterFixture;
+
+   @Override
+   public void tearDown() {
+      jiraAdapterFixture.tearDown();
+      pdmAdapterFixture.tearDown();
+      super.tearDown();
+   }
+
+   //Properties 
+   public JiraAdapterFixture getJiraAdapterFixture() { return jiraAdapterFixture; }
+   
+   //Protected, private helper methods
+   protected void mockAdapters() {
+      jiraAdapterFixture = new JiraAdapterFixture();
+      jiraAdapterFixture.setUp();
+      mockJiraAdapter = jiraAdapterFixture.getJiraAdapter();
+      
+      pdmAdapterFixture = new PdmAdapterFixture();
+      pdmAdapterFixture.setUp();
+      mockPdmAdapter = pdmAdapterFixture.getPdmAdapter();
+   }
+   
+   @Override protected void retrieveBeans() {
+      mockAdapters();
+      stubApplicationContextToReturnMockAdapters();
+      super.retrieveBeans();
+      Whitebox.setInternalState( worklogEraser, "applicationContext", mockApplicationContext );
+      
+   }
+   private void stubApplicationContextToReturnMockAdapters(){
+      mockApplicationContext = spy( applicationContext );
+      when( mockApplicationContext.getBean( "jiraAdapter", JiraAdapter.class )).thenReturn( mockJiraAdapter );
+      when( mockApplicationContext.getBean( "pdmAdapter", PdmAdapter.class )).thenReturn( mockPdmAdapter );
+   }
+}

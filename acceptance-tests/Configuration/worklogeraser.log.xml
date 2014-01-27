@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<worklogEraser>
+<execution finishedOn="18/12/2013, 07:29:46" startedOn="18/12/2013, 07:28:09" worklogsObsolatedFrom="2013/12/17">
+      <subjectProject name="AAW">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Administration ISC EMEA"/>
+      <subjectProject name="Airfreight Support CE">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Airlog Rollout">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Amer ISC Admin">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="AMER ISC QA">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="AMER IT Self Service">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Amer Process Tools">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Anti Terror">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Araci">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="AtlasX1">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="AuditDB">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="AZ Manhattan Implementation">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Booking SE">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="BPA Platform">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="bpa-fs">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CA-CDM">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CA-SSO">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CadisInvoiceFA">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Canada Master Data Collection">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Canada RTS Request Tracker Services">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Canada Vendor Suite">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Cargo Declaration System">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Cargo Manager Black and Decker">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Cargo Manager DirecTV">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Cargo Manager Office Depot">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Checka ATS">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CIEL FS">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CIP-Projekt">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CMS Multi Modal">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Contract Logistics Information Systems CE">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Contract Logistics Operations System CLOPS">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Contract Logistics System">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Critical Goods Manager">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CTI ">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CTI - Amazon IS / IT">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="CTI Toolbox Development, CTI CE">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Cubiscan Weights And Measures">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Customer Board">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Customer EDI Central Europe">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Customs Tool">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Dashboard">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Data Extract Task Force">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Data Pool Operations">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Disposition Planning System">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="eCommerce">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="eCommerce Support">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="EMDM Services">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="EMEA Output Management">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="eRecruiting">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Escape Serial Capture">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Faktura CSV">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Flex Worker">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="FO NAFTA Migration">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="FO-IS Competence Centre">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Forwarding Overland Master Data Management">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Framework Stream">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="FY - PMDS (Part Master)">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Garuda">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="GUI Ciel FW">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="HAM Customs IT">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="HAM GI-ST">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Hermes Message Router">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="HIS">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="HR - MIS">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="HR IT Project"/>
+      <subjectProject name="HRDB">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Human Capital Management System">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="IATA cargo XML">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="IIS HRIT Analysis">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="IIS HRIT Development">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="IIS HRIT Projects">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="IL Stream">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="IL Stream - CL (FW)">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="iLog Customer Solutions Tracker">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="iOPM">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="iOPM4XML">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="ISC 1 + 2 / iOPM to SALog">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="ISC DW Development"/>
+      <subjectProject name="ISC EMEA Program Management Board">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="ISC IT-Training">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="ISC LEX Development">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Jira Administration"/>
+      <subjectProject name="jScan">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Desktop Client">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Desktop Deployment">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN eFile">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN eScan">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Excellence">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Global DB for Legal and Compliance">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Lab">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Login Cross Layer Analysis">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Microsites">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Screen Manager">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Spark">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN WoodNet">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Workplace">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="KN Workplace Migration">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Kontinuierlicher Verbesserungsprozess">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="LAN-WLAN Management">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="LEX Development">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="LEX-APAC Development">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="LookupWS">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Loudon Consulting">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Main Stream">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="MEA Team Space">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="messe-sls">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Mex FD OTM">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Mex FO Huawei">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Mobile Application Development">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Monitoring CR">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Obtuse Profile Management">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="OCS">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Oil and Gas OMS">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="OLAF">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="OMS 4.0 - Web Order Entry">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Order Fulfillment Services">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="PACT DataWizard">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="PACT Help-Desk">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="PACT IT Action Tracker">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="PACT LOGSuite">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Palettentool">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Partnership Portal">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="PDM Projekt">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="PDMPlusPlus">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Pharma Phase 2">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Pramukha">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="QSHE Suite">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="QTOOL Development">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="RatingTool">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="RKA">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="RMSA - Rate Management System for Air Logistics Project">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="SALOG Development">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="SALog Infrastructure support">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Salog Interfaces">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="SALOG KNLogin Integration">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="SALOG Technical Architecture">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Salog Technical Design Project">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Seafreight Requirements">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="SeaLOG Central Europe">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="SeaLOG Development Central Europe">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Server Inventory Tool">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Server-Management">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Sinipi">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Solution ENHANCEMENTS GCST">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="South African Pulp and Paper Industries">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Taimaklaka">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="TicketingCaptureForm">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Triboni">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="TriboniSupport">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="VLog">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="WebCP">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="WEBDEV KN Login Support">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="Weekplan">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+      </subjectProject>
+      <subjectProject name="ZIPPY">
+         <projectAccessRestriction name="worklogeraser.admin"/>
+         <subjectIssue name="ADMIN-523" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-504" status="Closed">
+            <worklogDeleted email="michael.krueger@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/101860">Done. Activation needs up to 24h.</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="ADMIN-503" status="Closed">
+            <worklogDeleted email="michael.krueger@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/101843">Done.</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-499" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-496" status="Closed">
+            <worklogDeleted email="willi.kalmaz@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/101370"/>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-494" status="Closed"/>
+         <subjectIssue name="ADMIN-492" status="Closed"/>
+         <subjectIssue name="ADMIN-490" status="Closed"/>
+         <subjectIssue name="ADMIN-489" status="Closed"/>
+         <subjectIssue name="ADMIN-487" status="Closed"/>
+         <subjectIssue name="ADMIN-485" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-480" status="Closed">
+            <worklogDeleted email="michael.krueger@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/100470"/>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-453" status="Closed"/>
+         <subjectIssue name="ADMIN-448" status="Closed"/>
+         <subjectIssue name="ADMIN-447" status="Closed"/>
+         <subjectIssue name="ADMIN-442" status="Closed"/>
+         <subjectIssue name="ADMIN-434" status="Closed"/>
+         <subjectIssue name="ADMIN-432" status="Closed"/>
+         <subjectIssue name="ADMIN-413" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-395" status="Closed">
+            <worklogDeleted email="michael.krueger@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/90901"/>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-390" status="Closed"/>
+         <subjectIssue name="ADMIN-386" status="Closed"/>
+         <subjectIssue name="ADMIN-381" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-380" status="Closed">
+            <worklogDeleted email="michael.krueger@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/88182"/>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-369" status="Closed"/>
+         <subjectIssue name="ADMIN-365" status="Closed"/>
+         <subjectIssue name="ADMIN-362" status="Closed"/>
+         <subjectIssue name="ADMIN-355" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-353" status="Closed">
+            <worklogDeleted email="martin.zahn@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/85034"/>
+            <worklogDeleted email="martin.zahn@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/85034">-</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-333" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-327" status="Closed">
+            <worklogDeleted email="martin.zahn@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/82455"/>
+            <worklogDeleted email="martin.zahn@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/82455"/>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="ADMIN-323" status="Closed">
+            <worklogDeleted email="michael.krueger@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/81443"/>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-316" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-310" status="Closed">
+            <worklogDeleted email="michael.krueger@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/79228"/>
+            <worklogDeleted email="michael.krueger@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/79228"/>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-307" status="Closed"/>
+         <subjectIssue name="ADMIN-305" status="Closed"/>
+         <subjectIssue name="ADMIN-304" status="Closed"/>
+         <subjectIssue name="ADMIN-297" status="Closed"/>
+         <subjectIssue name="ADMIN-295" status="Closed"/>
+         <subjectIssue name="ADMIN-293" status="Closed"/>
+         <subjectIssue name="ADMIN-292" status="Closed"/>
+         <subjectIssue name="ADMIN-290" status="Closed"/>
+         <subjectIssue name="ADMIN-289" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="ADMIN-288" status="Closed">
+            <worklogDeleted email="willi.kalmaz@kuehne-nagel.com" issueUri="http://lxhamrzdb01:8080/jira/rest/api/latest/issue/76870"/>
+         </subjectIssue>
+         <subjectIssue name="ADMIN-287" status="Closed"/>
+         <subjectIssue name="ADMIN-282" status="Closed"/>
+         <subjectIssue name="ADMIN-277" status="Closed"/>
+         <subjectIssue name="ADMIN-275" status="Closed"/>
+         <subjectIssue name="ADMIN-261" status="Closed"/>
+         <subjectIssue name="ADMIN-252" status="Closed"/>
+      </subjectProject>
+   </execution>
+</worklogEraser>

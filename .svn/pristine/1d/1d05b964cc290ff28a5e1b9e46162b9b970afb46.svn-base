@@ -1,0 +1,73 @@
+package com.kn.jira.worklogeraser.jiraadapter;
+
+import java.net.URI;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.atlassian.jira.rest.client.IssueRestClient;
+import com.atlassian.jira.rest.client.JiraRestClient;
+import com.atlassian.jira.rest.client.ProjectRestClient;
+import com.atlassian.jira.rest.client.SearchRestClient;
+import com.atlassian.jira.rest.client.domain.BasicIssue;
+import com.atlassian.jira.rest.client.domain.BasicProject;
+import com.atlassian.jira.rest.client.domain.Issue;
+import com.atlassian.jira.rest.client.domain.SearchResult;
+import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientFactory;
+import com.google.common.collect.Lists;
+
+public class JiraAdapter {
+   final Logger logger = LoggerFactory.getLogger( getClass() );
+   private JiraRestClient jiraClient;
+   private final String password;
+   private final String serverUriString;
+   private final String userName;
+
+   //Constructors
+   public JiraAdapter( final String serverUriString, final String userName, final String password ) {
+      this.serverUriString = serverUriString;
+      this.userName = userName;
+      this.password = password;
+      instantiateJiraRestClient();
+   }
+   
+   //Public accessors and mutators
+   public List<BasicProject> findAllProjects() {
+      List<BasicProject> foundProjects = Lists.newArrayList();
+      final ProjectRestClient projectClient = jiraClient.getProjectClient();
+
+      for( final BasicProject expected : projectClient.getAllProjects().claim() ){
+         foundProjects.add( expected );
+      }
+      
+      return foundProjects;
+   }
+   
+   public List<Issue> findIssuesByQuery( String query ) {
+      List<Issue> foundIssues = Lists.newArrayList();
+      
+      SearchRestClient searchClient = jiraClient.getSearchClient();
+      IssueRestClient issueClient = jiraClient.getIssueClient();
+      SearchResult searchResult = searchClient.searchJql( query ).claim();
+      for( final BasicIssue expected : searchResult.getIssues() ){
+         Issue jiraIssue = null;
+         foundIssues.add( jiraIssue );
+      }
+      
+      return foundIssues;
+   }
+
+   //Properties
+   
+   //Protected, private helper methods
+   private void instantiateJiraRestClient(){
+      URI serverUri = URI.create( serverUriString );
+      try{
+         jiraClient = new AsynchronousJiraRestClientFactory().createWithBasicHttpAuthentication( serverUri, userName, password );
+      }catch( Exception e ){
+         e.printStackTrace();
+      }
+   }
+
+}

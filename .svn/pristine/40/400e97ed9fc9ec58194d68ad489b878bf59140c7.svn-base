@@ -1,0 +1,16 @@
+package com.kn.jira.worklogeraser.domain;
+
+import com.atlassian.jira.rest.client.domain.User;
+import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
+
+public class ServiceInvocationMatchingStrategy extends EmployeeMatchingStrategy {
+
+   @Override
+   protected Boolean verifyPerformer( User jiraUser ) {
+      PersonInPdm person = pdmAdapter.findPersonByEmail( jiraUser.getEmailAddress() );
+      if( person != null ){
+         if( person.getKnRegionCode() == "DE" ) return true;
+         else return false;
+      }else return false;
+   }
+}

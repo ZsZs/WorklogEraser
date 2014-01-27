@@ -1,0 +1,13 @@
+package com.kn.jira.worklogeraser.domain;
+
+import java.util.List;
+
+import com.atlassian.jira.rest.client.domain.Worklog;
+   
+public abstract class EmployeeMatchingStrategy {
+   protected List<Worklog> subjectWorklogs;
+   
+   public void perforErase( List<Worklog> subjectWorklogs ){
+      this.subjectWorklogs = subjectWorklogs;
+   }
+}

@@ -1,0 +1,23 @@
+
+### set log levels - for more verbose logging change 'info' to 'debug' ###
+### append consoleappender if necessery ex: log4j.logger.com.itcodex=INFO, R, stdout
+
+log4j.rootLogger = WARN, console, rollingFileAppender
+
+log4j.logger.com.com.kn.jira.worklogeraser = WARN, rollingFileAppender
+log4j.logger.com.com.kn.jira.worklogeraser = TRACE, console 
+log4j.logger.org.springframework = WARN, console
+log4j.logger.org.springframework.ws.client.MessageTracing = TRACE, console
+
+### direct log messages to stdout, uncomment only if you are using a development environment ###
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.Target=System.out
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+
+log4j.appender.rollingFileAppender = org.apache.log4j.RollingFileAppender
+log4j.appender.rollingFileAppender.File = Logs/WorklogEraser.log
+log4j.appender.rollingFileAppender.MaxFileSize = 10MB
+log4j.appender.rollingFileAppender.MaxBackupIndex = 10
+log4j.appender.rollingFileAppender.layout = org.apache.log4j.PatternLayout
+log4j.appender.rollingFileAppender.layout.ConversionPattern = %d{yyyy MMM dd HH:mm:ss,SSS} %p %t %c - %m%n

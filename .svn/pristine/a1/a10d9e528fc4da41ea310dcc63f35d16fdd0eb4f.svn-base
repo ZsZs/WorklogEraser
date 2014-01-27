@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="Run and setup local Jira instance" basedir=".." default="create-jira-issues">
+	
+	<property name="atlassian.plugin.sdk.home" location="../../../EntwicklungsUmgebung/atlassian-plugin-sdk" />
+	<property name="jira.cli.home" location="C:/ZsZs/EntwicklungsUmgebung/jira-cli-3.7.0" />
+   <property name="maven.home" location="C:/ZsZs/EntwicklungsUmgebung/atlassian-plugin-sdk/apache-maven" />
+
+	<target name="start-local-jira">
+		<parallel>
+			<sequential>
+	         <exec executable="cmd">
+	            <arg value="/c" />
+	            <arg value="${maven.home}/bin/mvn.bat com.atlassian.maven.plugins:maven-amps-dispatcher-plugin:4.2.10:run clean install" />
+	         </exec>
+				<sleep minutes="5"/>
+			</sequential>
+		</parallel>
+	</target>
+
+   <target name="create-jira-project">
+      <exec executable="cmd">
+         <arg value="/c" />
+         <arg value="${jira.cli.home}/jira.bat --action run --file Configuration/createJiraProjectsAndUsers.txt --findReplace @project@:WORKLOG,@user@:admin,@password@:admin --continue" />
+      </exec>
+   </target>
+	
+   <target name="create-jira-issues" depends="create-jira-project">
+      <exec executable="cmd">
+         <arg value="/c" />
+         <arg value="${jira.cli.home}/jira.bat --action run --file Configuration/createJiraIssues.txt --findReplace @project@:WORKLOG,@user@:admin,@password@:admin --continue" />
+      </exec>
+   </target>
+</project>

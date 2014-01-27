@@ -1,0 +1,78 @@
+package com.kn.jira.worklogeraser.domain;
+
+import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.verify;
+
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.atlassian.jira.rest.client.domain.BasicUser;
+import com.atlassian.jira.rest.client.domain.User;
+import com.atlassian.jira.rest.client.domain.Worklog;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
+import com.kn.jira.worklogeraser.pdmadapter.PdmAdapter;
+import com.kn.jira.worklogeraser.sharedresources.JiraAdapterFixture;
+import com.kn.jira.worklogeraser.sharedresources.PdmAdapterFixture;
+import com.kn.jira.worklogeraser.sharedresources.TestConfigurationWithMockAdaptersFixture;
+
+public abstract class EmployeeMatchingStrategyTest {
+   protected EmployeeMatchingStrategy employeeMatchingStrategy;
+   protected JiraAdapter jiraAdapter;
+   protected JiraAdapterFixture jiraAdapterFixture;
+   protected PdmAdapter pdmAdapter;
+   protected PdmAdapterFixture pdmAdapterFixture;
+   protected List<Worklog> subjectWorklogs;
+   protected TestConfigurationWithMockAdaptersFixture testConfiguration;
+
+   @Before public void beforeEachTest() {
+      testConfiguration = new TestConfigurationWithMockAdaptersFixture();
+      testConfiguration.setUp();
+      jiraAdapterFixture = testConfiguration.getJiraAdapterFixture();
+      jiraAdapter = jiraAdapterFixture.getJiraAdapter();
+      pdmAdapterFixture = testConfiguration.getPdmAdapterFixture();
+      pdmAdapter = pdmAdapterFixture.getPdmAdapter();
+      
+      employeeMatchingStrategy = testConfiguration.getEmployeeMatchingStrategy();
+      subjectWorklogs = jiraAdapterFixture.getExpectedSubjectWorklogs();
+   }
+
+   @After
+   public void afterEachTest() {
+      testConfiguration.tearDown();
+   }
+
+   //Test methods
+   @Test
+   public void performErase_forEachWorklog_retrievesPersonFromPdm() {
+      employeeMatchingStrategy.perforErase( subjectWorklogs );
+   
+      for( Worklog worklog : subjectWorklogs ){
+         User jiraUser = determineJiraUser( worklog );
+         
+         verify( pdmAdapter, atLeastOnce() ).findPersonByEmail( jiraUser.getEmailAddress() );
+      }
+   }
+
+   @Test
+   public void performErase_whenWorklogPerformerIsGermanEmployee_deteletesWorklog() {
+      employeeMatchingStrategy.perforErase( subjectWorklogs );
+   
+      for( Worklog worklog : subjectWorklogs ){
+         User jiraUser = determineJiraUser( worklog );
+         if( employeeMatchingStrategy.verifyPerformer( jiraUser )){
+            verify( jiraAdapter, atLeastOnce() ).deleteWorklog( worklog );
+         }
+      }
+   }
+
+   //Protected, private helper methods
+   protected User determineJiraUser( Worklog worklog ) {
+      BasicUser jiraUserSummary = worklog.getAuthor();
+      User jiraUser = jiraAdapter.findUser( jiraUserSummary );
+      return jiraUser;
+   }
+
+}

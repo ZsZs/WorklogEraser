@@ -1,0 +1,20 @@
+package com.kn.jira.worklogeraser.sharedresources;
+
+import static org.mockito.Mockito.mock;
+
+import com.kn.jira.worklogeraser.pdmadapter.PdmAdapter;
+
+public class PdmAdapterFixture {
+   private PdmAdapter mockPdmAdapter;
+   
+   //Public accessors and mutators
+   public void setUp(){
+      mockPdmAdapter = mock( PdmAdapter.class );
+   }
+   
+   public void tearDown(){
+      
+   }
+
+   public PdmAdapter getPdmAdapter() { return mockPdmAdapter; }
+}
