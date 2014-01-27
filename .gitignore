@@ -1,6 +1,11 @@
+.svn
+/acceptance-tests/.svn
 /acceptance-tests/target
+/integration-tests/.svn
 /integration-tests/target
+/local-jira/.svn
 /local-jira/target
+/production/.svn
 /production/target
 /Configuration
 /Logs
