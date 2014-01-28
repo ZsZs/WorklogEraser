@@ -55,6 +55,7 @@ public class WorklogEraser implements ApplicationContextAware{
       ApplicationContext applicationContext = new ClassPathXmlApplicationContext( DEFAULT_APPLICATION_CONFIGURATION );
       WorklogEraser worklogEraser = applicationContext.getBean( "worklogEraser", WorklogEraser.class );
       worklogEraser.perform();
+      System.exit( 0 );
    }   
    
    // Constructors
@@ -81,9 +82,10 @@ public class WorklogEraser implements ApplicationContextAware{
          try{
             actionLogger.executionEnd();
             actionLogger.tearDown();
-            programLogger.info( "Performing jira worklog erasure process finished" );
          }catch( TransformerException | IOException e ){
             programLogger.error( "Actions Logger coudn't tear down.", e );
+         }finally{
+            programLogger.info( "Performing jira worklog erasure process finished." );
          }
       }
    }
@@ -117,14 +119,14 @@ public class WorklogEraser implements ApplicationContextAware{
    protected void collectAllProjects(){
       programLogger.info( "Collecting all projects from Jira." );
       allJiraProjects = jiraAdapter.findAllProjects();
-      programLogger.debug( "Number of Jira Projects found is: " + allJiraProjects.size() );
+      programLogger.info( "Number of Jira Projects found is: " + allJiraProjects.size() );
    }
    
    protected void collectAllSubjectIssues() throws JiraAdapterException {
       programLogger.info( "Collecting all subject issues from Jira." );
       for( BasicProject jiraProject : allJiraProjects ){
          actionLogger.considerProject( jiraProject.getName() );
-         programLogger.debug( "Considering jira project: " + jiraProject.getName());
+         programLogger.info( "Considering jira project: " + jiraProject.getName());
          try{
             String formattedDate = dateFormat.format( obsolatedWorklogDate );
             List<Issue> foundIssuesInProject = jiraAdapter.findClosedObsolatedIssues( jiraProject.getKey(), closedIssueStatusName, formattedDate );
@@ -133,6 +135,7 @@ public class WorklogEraser implements ApplicationContextAware{
             actionLogger.projectAccessRestriction( jiraAdapter.getUser() );;
          }
       }
+      programLogger.info( "Number of subject issues found is: " + subjectIssues.size() );
    }
    
    protected void collectAllSubjectWorklogsAndPerformErase() throws JiraAdapterException {

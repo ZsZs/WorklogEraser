@@ -27,8 +27,9 @@ public class JiraAdapterTest {
    private static final String QUERY_CLOSED_ISSUES = "project=\"WORKLOG\" AND status=\"CLOSED\"";
    private static final String QUERY_ALL_ISSUES = "project=\"WORKLOG\"";
    private static final String STATUS_NAME = "CLOSED";
-   private TestConfigurationFixture testConfiguration;
+   private SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogEraser.DATE_FORMAT );
    private JiraAdapter jiraAdapter;
+   private TestConfigurationFixture testConfiguration;
 
    @Before public void beforeEachTest(){
       testConfiguration = new TestConfigurationFixture();
@@ -40,15 +41,13 @@ public class JiraAdapterTest {
       testConfiguration.tearDown();
    }
    
-   @Test public void deleteWorklog_removesWorklogFromIssue() throws JiraAdapterException{
+   @Test( expected = JiraAdapterDeleteWorklogException.class ) 
+   public void deleteWorklog_whenIssueIsClosed_throwsException() throws JiraAdapterException{
       Issue subjectIssue = findTheFirstSubjectIssue();
       List<Worklog> worklogs = Lists.newArrayList( subjectIssue.getWorklogs() );
       Worklog subjectWorklog = worklogs.get( 0 );
-      Integer numberOfWorklogsBeforeDelete = worklogs.size();
       
       jiraAdapter.deleteWorklog( subjectWorklog );
-      
-      assertThat( Lists.newArrayList( subjectIssue.getWorklogs() ).size(), lessThan( numberOfWorklogsBeforeDelete ));
    }
    
    @Test public void findAllProjects_returnsListOfJiraProjects(){
@@ -99,13 +98,16 @@ public class JiraAdapterTest {
    }
 
    //Private helper methods
-   private Issue findTheFirstSubjectIssue() throws JiraAdapterException {
-      SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogEraser.DATE_FORMAT );
+   private String calculateTomorrow() {
       DateTime currentDate = new DateTime();
       String tomorrow = dateFormat.format( currentDate.plusDays( 1 ).withTimeAtStartOfDay().toDate() );
-
-      List<Issue> obsolatedIssues = jiraAdapter.findClosedObsolatedIssues( PROJECT_NAME, STATUS_NAME, tomorrow );
+      return tomorrow;
+   }
+   
+   private Issue findTheFirstSubjectIssue() throws JiraAdapterException {
+      List<Issue> obsolatedIssues = jiraAdapter.findClosedObsolatedIssues( PROJECT_NAME, STATUS_NAME, calculateTomorrow() );
       Issue subjectIssue = obsolatedIssues.get( 0 );
       return subjectIssue;
    }
+
 }

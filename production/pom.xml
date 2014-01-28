@@ -70,6 +70,7 @@
                <useWildcardClassPath>true</useWildcardClassPath>
                <repositoryName>libraries</repositoryName>
                <repositoryLayout>flat</repositoryLayout>
+               <showConsoleWindow>true</showConsoleWindow>
                <platforms>
                   <platform>windows</platform>
                   <platform>unix</platform>

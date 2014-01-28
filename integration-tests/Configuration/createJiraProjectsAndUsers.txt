@@ -5,14 +5,21 @@
 # Remove project
 --action deleteProject --project @project@
 
+# Remove users
+--action removeUser --userId GermanEmployee
+--action removeUser --userId NoneGermanEmployee
+
 # Create users
---action addUser --userId GermanEmployee --userPassword @password@ --userEmail german.employee@kh.com --userFullName "German Employee" --preserveCase
+--action addUser --userId GermanEmployee --userPassword hello --userEmail sven.hoffmann@kuehne-nagel.com --userFullName "German Employee" --preserveCase
+--action addUserToGroup --userId GermanEmployee --group jira-developers
 --action addUserToGroup --userId GermanEmployee --group jira-administrators
---action addUser --userId NoneGermanEmployee --userPassword @password@ --userEmail none.german.employee@kh.com --userFullName "None German Employee"  --preserveCase
+
+--action addUser --userId NoneGermanEmployee --userPassword hello --userEmail none.german.employee@kh.com --userFullName "None German Employee"  --preserveCase
+--action addUserToGroup --userId NoneGermanEmployee --group jira-developers
 --action addUserToGroup --userId NoneGermanEmployee --group jira-administrators
 
 # Create project
---action createProject --project @project@ --name "@project@ test" --description "@project@ test" --lead @user@
+--action createProject --project @project@ --name "@project@ test" --description "@project@ test" --lead GermanEmployee
 
 # Versions
 --action addVersion --project @project@ --name "V1"
@@ -21,3 +28,5 @@
 # Components
 --action addComponent --project @project@ --name "C1"
 --action addComponent --project @project@ --name "C2"
+
+--action logout

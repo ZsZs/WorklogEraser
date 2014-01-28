@@ -1,25 +1,25 @@
 # Create a issues and worklogs
 # Command line:
-#     jira --action run --file createTestData.txt --findReplace @project@:XYZ,@user@:automation --continue
+#     jira --action run --file createTestData.txt --findReplace @project@:XYZ,GermanEmployee:automation --continue
 
 # Issues
---action createIssue --project @project@ --type "Task" --summary "Resolved issue with obsoleted worklogs" --affectsVersions "V1, V2" --components "C1"
+--action createIssue --project @project@ --type "Task" --summary "Resolved issue with obsoleted worklogs" --affectsVersions "V1, V2" --components "C1" --assignee GermanEmployee --reporter GermanEmployee
 --action addWork --issue @project@-1 --timeSpent "2h 30m" --date "2013/05/12" --dateFormat "YYYY/MM/DD" --comment "Working hard.."
 --action addWork --issue @project@-1 --timeSpent "1h 00m" --date "2013/05/12" --dateFormat "YYYY/MM/DD" --comment "Working harder."
 --action addWork --issue @project@-1 --timeSpent "3h 15m" --date "2013/05/12" --dateFormat "YYYY/MM/DD" --comment "KO"
 
---action createIssue --project @project@ --type "Sub-task" --summary "Resolved subtask with obsoleted worklogs" --parent @project@-1 --comment "Subtask with obsolated worklogs"
+--action createIssue --project @project@ --type "Sub-task" --summary "Resolved subtask with obsoleted worklogs" --parent @project@-1 --assignee GermanEmployee --reporter GermanEmployee --comment "Subtask with obsolated worklogs"
 --action addWork --issue @project@-2 --timeSpent "12h 00m" --date "2013/07/01" --dateFormat "YYYY/MM/DD" --comment "Just hanging around :)"
 --action addWork --issue @project@-2 --timeSpent "4h 00m" --date "2013/07/06" --dateFormat "YYYY/MM/DD" --comment "Take it easy"
 
---action createIssue --project @project@ --type "Task" --summary "Open issue with obsoleted worklogs" --affectsVersions "V1, V2" --components "C1"
+--action createIssue --project @project@ --type "Task" --summary "Open issue with obsoleted worklogs" --affectsVersions "V1, V2" --components "C1" --assignee GermanEmployee --reporter GermanEmployee
 --action addWork --issue @project@-3 --timeSpent "1h 45m" --date "2012/05/12" --dateFormat "YYYY/MM/DD"  --comment "Wasn't easy at all!"
 
---action createIssue --project @project@ --type "Sub-task" --summary "Open subtask with obsoleted worklogs" --parent @project@-3 --comment "Subtask with obsolated worklogs"
+--action createIssue --project @project@ --type "Sub-task" --summary "Open subtask with obsoleted worklogs" --parent @project@-3 --assignee GermanEmployee --reporter GermanEmployee --comment "Subtask with obsolated worklogs"
 --action addWork --issue @project@-4 --timeSpent "16h 00m" --date "2013/06/22" --dateFormat "YYYY/MM/DD" --comment "Pura Vida"
 --action addWork --issue @project@-4 --timeSpent "1h 30m" --date "2013/06/23" --dateFormat "YYYY/MM/DD" --comment "Life is nice"
 
---action createIssue --project @project@ --type "Task" --summary "Resolved issue with current worklogs" --affectsVersions "V1, V2" --components "C2"
+--action createIssue --project @project@ --type "Task" --summary "Resolved issue with current worklogs" --affectsVersions "V1, V2" --components "C2" --assignee GermanEmployee --reporter GermanEmployee
 --action addWork --issue @project@-5 --timeSpent "3h 30m" --date "2013/12/12" --dateFormat "YYYY/MM/DD" --comment "Pura Vida"
 
 --action progressIssue --issue @project@-1 --step "Close Issue" --resolution Fixed --date "2013/05/12" --dateFormat "YYYY/MM/DD"
