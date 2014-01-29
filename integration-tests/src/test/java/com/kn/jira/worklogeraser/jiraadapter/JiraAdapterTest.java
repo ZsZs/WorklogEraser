@@ -42,7 +42,7 @@ public class JiraAdapterTest {
    }
    
    @Test( expected = JiraAdapterDeleteWorklogException.class ) 
-   public void deleteWorklog_whenIssueIsClosed_throwsException() throws JiraAdapterException{
+   public void deleteWorklog_whenIssueChangeIsForbidden_throwsException() throws JiraAdapterException{
       Issue subjectIssue = findTheFirstSubjectIssue();
       List<Worklog> worklogs = Lists.newArrayList( subjectIssue.getWorklogs() );
       Worklog subjectWorklog = worklogs.get( 0 );
@@ -80,6 +80,17 @@ public class JiraAdapterTest {
       User userDetails = jiraAdapter.findUserDetails( "admin" );
       
       assertThat( userDetails.getName(), equalTo( "admin" ));
+   }
+   
+   @Test public void reopenIssue_whenTransitionExists_setsStatusToOpen() throws JiraAdapterException{
+      //SETUP:
+      Issue subjectIssue = findTheFirstSubjectIssue();
+
+      //EXECUTE:
+      jiraAdapter.reopenIssue( subjectIssue );
+      
+      //VERIFY:
+      assertThat( subjectIssue.getStatus().getName(), equalTo( "Reopened" ));
    }
    
    @Test public void signIssueAsManipulated_addsCommentToIssue() throws JiraAdapterException{

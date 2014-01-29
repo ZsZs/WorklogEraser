@@ -2,6 +2,7 @@ package com.kn.jira.worklogeraser.domain;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,9 +11,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 import com.atlassian.jira.rest.client.domain.BasicUser;
+import com.atlassian.jira.rest.client.domain.Issue;
 import com.atlassian.jira.rest.client.domain.User;
 import com.atlassian.jira.rest.client.domain.Worklog;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 import com.kn.jira.worklogeraser.pdmadapter.PdmAdapter;
 import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
@@ -26,14 +29,16 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
    protected ApplicationContext applicationContext;
    protected JiraAdapter jiraAdapter;
    protected PdmAdapter pdmAdapter;
+   protected Map<URI, Issue> subjectIssues;
    protected List<Worklog> subjectWorklogs;
    
    public EmployeeMatchingStrategy( EraseActionLogger actionLogger ){
       this.actionLogger = actionLogger;      
    }
    
-   public void perforErase( List<Worklog> subjectWorklogs ) throws JiraAdapterException{
+   public void perforErase( Map<URI, Issue> subjectIssues, List<Worklog> subjectWorklogs ) throws JiraAdapterException{
       instantiateAdapters();
+      this.subjectIssues = subjectIssues;
       this.subjectWorklogs = subjectWorklogs;
       checkAllWorklogs();
    }
@@ -45,12 +50,18 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
    }
    
    //Protected, private helper methods
-   protected void deleteWorklog( Worklog worklog, PersonInPdm person ) throws JiraAdapterException{
-      jiraAdapter.deleteWorklog( worklog );
-      actionLogger.worklogDeleted( worklog.getIssueUri().toString(), person.getEmailAddress(), worklog.getComment() );
-      programLogger.debug( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " is deleted.");
+   protected void deleteWorklog( Worklog worklog, PersonInPdm person ){
+      try{
+         jiraAdapter.deleteWorklog( worklog );
+         actionLogger.worklogDeleted( worklog.getIssueUri().toString(), person.getEmailAddress(), worklog.getComment() );
+         programLogger.info( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " is deleted.");
+      }catch( JiraAdapterDeleteWorklogException e ){
+         reopenDeleteCloseIssue( worklog, person );
+      }catch( JiraAdapterException e ){
+         programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " could not be deleted.");
+      }
    }
-   
+
    protected void checkAllWorklogs() throws JiraAdapterException{
       URI manipulatedIssueUri = null;
       for( Worklog jiraWorklog : subjectWorklogs ){
@@ -72,6 +83,21 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
    protected void instantiateAdapters(){
       pdmAdapter = applicationContext.getBean( "pdmAdapter", PdmAdapter.class );
       jiraAdapter = applicationContext.getBean( "jiraAdapter", JiraAdapter.class );
+   }
+   
+   protected void reopenDeleteCloseIssue( Worklog worklog, PersonInPdm person ) {
+      Issue subjectIssue = subjectIssues.get( worklog.getIssueUri() );
+      try{
+         jiraAdapter.reopenIssue( subjectIssue );
+         if( subjectIssue.getStatus().getName() == JiraAdapter.REOPENED_STATUS_NAME ){
+            deleteWorklog( worklog, person );
+            jiraAdapter.closeIssue( subjectIssue );
+         }else{
+            programLogger.info( "Issue: '" + subjectIssue.getKey() + "' can't be reopened." );
+         }
+      }catch( Exception exception ){
+         programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " could not be deleted.");
+      }
    }
    
    protected void signIssueAsManipulated( URI issueUri ) {

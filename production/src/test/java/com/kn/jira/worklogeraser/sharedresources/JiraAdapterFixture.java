@@ -9,6 +9,7 @@ import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.joda.time.DateTime;
@@ -22,15 +23,18 @@ import com.atlassian.jira.rest.client.domain.User;
 import com.atlassian.jira.rest.client.domain.Worklog;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.kn.jira.worklogeraser.domain.WorklogEraser;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 
 public class JiraAdapterFixture {
+   private static final String JIRA_BASE_URI = "http://localhost:2990/jira/browse";
+   private Worklog anotherWorklogToDelete;
    private ApplicationContext applicationContext;
-   private List<Issue> expectedSubjectIssues = Lists.newArrayList();
+   private Map<URI,Issue> expectedSubjectIssues = Maps.newHashMap();
    private List<Worklog> expectedSubjectWorklogs = Lists.newArrayList();
-   private Worklog germanEmployeeWorklog;
+   private Worklog worklogToDelete;
    private List<Issue> issues = Lists.newArrayList();
    private JiraAdapter mockJiraAdapter;
    private Worklog noneGermanEmployeeWorklog;
@@ -70,7 +74,7 @@ public class JiraAdapterFixture {
    }
 
    //Properties
-   public List<Issue> getExpectedSubjectIssues() { return expectedSubjectIssues; }
+   public Map<URI,Issue> getExpectedSubjectIssues() { return expectedSubjectIssues; }
    public List<Worklog> getExpectedSubjectWorklogs() { return expectedSubjectWorklogs; }
    public List<Worklog> getProjectAexpectedWorklogs() { return projectAexpectedWorklogs; }
    public List<Worklog> getProjectBexpectedWorklogs() { return projectBexpectedWorklogs; }
@@ -89,7 +93,7 @@ public class JiraAdapterFixture {
       obsolatedWorklogDate = dateFormat.format( calculatedDate ); 
    }
    
-   private void createJiraIssues() throws JiraAdapterException{
+   private void createJiraIssues() throws JiraAdapterException, URISyntaxException{
       BasicStatus mockOpenStatus = mock( BasicStatus.class );
       when( mockOpenStatus.getName() ).thenReturn( "Open" );
       BasicStatus mockClosedStatus = mock( BasicStatus.class );
@@ -97,18 +101,21 @@ public class JiraAdapterFixture {
       
       Issue openIssueWithoutWorklog = mock( Issue.class );
       when( openIssueWithoutWorklog.getKey() ).thenReturn(  "1000" );
+      when( openIssueWithoutWorklog.getSelf() ).thenReturn(  new URI( JIRA_BASE_URI + "1000" ));
       when( openIssueWithoutWorklog.getStatus() ).thenReturn( mockOpenStatus );
       projectAissues.add( openIssueWithoutWorklog );
       projectBissues.add( openIssueWithoutWorklog );
       
       Issue openIssueWithWorklog = mock( Issue.class );
       when( openIssueWithWorklog.getKey() ).thenReturn(  "1001" );
+      when( openIssueWithWorklog.getSelf() ).thenReturn(  new URI( JIRA_BASE_URI + "1001" ));
       when( openIssueWithWorklog.getStatus() ).thenReturn( mockOpenStatus );
       projectAissues.add( openIssueWithWorklog );
       projectBissues.add( openIssueWithWorklog );
       
       Issue resolvedIssueWithoutWorklog = mock( Issue.class );
       when( resolvedIssueWithoutWorklog.getKey() ).thenReturn(  "1002" );
+      when( resolvedIssueWithoutWorklog.getSelf() ).thenReturn(  new URI( JIRA_BASE_URI + "1002" ));
       when( resolvedIssueWithoutWorklog.getStatus() ).thenReturn( mockClosedStatus );
       when( resolvedIssueWithoutWorklog.getWorklogs() ).thenReturn( ImmutableList.of( noneGermanEmployeeWorklog ));
       projectAissues.add( resolvedIssueWithoutWorklog );
@@ -116,8 +123,9 @@ public class JiraAdapterFixture {
       
       Issue resolvedIssueWithWorklog = mock( Issue.class );
       when( resolvedIssueWithWorklog.getKey() ).thenReturn(  "1003" );
+      when( resolvedIssueWithWorklog.getSelf() ).thenReturn(  new URI( JIRA_BASE_URI + "1003" ));
       when( resolvedIssueWithWorklog.getStatus() ).thenReturn( mockClosedStatus );
-      when( resolvedIssueWithWorklog.getWorklogs() ).thenReturn( ImmutableList.of( germanEmployeeWorklog ));
+      when( resolvedIssueWithWorklog.getWorklogs() ).thenReturn( ImmutableList.of( worklogToDelete ));
       projectAissues.add( resolvedIssueWithWorklog );
       projectAexpectedIssues.add( resolvedIssueWithWorklog );
       projectBissues.add( resolvedIssueWithWorklog );
@@ -132,8 +140,12 @@ public class JiraAdapterFixture {
       when( mockJiraAdapter.findIssuesByQuery( query )).thenReturn( projectBexpectedIssues );
       when( mockJiraAdapter.findClosedObsolatedIssues( "B", "Closed", obsolatedWorklogDate )).thenReturn( projectBexpectedIssues );
       
-      expectedSubjectIssues.addAll( projectAexpectedIssues );
-      expectedSubjectIssues.addAll( projectBexpectedIssues );
+      for( Issue issue : projectAexpectedIssues ){
+         expectedSubjectIssues.put( issue.getSelf(), issue );
+      }
+      for( Issue issue : projectBexpectedIssues ){
+         expectedSubjectIssues.put( issue.getSelf(), issue );
+      }
    }
    
    private void createJiraProjects(){
@@ -161,17 +173,21 @@ public class JiraAdapterFixture {
    }
 
    private void createJiraWorklogs() throws URISyntaxException{
-      germanEmployeeWorklog = mock( Worklog.class );
-      when( germanEmployeeWorklog.getAuthor() ).thenReturn( germanEmployeeSummary );
-      when( germanEmployeeWorklog.getIssueUri() ).thenReturn( new URI("http://localhost:2990/jira/browse/ADMIN-523") );
+      worklogToDelete = mock( Worklog.class );
+      anotherWorklogToDelete = mock( Worklog.class );
+      when( worklogToDelete.getAuthor() ).thenReturn( germanEmployeeSummary );
+      when( worklogToDelete.getIssueUri() ).thenReturn( new URI( JIRA_BASE_URI ));
+      
+      when( anotherWorklogToDelete.getAuthor() ).thenReturn( germanEmployeeSummary );
+      when( anotherWorklogToDelete.getIssueUri() ).thenReturn( new URI( JIRA_BASE_URI ));
       
       noneGermanEmployeeWorklog = mock( Worklog.class );
       when( noneGermanEmployeeWorklog.getAuthor() ).thenReturn( noneGermanEmployeeSummary );
       
-      expectedSubjectWorklogs.add( germanEmployeeWorklog );
-      projectAexpectedWorklogs.add( germanEmployeeWorklog );
+      expectedSubjectWorklogs.add( worklogToDelete );
+      projectAexpectedWorklogs.add( worklogToDelete );
       
-      expectedSubjectWorklogs.add( germanEmployeeWorklog );
-      projectBexpectedWorklogs.add( germanEmployeeWorklog );
+      expectedSubjectWorklogs.add( anotherWorklogToDelete );
+      projectBexpectedWorklogs.add( anotherWorklogToDelete );
    }
 }

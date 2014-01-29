@@ -1,9 +1,12 @@
 package com.kn.jira.worklogeraser.domain;
 
 import java.io.IOException;
+import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -24,6 +27,7 @@ import com.atlassian.jira.rest.client.domain.BasicProject;
 import com.atlassian.jira.rest.client.domain.Issue;
 import com.atlassian.jira.rest.client.domain.Worklog;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 
@@ -43,7 +47,7 @@ public class WorklogEraser implements ApplicationContextAware{
    private JiraAdapter jiraAdapter;
    private Logger programLogger = LoggerFactory.getLogger( this.getClass() );
    private Date obsolatedWorklogDate;
-   private List<Issue> subjectIssues = Lists.newArrayList();
+   private Map<URI, Issue> subjectIssues = Maps.newHashMap();
    private List<Worklog> subjectWorklogs = Lists.newArrayList();
    private JiraQuery worklogQueryStatement;
 
@@ -130,7 +134,9 @@ public class WorklogEraser implements ApplicationContextAware{
          try{
             String formattedDate = dateFormat.format( obsolatedWorklogDate );
             List<Issue> foundIssuesInProject = jiraAdapter.findClosedObsolatedIssues( jiraProject.getKey(), closedIssueStatusName, formattedDate );
-            subjectIssues.addAll( foundIssuesInProject );
+            for( Issue issue : foundIssuesInProject ){
+               subjectIssues.put( issue.getSelf(), issue );
+            }
          }catch( RestClientException e ){
             actionLogger.projectAccessRestriction( jiraAdapter.getUser() );;
          }
@@ -140,7 +146,8 @@ public class WorklogEraser implements ApplicationContextAware{
    
    protected void collectAllSubjectWorklogsAndPerformErase() throws JiraAdapterException {
       programLogger.info( "Collecting all worklogs of all subject issues." );
-      for( Issue jiraIssue : subjectIssues ){
+      for( Entry<URI, Issue> jiraIssueEntry : subjectIssues.entrySet() ){
+         Issue jiraIssue = jiraIssueEntry.getValue();
          actionLogger.considerIssue( jiraIssue.getKey(), jiraIssue.getStatus().getName() );
          List<Worklog> worklogsAssociatedToIssue = Lists.newArrayList( jiraIssue.getWorklogs() );
          performErase( worklogsAssociatedToIssue );
@@ -149,7 +156,7 @@ public class WorklogEraser implements ApplicationContextAware{
    }
 
    protected void performErase( List<Worklog> subjectWorklogs ) throws JiraAdapterException{
-      employeeMatchingStrategy.perforErase( subjectWorklogs );
+      employeeMatchingStrategy.perforErase( subjectIssues, subjectWorklogs );
    }
    
    protected void setUpActionsLog() throws SAXException, IOException, ParserConfigurationException, TransformerException {

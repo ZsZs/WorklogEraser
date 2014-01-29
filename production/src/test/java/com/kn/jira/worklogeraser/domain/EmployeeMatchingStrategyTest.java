@@ -5,13 +5,16 @@ import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
+import java.net.URI;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.internal.util.reflection.Whitebox;
 
+import com.atlassian.jira.rest.client.domain.Issue;
 import com.atlassian.jira.rest.client.domain.User;
 import com.atlassian.jira.rest.client.domain.Worklog;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
@@ -29,6 +32,7 @@ public abstract class EmployeeMatchingStrategyTest {
    protected EraseActionLogger mockActionLogger;
    protected PdmAdapter pdmAdapter;
    protected PdmAdapterFixture pdmAdapterFixture;
+   protected Map<URI, Issue> subjectIssues;
    protected List<Worklog> subjectWorklogs;
    protected TestConfigurationWithMockAdaptersFixture testConfiguration;
 
@@ -41,6 +45,7 @@ public abstract class EmployeeMatchingStrategyTest {
       pdmAdapter = pdmAdapterFixture.getPdmAdapter();
       
       employeeMatchingStrategy = testConfiguration.getEmployeeMatchingStrategy();
+      subjectIssues = jiraAdapterFixture.getExpectedSubjectIssues();
       subjectWorklogs = jiraAdapterFixture.getExpectedSubjectWorklogs();
       
       mockActionLogger = mock( EraseActionLogger.class );
@@ -55,7 +60,7 @@ public abstract class EmployeeMatchingStrategyTest {
    //Test methods
    @Test
    public void performErase_forEachWorklog_retrievesPersonFromPdm() throws JiraAdapterException {
-      employeeMatchingStrategy.perforErase( subjectWorklogs );
+      employeeMatchingStrategy.perforErase( subjectIssues, subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){
          User jiraUser = testConfiguration.determineJiraUser( worklog );
@@ -66,7 +71,7 @@ public abstract class EmployeeMatchingStrategyTest {
 
    @Test
    public void performErase_whenWorklogPerformerIsGermanEmployee_deteletesWorklog() throws JiraAdapterException {
-      employeeMatchingStrategy.perforErase( subjectWorklogs );
+      employeeMatchingStrategy.perforErase( subjectIssues, subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){
          PersonInPdm person = testConfiguration.determinePersonInPdm( worklog );
@@ -78,7 +83,7 @@ public abstract class EmployeeMatchingStrategyTest {
 
    @Test
    public void performErase_whenWorklogPerformerIsGermanEmployee_logsDeleteAction() throws JiraAdapterException {
-      employeeMatchingStrategy.perforErase( subjectWorklogs );
+      employeeMatchingStrategy.perforErase( subjectIssues, subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){
          PersonInPdm person = testConfiguration.determinePersonInPdm( worklog );
@@ -92,7 +97,7 @@ public abstract class EmployeeMatchingStrategyTest {
 
    @Test
    public void performErase_whenWorklogWasDeleted_addsCommentToTheIssue() throws JiraAdapterException {
-      employeeMatchingStrategy.perforErase( subjectWorklogs );
+      employeeMatchingStrategy.perforErase( subjectIssues, subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){
          PersonInPdm person = testConfiguration.determinePersonInPdm( worklog );

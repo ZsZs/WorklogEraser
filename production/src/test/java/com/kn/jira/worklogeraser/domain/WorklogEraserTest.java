@@ -7,7 +7,9 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
+import java.net.URI;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.joda.time.DateTime;
@@ -71,7 +73,7 @@ public class WorklogEraserTest {
    @Test public void perform_collectsJiraIsuesWithCondition(){
       worklogEraser.perform();
       
-      List<Issue> foundIssues = Whitebox.getInternalState( worklogEraser, "subjectIssues", WorklogEraser.class );
+      Map<URI, Issue> foundIssues = Whitebox.getInternalState( worklogEraser, "subjectIssues", WorklogEraser.class );
       
       assertThat( foundIssues, equalTo( jiraAdapterFixture.getExpectedSubjectIssues() ));
    }
@@ -79,9 +81,9 @@ public class WorklogEraserTest {
    @Test public void perform_collectsJiraWorklogsWithCondition(){
       worklogEraser.perform();
       
-      List<Worklog> foundIssues = Whitebox.getInternalState( worklogEraser, "subjectWorklogs", WorklogEraser.class );
+      List<Worklog> foundWorklogs = Whitebox.getInternalState( worklogEraser, "subjectWorklogs", WorklogEraser.class );
       
-      assertThat( foundIssues, equalTo( jiraAdapterFixture.getExpectedSubjectWorklogs() ));
+      assertThat( foundWorklogs, equalTo( jiraAdapterFixture.getExpectedSubjectWorklogs() ));
    }
 
    @Test public void perform_instantiatesMatchingStrategy() throws Exception {
@@ -94,10 +96,10 @@ public class WorklogEraserTest {
    @Test public void perform_delegatesToMatchingStrategy() throws Exception {
       EmployeeMatchingStrategy spyStrategy = spy( testConfiguration.getEmployeeMatchingStrategy() );
       Whitebox.setInternalState( worklogEraser, "employeeMatchingStrategy", spyStrategy );
+      
       worklogEraser.perform();
 
-      verify( spyStrategy, times( 2 )).perforErase( jiraAdapterFixture.getProjectAexpectedWorklogs() );
-      verify( spyStrategy, times( 2 )).perforErase( jiraAdapterFixture.getProjectBexpectedWorklogs() );
+      verify( spyStrategy, times( 1 )).perforErase( jiraAdapterFixture.getExpectedSubjectIssues(), jiraAdapterFixture.getExpectedSubjectWorklogs() );
    }
    
    //Protected, private helper methods

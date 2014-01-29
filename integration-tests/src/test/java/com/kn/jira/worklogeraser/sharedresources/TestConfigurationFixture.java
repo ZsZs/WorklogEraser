@@ -44,6 +44,7 @@ public class TestConfigurationFixture {
       worklogEraser = applicationContext.getBean( "worklogEraser", WorklogEraser.class );
       configurationProperties = applicationContext.getBean( "configProperties", Properties.class );
       jiraAdapter = applicationContext.getBean( "jiraAdapter", JiraAdapter.class );
+      jiraAdapter.setUp();
       pdmServiceClient = applicationContext.getBean( "pdmServiceClient", PdmPersonServiceClient.class );
       employeeMatchingStrategy = applicationContext.getBean( "employeeMatchingStrategy", EmployeeMatchingStrategy.class );
    }

@@ -14,7 +14,7 @@ public class ServiceInvocationMatchingStrategyTest extends EmployeeMatchingStrat
    //Test methods
    @Test
    public void performErase_whenWorklogPerformerIsInPdm_veryfiesPerson() throws JiraAdapterException {
-      employeeMatchingStrategy.perforErase( subjectWorklogs );
+      employeeMatchingStrategy.perforErase( subjectIssues, subjectWorklogs );
    
       for( Worklog worklog : subjectWorklogs ){
          User jiraUser = testConfiguration.determineJiraUser( worklog );
