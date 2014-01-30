@@ -125,7 +125,7 @@ public class JiraAdapterFixture {
       when( resolvedIssueWithWorklog.getKey() ).thenReturn(  "1003" );
       when( resolvedIssueWithWorklog.getSelf() ).thenReturn(  new URI( JIRA_BASE_URI + "1003" ));
       when( resolvedIssueWithWorklog.getStatus() ).thenReturn( mockClosedStatus );
-      when( resolvedIssueWithWorklog.getWorklogs() ).thenReturn( ImmutableList.of( worklogToDelete ));
+      when( resolvedIssueWithWorklog.getWorklogs() ).thenReturn( ImmutableList.of( worklogToDelete, anotherWorklogToDelete ));
       projectAissues.add( resolvedIssueWithWorklog );
       projectAexpectedIssues.add( resolvedIssueWithWorklog );
       projectBissues.add( resolvedIssueWithWorklog );

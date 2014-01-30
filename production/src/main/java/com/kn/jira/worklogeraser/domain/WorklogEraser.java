@@ -153,6 +153,7 @@ public class WorklogEraser implements ApplicationContextAware{
          performErase( worklogsAssociatedToIssue );
          subjectWorklogs.addAll( worklogsAssociatedToIssue );
       }
+      programLogger.info( "Number of subject worklogs found is: " + subjectWorklogs.size() );
    }
 
    protected void performErase( List<Worklog> subjectWorklogs ) throws JiraAdapterException{
@@ -167,6 +168,7 @@ public class WorklogEraser implements ApplicationContextAware{
    
    protected void setUpConnectedSystemsAdapters(){
       jiraAdapter = applicationContext.getBean( "jiraAdapter", JiraAdapter.class );
+      jiraAdapter.setUp();
       programLogger.info( "Jira and PDM++ web service adapters are configured." );
    }
 }

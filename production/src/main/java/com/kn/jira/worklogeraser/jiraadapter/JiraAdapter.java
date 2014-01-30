@@ -37,6 +37,7 @@ import com.atlassian.jira.rest.client.domain.Worklog;
 import com.atlassian.jira.rest.client.domain.input.FieldInput;
 import com.atlassian.jira.rest.client.domain.input.TransitionInput;
 import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientFactory;
+import com.atlassian.util.concurrent.Promise;
 import com.google.common.collect.Lists;
 
 public class JiraAdapter {
@@ -103,13 +104,19 @@ public class JiraAdapter {
       query = StringUtils.replace( query, "/", "\\u002f" );
       return findIssuesByQuery( query );
    }
+   
+   public Issue findIssueByKey( String issueKey ){
+      Issue foundIssue = issueClient.getIssue( issueKey ).claim();
+      return foundIssue;
+   }
 
    public List<Issue> findIssuesByQuery( String query ) throws JiraAdapterException {
       List<Issue> foundIssues = Lists.newArrayList();
 
       SearchResult searchResult = null;
       try{
-         searchResult = searchClient.searchJql( query ).claim();
+         Promise<SearchResult> promise = searchClient.searchJql( query ); 
+         searchResult = promise.claim();
          for( final BasicIssue issueSummary : searchResult.getIssues() ){
             Issue jiraIssue = issueClient.getIssue( issueSummary.getKey() ).claim();
             foundIssues.add( jiraIssue );
@@ -132,7 +139,7 @@ public class JiraAdapter {
    }
    
    public void reopenIssue( Issue subjectIssue ) throws JiraAdapterException {
-      Collection<FieldInput> fieldInputs = Arrays.asList( new FieldInput( "", "Incomplete" ));
+      Collection<FieldInput> fieldInputs = Arrays.asList();
       performTransition( subjectIssue, REOPEN_TRANSITION_NAME, fieldInputs );
    }
 
@@ -203,12 +210,24 @@ public class JiraAdapter {
       final Transition transition = determineTransitionByName( transitions, transitionName );
 
       if( transition != null ){
+         Promise<Void> promise = null;
          try{
             TransitionInput transitionInput = new TransitionInput( transition.getId(), fieldInputs, Comment.valueOf( TRANSITION_COMMENT ));
-            issueClient.transition( subjectIssue.getTransitionsUri(), transitionInput );
+            promise = issueClient.transition( subjectIssue.getTransitionsUri(), transitionInput );
+            waitForPromisIsDone( promise );
          }catch( Exception e ){
             throw new JiraAdapterException( transitionName, e );
          }
+         
       }else throw new JiraAdapterTransitionNotFoundException( transitionName, subjectIssue );
+   }
+
+   private void waitForPromisIsDone( Promise<Void> promise ) throws InterruptedException {
+      waitForFinish: for( int i = 0; i < 5000; i++ ){
+         if( !(promise.isDone() || promise.isCancelled()) ){
+           Thread.sleep( 50 );
+           continue waitForFinish;
+         }
+      }
    }
 }

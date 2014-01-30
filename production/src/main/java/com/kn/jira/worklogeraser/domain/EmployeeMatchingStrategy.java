@@ -54,11 +54,11 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
       try{
          jiraAdapter.deleteWorklog( worklog );
          actionLogger.worklogDeleted( worklog.getIssueUri().toString(), person.getEmailAddress(), worklog.getComment() );
-         programLogger.info( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " is deleted.");
+         programLogger.info( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " of issue: " + worklog.getIssueUri().toString() + " is deleted.");
       }catch( JiraAdapterDeleteWorklogException e ){
          reopenDeleteCloseIssue( worklog, person );
       }catch( JiraAdapterException e ){
-         programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " could not be deleted.");
+         programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " of issue: " + worklog.getIssueUri().toString() + " could not be deleted.", e );
       }
    }
 
@@ -89,15 +89,20 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
       Issue subjectIssue = subjectIssues.get( worklog.getIssueUri() );
       try{
          jiraAdapter.reopenIssue( subjectIssue );
-         if( subjectIssue.getStatus().getName() == JiraAdapter.REOPENED_STATUS_NAME ){
+         subjectIssue = reloadIssue( subjectIssue );
+         if( subjectIssue.getStatus().getName().toUpperCase().equals( JiraAdapter.REOPENED_STATUS_NAME )){
             deleteWorklog( worklog, person );
             jiraAdapter.closeIssue( subjectIssue );
          }else{
-            programLogger.info( "Issue: '" + subjectIssue.getKey() + "' can't be reopened." );
+            programLogger.info( "Issue: '" + subjectIssue.getKey() + "' can't be reopened as the status remained: '" + subjectIssue.getStatus().getName() + "'." );
          }
       }catch( Exception exception ){
-         programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " could not be deleted.");
+         programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " could not be deleted.", exception );
       }
+   }
+   
+   protected Issue reloadIssue( Issue subjectIssue ) {
+      return jiraAdapter.findIssueByKey( subjectIssue.getKey() );
    }
    
    protected void signIssueAsManipulated( URI issueUri ) {

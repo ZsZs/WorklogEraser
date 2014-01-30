@@ -98,8 +98,10 @@ public class WorklogEraserTest {
       Whitebox.setInternalState( worklogEraser, "employeeMatchingStrategy", spyStrategy );
       
       worklogEraser.perform();
-
-      verify( spyStrategy, times( 1 )).perforErase( jiraAdapterFixture.getExpectedSubjectIssues(), jiraAdapterFixture.getExpectedSubjectWorklogs() );
+      
+      Map<URI, Issue> subjectIssues = Whitebox.getInternalState( worklogEraser, "subjectIssues" );
+      List<Worklog> subjectWorklogs = Whitebox.getInternalState( worklogEraser, "subjectWorklogs" );
+      verify( spyStrategy, times( 1 )).perforErase( subjectIssues, subjectWorklogs );
    }
    
    //Protected, private helper methods

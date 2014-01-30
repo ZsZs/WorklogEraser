@@ -90,9 +90,12 @@ public class JiraAdapterTest {
       jiraAdapter.reopenIssue( subjectIssue );
       
       //VERIFY:
-      assertThat( subjectIssue.getStatus().getName(), equalTo( "Reopened" ));
+      assertThat( reloadIssue( subjectIssue ).getStatus().getName(), equalTo( "Reopened" ));
+      
+      //TEAR DOWN:
+      jiraAdapter.closeIssue( subjectIssue );
    }
-   
+
    @Test public void signIssueAsManipulated_addsCommentToIssue() throws JiraAdapterException{
       //SETUP:
       Issue subjectIssue = findTheFirstSubjectIssue();
@@ -119,6 +122,10 @@ public class JiraAdapterTest {
       List<Issue> obsolatedIssues = jiraAdapter.findClosedObsolatedIssues( PROJECT_NAME, STATUS_NAME, calculateTomorrow() );
       Issue subjectIssue = obsolatedIssues.get( 0 );
       return subjectIssue;
+   }
+   
+   private Issue reloadIssue( Issue subjectIssue ) {
+      return jiraAdapter.findIssueByKey( subjectIssue.getKey() );
    }
 
 }
