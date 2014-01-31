@@ -14,7 +14,7 @@
    </bean>
    
    <bean id="eraseActionLog" class="com.kn.jira.worklogeraser.domain.EraseActionLogger">
-      <constructor-arg value="file:Configuration/worklogeraser.log.xml" />
+      <constructor-arg value="file:Logs/worklogeraser.log.xml" />
    </bean>
    
    <bean id="employeeMatchingStrategy" class="com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy">

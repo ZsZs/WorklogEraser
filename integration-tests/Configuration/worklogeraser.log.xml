@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><worklogEraser/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<worklogEraser>
+   <execution finishedOn="31/01/2014, 09:27:21" startedOn="31/01/2014, 09:26:34" worklogsObsolatedFrom="2013/12/02">
+      <subjectProject name="WORKLOG test"/>
+   </execution>
+<execution finishedOn="31/01/2014, 09:28:35" startedOn="31/01/2014, 09:28:26" worklogsObsolatedFrom="2013/12/02">
+      <subjectProject name="WORKLOG test"/>
+   </execution>
+</worklogEraser>

@@ -118,3 +118,783 @@
 2014 Jan 30 11:00:37,577 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" emailAddress="external.zsolt.zsuffa@kuehne-nagel.com" firstname="Zsolt" firstnameInternational="Zsolt" isActive="Y" isStaffMember="N" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Zsuffa," lastnameInternational="Zsuffa," locationCode="HAM" pdmUid="299436" phone="+49-40-30333-0" postalCode="20457" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>external.zsolt.zsuffa@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
 2014 Jan 30 11:00:38,218 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10162/worklog/10190" resulted in 403 (Forbidden); invoking error handler
 2014 Jan 30 11:03:57,543 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10161/worklog/10189" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:30:25,219 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jan 31 09:30:25,329 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sat Feb 01 00:00:00 CET 2014
+2014 Jan 31 09:30:25,329 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Configuration\worklogeraser.log.xml
+2014 Jan 31 09:30:25,329 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jan 31 09:30:25,329 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jan 31 09:30:25,329 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jan 31 09:30:25,563 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of Jira Projects found is: 1
+2014 Jan 31 09:30:25,563 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all subject issues from Jira.
+2014 Jan 31 09:30:25,563 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: WORKLOG test
+2014 Jan 31 09:30:26,188 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of subject issues found is: 3
+2014 Jan 31 09:30:26,188 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all worklogs of all subject issues.
+2014 Jan 31 09:31:00,659 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Working hard..' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:31:15,488 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:31:16,550 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:31:27,051 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:32:34,602 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10000" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:34:03,466 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - sven.hoffmann@kuehne-nagel.com's worklog: Working hard.. to issue: http://localhost:2990/jira/rest/api/latest/issue/10000 could not be deleted.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:91)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:59)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:73)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:43)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:34:56,110 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Working harder.' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:34:56,813 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:34:57,188 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:34:59,547 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:35:31,906 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10001" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:39:56,514 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jan 31 09:39:56,592 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sat Feb 01 00:00:00 CET 2014
+2014 Jan 31 09:39:56,608 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Configuration\worklogeraser.log.xml
+2014 Jan 31 09:39:56,608 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jan 31 09:39:56,608 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jan 31 09:39:56,608 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jan 31 09:39:56,873 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of Jira Projects found is: 1
+2014 Jan 31 09:39:56,873 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all subject issues from Jira.
+2014 Jan 31 09:39:56,873 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: WORKLOG test
+2014 Jan 31 09:39:57,264 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of subject issues found is: 3
+2014 Jan 31 09:39:57,264 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all worklogs of all subject issues.
+2014 Jan 31 09:40:08,123 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Working hard..' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:40:10,686 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:40:11,029 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:40:11,826 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:40:29,966 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10000" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:40:54,153 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10000 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:92)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:60)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:74)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:41:52,089 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Working harder.' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:41:52,667 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:41:52,964 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:41:55,229 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:42:12,682 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10001" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:42:35,915 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10000 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:92)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:60)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:74)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:51:15,495 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jan 31 09:51:15,574 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sat Feb 01 00:00:00 CET 2014
+2014 Jan 31 09:51:15,589 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Configuration\worklogeraser.log.xml
+2014 Jan 31 09:51:15,589 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jan 31 09:51:15,589 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jan 31 09:51:15,589 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jan 31 09:51:15,839 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of Jira Projects found is: 1
+2014 Jan 31 09:51:15,839 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all subject issues from Jira.
+2014 Jan 31 09:51:15,839 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: WORKLOG test
+2014 Jan 31 09:51:16,230 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of subject issues found is: 3
+2014 Jan 31 09:51:16,230 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all worklogs of all subject issues.
+2014 Jan 31 09:51:20,746 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Working hard..' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:51:20,824 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:51:21,121 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:51:21,137 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:51:32,607 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10000" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:51:46,077 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10000 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:96)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:51:53,672 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - sven.hoffmann@kuehne-nagel.com's worklog: Working hard.. of issue: http://localhost:2990/jira/rest/api/latest/issue/10000 could not be deleted.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException: Deleting worklog: '10000' of issue: '10000' resulted in the following exeption:
+ 403 Forbidden
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:84)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:56)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.web.client.HttpClientErrorException: 403 Forbidden
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:88)
+	at org.springframework.web.client.RestTemplate.handleResponseError(RestTemplate.java:537)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:493)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:465)
+	at org.springframework.web.client.RestTemplate.delete(RestTemplate.java:373)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:81)
+	... 31 more
+2014 Jan 31 09:52:02,454 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Working harder.' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:52:02,454 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:02,813 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:02,813 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:52:15,034 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10001" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:52:17,971 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10000 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:96)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:52:17,971 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - sven.hoffmann@kuehne-nagel.com's worklog: Working harder. of issue: http://localhost:2990/jira/rest/api/latest/issue/10000 could not be deleted.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException: Deleting worklog: '10001' of issue: '10000' resulted in the following exeption:
+ 403 Forbidden
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:84)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:56)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.web.client.HttpClientErrorException: 403 Forbidden
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:88)
+	at org.springframework.web.client.RestTemplate.handleResponseError(RestTemplate.java:537)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:493)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:465)
+	at org.springframework.web.client.RestTemplate.delete(RestTemplate.java:373)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:81)
+	... 31 more
+2014 Jan 31 09:52:19,784 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'KO' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:52:19,784 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:20,003 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:20,003 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:52:21,815 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10002" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:52:24,690 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10000 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:96)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:52:24,690 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - sven.hoffmann@kuehne-nagel.com's worklog: KO of issue: http://localhost:2990/jira/rest/api/latest/issue/10000 could not be deleted.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException: Deleting worklog: '10002' of issue: '10000' resulted in the following exeption:
+ 403 Forbidden
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:84)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:56)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.web.client.HttpClientErrorException: 403 Forbidden
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:88)
+	at org.springframework.web.client.RestTemplate.handleResponseError(RestTemplate.java:537)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:493)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:465)
+	at org.springframework.web.client.RestTemplate.delete(RestTemplate.java:373)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:81)
+	... 31 more
+2014 Jan 31 09:52:27,878 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Just hanging around :)' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:52:27,878 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:28,300 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:28,300 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:52:30,440 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10001/worklog/10003" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:52:33,440 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10001 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-2' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:96)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:52:33,440 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - sven.hoffmann@kuehne-nagel.com's worklog: Just hanging around :) of issue: http://localhost:2990/jira/rest/api/latest/issue/10001 could not be deleted.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException: Deleting worklog: '10003' of issue: '10001' resulted in the following exeption:
+ 403 Forbidden
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:84)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:56)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.web.client.HttpClientErrorException: 403 Forbidden
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:88)
+	at org.springframework.web.client.RestTemplate.handleResponseError(RestTemplate.java:537)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:493)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:465)
+	at org.springframework.web.client.RestTemplate.delete(RestTemplate.java:373)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:81)
+	... 31 more
+2014 Jan 31 09:52:34,253 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Take it easy' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:52:34,253 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:34,612 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:34,612 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:52:37,237 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10001/worklog/10004" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:52:39,862 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10001 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-2' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:96)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:52:39,862 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - sven.hoffmann@kuehne-nagel.com's worklog: Take it easy of issue: http://localhost:2990/jira/rest/api/latest/issue/10001 could not be deleted.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException: Deleting worklog: '10004' of issue: '10001' resulted in the following exeption:
+ 403 Forbidden
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:84)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:56)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.web.client.HttpClientErrorException: 403 Forbidden
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:88)
+	at org.springframework.web.client.RestTemplate.handleResponseError(RestTemplate.java:537)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:493)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:465)
+	at org.springframework.web.client.RestTemplate.delete(RestTemplate.java:373)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:81)
+	... 31 more
+2014 Jan 31 09:52:44,972 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Pura Vida' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 09:52:44,972 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:45,222 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 09:52:45,222 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 09:52:47,050 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10004/worklog/10008" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 09:52:51,847 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10004 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-5' is not defined in the current status: 'Geschlossen'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:96)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 09:52:51,847 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - sven.hoffmann@kuehne-nagel.com's worklog: Pura Vida of issue: http://localhost:2990/jira/rest/api/latest/issue/10004 could not be deleted.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException: Deleting worklog: '10008' of issue: '10004' resulted in the following exeption:
+ 403 Forbidden
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:84)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:56)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.web.client.HttpClientErrorException: 403 Forbidden
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:88)
+	at org.springframework.web.client.RestTemplate.handleResponseError(RestTemplate.java:537)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:493)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:465)
+	at org.springframework.web.client.RestTemplate.delete(RestTemplate.java:373)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:81)
+	... 31 more
+2014 Jan 31 09:56:08,290 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jan 31 09:56:08,368 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sat Feb 01 00:00:00 CET 2014
+2014 Jan 31 09:56:08,383 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Configuration\worklogeraser.log.xml
+2014 Jan 31 09:56:08,383 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jan 31 09:56:08,383 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jan 31 09:56:08,383 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jan 31 09:56:08,633 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of Jira Projects found is: 1
+2014 Jan 31 09:56:08,633 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all subject issues from Jira.
+2014 Jan 31 09:56:08,633 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: WORKLOG test
+2014 Jan 31 09:56:09,040 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of subject issues found is: 3
+2014 Jan 31 09:56:09,040 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all worklogs of all subject issues.
+2014 Jan 31 10:08:04,372 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jan 31 10:08:04,450 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sat Feb 01 00:00:00 CET 2014
+2014 Jan 31 10:08:04,450 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Configuration\worklogeraser.log.xml
+2014 Jan 31 10:08:04,450 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jan 31 10:08:04,450 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jan 31 10:08:04,450 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jan 31 10:08:04,716 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of Jira Projects found is: 1
+2014 Jan 31 10:08:04,716 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all subject issues from Jira.
+2014 Jan 31 10:08:04,716 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: WORKLOG test
+2014 Jan 31 10:08:05,106 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of subject issues found is: 3
+2014 Jan 31 10:08:05,106 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all worklogs of all subject issues.
+2014 Jan 31 10:08:10,794 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Working hard..' of person: sven.hoffmann@kuehne-nagel.com
+2014 Jan 31 10:08:10,888 TRACE main org.springframework.ws.client.MessageTracing.sent - Sent request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 10:08:11,200 TRACE main org.springframework.ws.client.MessageTracing.received - Received response [<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:findEmployeeByEmailResponse xmlns:ns2="http://persondata.ws.pdmplusplus.kn.com/"><return acCompany="01" branchOfficeNumber="0593" businessFieldName="IT Costs" businessSubfieldName="Software Development" businessUnitName="Cost Center" city="Hamburg" companyName="Kühne + Nagel (AG &amp; Co.) KG" companyShort="Z1" corporateCompany="000KNA" costCenter="95ZI26" countryCode="DE" departmentName="Software Development &amp; Licenses-Seafreig" departmentTypeName="Software Development &amp; Licenses-Seafreig" dottedLinePdmUid="44237" emailAddress="sven.hoffmann@kuehne-nagel.com" employeeCode="261001" fax="+49-40-30333-44-1699" firstname="Sven" firstnameInternational="Sven" hrRespPdmUid="145170" hresppayrollcode="HAMZPI" isActive="Y" isStaffMember="Y" knCode="MI-AJ" knRegionCode="WEU" knRegionName="Western Europe" lastname="Hoffmann" lastnameInternational="Hoffmann" locationCode="HAM" mobile="+49-172-3004994" pdmUid="56707" phone="+49-40-30333-1699" postalCode="20457" solidLinePdmUid="44237" street="Großer Grasbrook 11 - 13"><cp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><dottedManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><solidManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/></return></ns2:findEmployeeByEmailResponse></soap:Body></soap:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:findEmployeeByEmail xmlns:ns3="http://persondata.ws.pdmplusplus.kn.com/"><mail>sven.hoffmann@kuehne-nagel.com</mail></ns3:findEmployeeByEmail></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014 Jan 31 10:08:11,216 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: sven.hoffmann@kuehne-nagel.com in country: DE
+2014 Jan 31 10:08:35,480 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10000" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 10:09:15,729 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10000/worklog/10000" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 10:12:15,395 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Issue: http://localhost:2990/jira/rest/api/latest/issue/10000 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Closed'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:222)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:143)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:96)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:99)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jan 31 10:12:19,426 ERROR main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - sven.hoffmann@kuehne-nagel.com's worklog: Working hard.. of issue: http://localhost:2990/jira/rest/api/latest/issue/10000 could not be deleted.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException: Deleting worklog: '10000' of issue: '10000' resulted in the following exeption:
+ 403 Forbidden
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:84)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:56)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.reopenDeleteCloseIssue(EmployeeMatchingStrategy.java:99)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.deleteWorklog(EmployeeMatchingStrategy.java:61)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.checkAllWorklogs(EmployeeMatchingStrategy.java:78)
+	at com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy.perforErase(EmployeeMatchingStrategy.java:44)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.performErase(WorklogEraser.java:160)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.collectAllSubjectWorklogsAndPerformErase(WorklogEraser.java:153)
+	at com.kn.jira.worklogeraser.domain.WorklogEraser.perform(WorklogEraser.java:82)
+	at com.kn.jira.worklogeraser.domain.WorklogEraserTest.perform_InvestigatesAllProjects(WorklogEraserTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.web.client.HttpClientErrorException: 403 Forbidden
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:88)
+	at org.springframework.web.client.RestTemplate.handleResponseError(RestTemplate.java:537)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:493)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:465)
+	at org.springframework.web.client.RestTemplate.delete(RestTemplate.java:373)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.deleteWorklog(JiraAdapter.java:81)
+	... 33 more
+2014 Jan 31 10:17:05,120 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10004/worklog/10008" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 10:22:59,406 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10004/worklog/10008" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 10:27:54,812 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10001/worklog/10003" resulted in 403 (Forbidden); invoking error handler
+2014 Jan 31 10:36:27,379 WARN main org.springframework.web.client.RestTemplate - DELETE request for "http://localhost:2990/jira/api/2/issue/10004/worklog/10008" resulted in 403 (Forbidden); invoking error handler

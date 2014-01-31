@@ -44,6 +44,7 @@ public class JiraAdapterTest {
    @Test( expected = JiraAdapterDeleteWorklogException.class ) 
    public void deleteWorklog_whenIssueChangeIsForbidden_throwsException() throws JiraAdapterException{
       Issue subjectIssue = findTheFirstSubjectIssue();
+      jiraAdapter.reopenIssue( subjectIssue );
       List<Worklog> worklogs = Lists.newArrayList( subjectIssue.getWorklogs() );
       Worklog subjectWorklog = worklogs.get( 0 );
       

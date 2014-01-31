@@ -17,6 +17,7 @@ import com.atlassian.jira.rest.client.domain.Worklog;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterDeleteWorklogException;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException;
 import com.kn.jira.worklogeraser.pdmadapter.PdmAdapter;
 import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
    
@@ -56,7 +57,11 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
          actionLogger.worklogDeleted( worklog.getIssueUri().toString(), person.getEmailAddress(), worklog.getComment() );
          programLogger.info( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " of issue: " + worklog.getIssueUri().toString() + " is deleted.");
       }catch( JiraAdapterDeleteWorklogException e ){
-         reopenDeleteCloseIssue( worklog, person );
+         try{
+            reopenDeleteCloseIssue( worklog, person );
+         }catch( JiraAdapterException e1 ){
+            programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " of issue: " + worklog.getIssueUri().toString() + " could not be deleted.", e );
+         }
       }catch( JiraAdapterException e ){
          programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " of issue: " + worklog.getIssueUri().toString() + " could not be deleted.", e );
       }
@@ -85,7 +90,7 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
       jiraAdapter = applicationContext.getBean( "jiraAdapter", JiraAdapter.class );
    }
    
-   protected void reopenDeleteCloseIssue( Worklog worklog, PersonInPdm person ) {
+   protected void reopenDeleteCloseIssue( Worklog worklog, PersonInPdm person ) throws JiraAdapterException {
       Issue subjectIssue = subjectIssues.get( worklog.getIssueUri() );
       try{
          jiraAdapter.reopenIssue( subjectIssue );
@@ -96,8 +101,12 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
          }else{
             programLogger.info( "Issue: '" + subjectIssue.getKey() + "' can't be reopened as the status remained: '" + subjectIssue.getStatus().getName() + "'." );
          }
-      }catch( Exception exception ){
+      }catch( JiraAdapterTransitionNotFoundException exception ){
+         programLogger.error( "Issue: " + worklog.getIssueUri().toString() + " doesn't have 'Reopen' transtion in the current state.", exception );
+         throw exception;
+      }catch( JiraAdapterException exception ){
          programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + worklog.getIssueUri().toString() + " could not be deleted.", exception );
+         throw exception;
       }
    }
    
