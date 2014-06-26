@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<worklogEraser>
+   
+
+
+
+
+
+
+<execution finishedOn="26/06/2014, 09:14:50" startedOn="26/06/2014, 09:14:50" worklogsObsolatedFrom="2014/04/27">
+      <subjectProject name=""/>
+      <subjectProject name="">
+         <subjectIssue isWorkModified="true" name="1003" status="Closed">
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
+<execution finishedOn="26/06/2014, 09:14:51" startedOn="26/06/2014, 09:14:51" worklogsObsolatedFrom="2014/04/27">
+      <subjectProject name=""/>
+      <subjectProject name="">
+         <subjectIssue isWorkModified="true" name="1003" status="Closed">
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
+<execution finishedOn="26/06/2014, 09:14:51" startedOn="26/06/2014, 09:14:51" worklogsObsolatedFrom="2014/04/27">
+      <subjectProject name=""/>
+      <subjectProject name="">
+         <subjectIssue isWorkModified="true" name="1003" status="Closed">
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
+<execution finishedOn="26/06/2014, 09:14:51" startedOn="26/06/2014, 09:14:51" worklogsObsolatedFrom="2014/04/27">
+      <subjectProject name=""/>
+      <subjectProject name="">
+         <subjectIssue isWorkModified="true" name="1003" status="Closed">
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
+<execution finishedOn="26/06/2014, 09:14:51" startedOn="26/06/2014, 09:14:51" worklogsObsolatedFrom="2014/04/27">
+      <subjectProject name=""/>
+      <subjectProject name="">
+         <subjectIssue isWorkModified="true" name="1003" status="Closed">
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
+<execution finishedOn="26/06/2014, 09:14:51" startedOn="26/06/2014, 09:14:51" worklogsObsolatedFrom="2014/04/27">
+      <subjectProject name=""/>
+      <subjectProject name="">
+         <subjectIssue isWorkModified="true" name="1003" status="Closed">
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
+<execution finishedOn="26/06/2014, 09:14:51" startedOn="26/06/2014, 09:14:51" worklogsObsolatedFrom="2014/04/27">
+      <subjectProject name=""/>
+      <subjectProject name="">
+         <subjectIssue isWorkModified="true" name="1003" status="Closed">
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+            <worklogDeleted email="german.employee@kh.com" issueUri="http://localhost:2990/jira/browse"/>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
+</worklogEraser>

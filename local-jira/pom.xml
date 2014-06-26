@@ -66,21 +66,22 @@
                   <phase>pre-integration-test</phase>
                   <configuration>
                      <target>
-                        <property name="atlassian.plugin.sdk.home" location="../../../EntwicklungsUmgebung/atlassian-plugin-sdk" />
+                        <property name="atlassian.plugin.sdk.home" location="../../../EntwicklungsUmgebung/atlassian-plugin-sdk-5.1" />
                         <property name="jira.cli.home" location="C:/ZsZs/EntwicklungsUmgebung/jira-cli-3.7.0" />
-                        <property name="maven.home" location="C:/ZsZs/EntwicklungsUmgebung/atlassian-plugin-sdk/apache-maven" />
-                     
-                        <target name="start-local-jira">
-                           <parallel>
-                              <sequential>
-                                 <exec executable="cmd">
-                                    <arg value="/c" />
-                                    <arg value="${maven.home}/bin/mvn.bat com.atlassian.maven.plugins:maven-amps-dispatcher-plugin:4.2.10:run clean install" />
-                                 </exec>
-                                 <sleep minutes="5"/>
-                              </sequential>
-                           </parallel>
-                        </target>
+                        <property name="maven.home" location="C:/ZsZs/EntwicklungsUmgebung/atlassian-plugin-sdk-5.1/apache-maven" />
+                        <!-- 
+                         -->
+                        <parallel>
+                           <sequential>
+                              <exec executable="cmd">
+                                 <arg value="/c" />
+                                 <arg value="${project.basedir}/Configuration/runLocalJira.bat" />
+                              </exec>
+                              <sleep minutes="5"/>
+                           </sequential>
+                        </parallel>
+                        <!-- 
+                         -->
                      </target>
                   </configuration>
                   <goals>
