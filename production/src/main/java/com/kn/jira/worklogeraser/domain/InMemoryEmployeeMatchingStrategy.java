@@ -5,7 +5,7 @@ import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
 
 public class InMemoryEmployeeMatchingStrategy extends EmployeeMatchingStrategy{
 
-   public InMemoryEmployeeMatchingStrategy( EraseActionLogger actionLogger ) {
+   public InMemoryEmployeeMatchingStrategy( AnonymizationActionLogger actionLogger ) {
       super( actionLogger );
    }
 

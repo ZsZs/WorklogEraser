@@ -534,4 +534,310 @@
          <subjectIssue name="ADMIN-252" status="Closed"/>
       </subjectProject>
    </execution>
+<execution finishedOn="30/06/2014, 12:30:57" startedOn="30/06/2014, 12:30:51" worklogsObsolatedFrom="2014/06/29"/>
+<execution finishedOn="30/06/2014, 13:44:23" startedOn="30/06/2014, 12:36:15" worklogsObsolatedFrom="2014/06/29"/>
+<execution finishedOn="30/06/2014, 13:58:19" startedOn="30/06/2014, 13:58:06" worklogsObsolatedFrom="2014/06/29"/>
+<execution finishedOn="30/06/2014, 13:58:49" startedOn="30/06/2014, 13:58:39" worklogsObsolatedFrom="2014/06/29"/>
+<execution finishedOn="30/06/2014, 14:24:01" startedOn="30/06/2014, 14:21:00" worklogsObsolatedFrom="2014/06/29">
+      <subjectProject name="Administration ISC EMEA"/>
+      <subjectProject name="AMER ISC Demand"/>
+      <subjectProject name="Clarity Interface Test"/>
+      <subjectProject name="Cross Dock Management System"/>
+      <subjectProject name="Development Support"/>
+      <subjectProject name="ISC EMEA Program Management Board"/>
+      <subjectProject name="Jira Administration"/>
+      <subjectProject name="KN Desktop Client"/>
+      <subjectProject name="KN Desktop Deployment">
+         <subjectIssue name="RCD-243" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-486" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159460">created the wiki page</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-461" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/152285">Brainstorming Questions</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-292" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/117779">-</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="KND-419" status="Closed"/>
+         <subjectIssue name="RCD-222" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-432" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/138739"/>
+         </subjectIssue>
+         <subjectIssue name="DEVSUP-6" status="Closed"/>
+         <subjectIssue name="KND-445" status="Closed"/>
+         <subjectIssue name="KND-428" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-487" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159461">created wiki page and answered email</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="DEVSUP-4" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-299" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/126512">Review</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-482" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/157468">Collected information from oracle website</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-458" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151448">consulting jack liang</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151448">consulting jack liang</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-316" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139572">model concurrency: activity diagrams</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139572">model concurrency</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139572">model opt2</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139572">added concurrency model to-be opt2</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-451" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/148968">tried to reproduce and communication with Timo Eckhardt</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-489" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159632">tested installers and deployment update scenarios</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="KND-491" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-319" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/147409">bugfix</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-237" status="Closed"/>
+         <subjectIssue name="DEVSUP-19" status="Closed"/>
+         <subjectIssue name="CDMS-48" status="Closed"/>
+         <subjectIssue name="DEVSUP-22" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-311" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/136897">Reinstall jenkins slave, setup user, configure jenkins.</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="KND-449" status="Closed"/>
+         <subjectIssue name="RCD-225" status="Closed"/>
+         <subjectIssue name="DEVSUP-16" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-460" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/152235">analyzing logfiles</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-465" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154050">* assembled recipients&#13;
+* looked for a survey tool&#13;
+* requested creation of accounts</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154050">data migration to the survey tool</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154050">final assembly of recipients with thomas</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154050">assembled email</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-448" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144580">see comments</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-240" status="Closed"/>
+         <subjectIssue name="DEVSUP-13" status="Closed"/>
+         <subjectIssue name="RCD-307" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-442" status="Closed">
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124">.</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-231" status="Closed"/>
+         <subjectIssue name="RCD-271" status="Closed"/>
+         <subjectIssue name="DEVSUP-12" status="Closed"/>
+         <subjectIssue name="RCD-251" status="Closed"/>
+         <subjectIssue name="DEVSUP-8" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-459" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151602">consulting</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-477" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154572">filled form</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154572">filled form</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154572">reworked review and sent out document</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-464" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/153755">added users</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="KND-484" status="Closed"/>
+         <subjectIssue name="DEVSUP-18" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-414" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/130590">KND deployment training</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/130590">deployment intro</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/130590">deployment intro (launcher / service communication)</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/130590">deployment intro: launcher (andreas only)</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-298" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/116698">review (testing)</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/116698">testing</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/116698">reviewed with remarks.</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/116698">testing</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-226" status="Closed"/>
+         <subjectIssue name="RCD-236" status="Closed"/>
+         <subjectIssue name="DEVSUP-7" status="Closed"/>
+         <subjectIssue name="RCD-235" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-430" status="Closed">
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/138542">.</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="CDMS-80" status="Closed"/>
+         <subjectIssue name="RCD-241" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-498" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/162211">Call with Christian Kölle, discussion with Tõnis and Andreas Gudian</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/162211">call with Andreas Gudian</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="DEVSUP-5" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-255" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111686">implementation and test</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="KND-424" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-440" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144111">analyzed testOpenToolbarAndVerify Redraw</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144111">analyze test failures and determine candidates</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144111">analyze openSwingDialogCloseNotConfirmed</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144111">fixed SwingDialogsTest</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-242" status="Closed"/>
+         <subjectIssue name="DEVSUP-9" status="Closed"/>
+         <subjectIssue name="RCD-321" status="Closed"/>
+         <subjectIssue name="RCD-306" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-256" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806">-</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806">talked to Tobias regarding the current client performance solution</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806">meeting</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806">meeting with K.W. (BI)</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806">meeting</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806">Meeting with Joachim Freund</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806">meeting minutes</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-293" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/119187">Meeting with Pavlos</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/119187">communication with pavlos</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-254" status="Closed"/>
+         <subjectIssue name="KND-421" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-305" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/134973">provided requested information</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="DEVSUP-15" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-427" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/137620">analyze issue</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-450" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774">started definition ("when hotfixing?")</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774">ready for internal review</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774">worked on review comments for thomas</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774">sent to salog for review&#13;
+</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774">set hotfix release proposal to SALOG + AconNew</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-480" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/155819">review</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-431" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/138605">tested with showcase</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-247" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/109957">Testing</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/109957">tested setup packages</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="DEVSUP-10" status="Closed"/>
+         <subjectIssue name="KND-410" status="Closed"/>
+         <subjectIssue name="RCD-227" status="Closed"/>
+         <subjectIssue name="DEVSUP-14" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-314" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/138354">server analysis</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-302" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-456" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151309">request access rights for repository</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151309">released and integrated kncoolgray 1.0.1.6</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-223" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-492" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/160847">review</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-434" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139684">analysis</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-332" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159994">requested client management wiki page update</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159994">requested artifact distribution at ISC's</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159994">announced deployment</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159994">Requested activation and requested ticket access to last activation, added information to the wikipage</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="DEVSUP-2" status="Closed"/>
+         <subjectIssue name="RCD-248" status="Closed"/>
+         <subjectIssue name="KND-447" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-439" status="Closed">
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/141967"/>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/141967">review</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-462" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/153538">discussion and commenting</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-417" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/134508">review</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/134508">Review</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="DEVSUP-20" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-485" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159457">initial implementation / discussion</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159457">adaption of tests</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-258" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111863">-</worklogDeleted>
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111863">-</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-446" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144577">see comments</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-436" status="Closed">
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103">.</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103">.</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103">review sample app</worklogDeleted>
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103">.</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="KND-420" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/135774">Review</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/135774">Review</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-295" status="Closed">
+            <worklogDeleted email="jing.ge@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/120816">.</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="KND-423" status="Closed"/>
+         <subjectIssue name="RCD-272" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-331" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159463">requested installers</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-244" status="Closed"/>
+         <subjectIssue name="RCD-234" status="Closed"/>
+         <subjectIssue name="KND-426" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-466" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154125">define tasks for mac OS port</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154125">Define and estimate tasks</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154125">prepare slides</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154125">discuss slides</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="DEVSUP-3" status="Closed"/>
+         <subjectIssue name="RCD-229" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-481" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/156219">changed computation of width for the IToolbarContributionItem</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-315" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139027">implemented and tested the script,&#13;
+updated documentation</worklogDeleted>
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139027">reworked review remarks</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-224" status="Closed"/>
+         <subjectIssue name="RCD-238" status="Closed"/>
+         <subjectIssue name="KND-438" status="Closed"/>
+         <subjectIssue name="RCD-273" status="Closed"/>
+         <subjectIssue name="RCD-246" status="Closed"/>
+         <subjectIssue name="KND-453" status="Closed"/>
+         <subjectIssue name="CDMS-51" status="Closed"/>
+         <subjectIssue name="RCD-308" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="RCD-259" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111883">-</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="RCD-228" status="Closed">
+            <worklogDeleted email="christoph.gerkens@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/102265">intial analysis</worklogDeleted>
+         </subjectIssue>
+         <subjectIssue name="RCD-245" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="KND-415" status="Closed">
+            <worklogDeleted email="andreas.gellendin@kuehne-nagel.com" issueUri="http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/132791">Review</worklogDeleted>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
 </worklogEraser>

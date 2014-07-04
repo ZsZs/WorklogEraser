@@ -5,6 +5,7 @@ import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Properties;
 
 import javax.ws.rs.core.UriBuilder;
 
@@ -39,6 +40,7 @@ import com.atlassian.jira.rest.client.domain.input.TransitionInput;
 import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientFactory;
 import com.atlassian.util.concurrent.Promise;
 import com.google.common.collect.Lists;
+import com.kn.jira.worklogeraser.domain.WorklogAnonymizator;
 
 public class JiraAdapter {
    private static final String TRANSITION_COMMENT = "Transition was carried out by 'WorklogEraser'";
@@ -47,22 +49,22 @@ public class JiraAdapter {
    public static final String REOPEN_TRANSITION_NAME = "Reopen Issue";
    public static final String REOPENED_STATUS_NAME = "REOPENED";
    public static final String COMMENT_TEXT = "Worklogs was modified by 'WorklogEraser'.";
+   private Properties configurationProperties;
    private final Logger logger = LoggerFactory.getLogger( getClass() );
    private RestTemplate httpClient;
    private JiraRestClient jiraClient;
-   private final String password;
-   private final String restServicesUri;
+   private String password;
+   private String restServicesUri;
    private final String serverUriString;
-   private final String userName;
+   private String userName;
    private IssueRestClient issueClient;
    private SearchRestClient searchClient;
 
    // Constructors
-   public JiraAdapter( final String serverUriString, final String userName, final String password ) {
+   public JiraAdapter( final Properties configurationProperties, final String serverUriString ) {
+      this.configurationProperties = configurationProperties;
       this.serverUriString = serverUriString;
-      this.restServicesUri = this.serverUriString + "/api/2/";
-      this.userName = userName;
-      this.password = password;
+      configure();
       instantiateJiraRestClient();
       instantiateHttpClient();
    }
@@ -171,6 +173,12 @@ public class JiraAdapter {
    }
 
    // Protected, private helper methods
+   private void configure() {
+      this.restServicesUri = this.serverUriString + "/api/2/";
+      this.userName = this.configurationProperties.getProperty( WorklogAnonymizator.CONF_JIRA_USER_NAME );
+      this.password = this.configurationProperties.getProperty( WorklogAnonymizator.CONF_JIRA_USER_PASSWORD );
+   }
+
    private void configureHttpClientContext() {
       CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
       UsernamePasswordCredentials credentials = new UsernamePasswordCredentials( userName, password );

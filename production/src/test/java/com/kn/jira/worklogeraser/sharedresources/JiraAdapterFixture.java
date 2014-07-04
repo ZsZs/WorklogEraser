@@ -24,7 +24,7 @@ import com.atlassian.jira.rest.client.domain.Worklog;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.kn.jira.worklogeraser.domain.WorklogEraser;
+import com.kn.jira.worklogeraser.domain.WorklogAnonymizator;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 
@@ -85,11 +85,11 @@ public class JiraAdapterFixture {
    //Protected, private helper methods
    private void calculateObsolatedWorklogDate(){
       Properties configurationProperties = applicationContext.getBean( "configProperties", Properties.class );
-      Integer obsolescenceTimePeriod = Integer.parseInt( configurationProperties.getProperty( WorklogEraser.OBSOLESCENCE_TIME_PERIOD ));
+      Integer obsolescenceTimePeriod = Integer.parseInt( configurationProperties.getProperty( WorklogAnonymizator.CONF_OBSOLESCENCE_TIME_PERIOD ));
       DateTime currentDate = new DateTime();
       Date calculatedDate = currentDate.minusDays( obsolescenceTimePeriod ).withTimeAtStartOfDay().toDate();
       
-      SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogEraser.DATE_FORMAT ); 
+      SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogAnonymizator.DATE_FORMAT ); 
       obsolatedWorklogDate = dateFormat.format( calculatedDate ); 
    }
    

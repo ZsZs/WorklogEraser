@@ -24,11 +24,11 @@ import com.atlassian.jira.rest.client.domain.Worklog;
 import com.kn.jira.worklogeraser.sharedresources.JiraAdapterFixture;
 import com.kn.jira.worklogeraser.sharedresources.TestConfigurationWithMockAdaptersFixture;
 
-public class WorklogEraserTest {
+public class WorklogAnonymizatorTest {
    private Properties configurationProperties;
    private JiraAdapterFixture jiraAdapterFixture;
    private TestConfigurationWithMockAdaptersFixture testConfiguration;
-   private WorklogEraser worklogEraser;
+   private WorklogAnonymizator worklogAnonymizator;
    private Integer obsolescenceTimePeriod;
 
    @Before public void beforeEachTest() {
@@ -36,10 +36,10 @@ public class WorklogEraserTest {
       testConfiguration.setUp();
       jiraAdapterFixture = testConfiguration.getJiraAdapterFixture();
       
-      worklogEraser = testConfiguration.getWorklogEraser();
+      worklogAnonymizator = testConfiguration.getWorklogEraser();
       configurationProperties = testConfiguration.getConfigurationProperties();
       
-      obsolescenceTimePeriod = Integer.parseInt( configurationProperties.getProperty( "worklogeraser.obsolescenceTimePeriod" ));
+      obsolescenceTimePeriod = Integer.parseInt( configurationProperties.getProperty( WorklogAnonymizator.CONF_OBSOLESCENCE_TIME_PERIOD ));
    }
 
    @After public void afterEachTest(){
@@ -47,60 +47,60 @@ public class WorklogEraserTest {
    }
    
    @Test public void perform_calculatesObsolatedWorklogsDate() throws Exception{
-      worklogEraser.perform();
+      worklogAnonymizator.perform();
       
       DateTime currentDate = new DateTime();
       
-      assertThat( worklogEraser.getObsolatedWorklogDate(), equalTo( currentDate.minusDays( obsolescenceTimePeriod ).withTimeAtStartOfDay().toDate() ));
+      assertThat( worklogAnonymizator.getObsolatedWorklogDate(), equalTo( currentDate.minusDays( obsolescenceTimePeriod ).withTimeAtStartOfDay().toDate() ));
    }
    
    @Test public void perform_instantiatesActionLogger(){
-      worklogEraser.perform();
+      worklogAnonymizator.perform();
       
-      EraseActionLogger actionLogger = Whitebox.getInternalState( worklogEraser, "actionLogger" );
+      AnonymizationActionLogger actionLogger = Whitebox.getInternalState( worklogAnonymizator, "actionLogger" );
       
       assertThat( actionLogger, notNullValue() );
    }
    
    @Test public void perform_collectsAllJiraProjects(){
-      worklogEraser.perform();
+      worklogAnonymizator.perform();
       
-      List<BasicProject> foundProjects = Whitebox.getInternalState( worklogEraser, "allJiraProjects", WorklogEraser.class );
+      List<BasicProject> foundProjects = Whitebox.getInternalState( worklogAnonymizator, "allJiraProjects", WorklogAnonymizator.class );
       
       assertThat( foundProjects, equalTo( jiraAdapterFixture.getProjects() ));
    }
 
    @Test public void perform_collectsJiraIsuesWithCondition(){
-      worklogEraser.perform();
+      worklogAnonymizator.perform();
       
-      Map<URI, Issue> foundIssues = Whitebox.getInternalState( worklogEraser, "subjectIssues", WorklogEraser.class );
+      Map<URI, Issue> foundIssues = Whitebox.getInternalState( worklogAnonymizator, "subjectIssues", WorklogAnonymizator.class );
       
       assertThat( foundIssues, equalTo( jiraAdapterFixture.getExpectedSubjectIssues() ));
    }
 
    @Test public void perform_collectsJiraWorklogsWithCondition(){
-      worklogEraser.perform();
+      worklogAnonymizator.perform();
       
-      List<Worklog> foundWorklogs = Whitebox.getInternalState( worklogEraser, "subjectWorklogs", WorklogEraser.class );
+      List<Worklog> foundWorklogs = Whitebox.getInternalState( worklogAnonymizator, "subjectWorklogs", WorklogAnonymizator.class );
       
       assertThat( foundWorklogs, equalTo( jiraAdapterFixture.getExpectedSubjectWorklogs() ));
    }
 
    @Test public void perform_instantiatesMatchingStrategy() throws Exception {
-      worklogEraser.perform();
+      worklogAnonymizator.perform();
       
-      EmployeeMatchingStrategy currentMatchingStrategy = Whitebox.getInternalState( worklogEraser, "employeeMatchingStrategy", WorklogEraser.class ); 
+      EmployeeMatchingStrategy currentMatchingStrategy = Whitebox.getInternalState( worklogAnonymizator, "employeeMatchingStrategy", WorklogAnonymizator.class ); 
       assertThat( currentMatchingStrategy, equalTo( testConfiguration.getEmployeeMatchingStrategy() ));
    }
 
    @Test public void perform_delegatesToMatchingStrategy() throws Exception {
       EmployeeMatchingStrategy spyStrategy = spy( testConfiguration.getEmployeeMatchingStrategy() );
-      Whitebox.setInternalState( worklogEraser, "employeeMatchingStrategy", spyStrategy );
+      Whitebox.setInternalState( worklogAnonymizator, "employeeMatchingStrategy", spyStrategy );
       
-      worklogEraser.perform();
+      worklogAnonymizator.perform();
       
-      Map<URI, Issue> subjectIssues = Whitebox.getInternalState( worklogEraser, "subjectIssues" );
-      List<Worklog> subjectWorklogs = Whitebox.getInternalState( worklogEraser, "subjectWorklogs" );
+      Map<URI, Issue> subjectIssues = Whitebox.getInternalState( worklogAnonymizator, "subjectIssues" );
+      List<Worklog> subjectWorklogs = Whitebox.getInternalState( worklogAnonymizator, "subjectWorklogs" );
       verify( spyStrategy, times( 1 )).perforErase( subjectIssues, subjectWorklogs );
    }
    

@@ -16,14 +16,14 @@ import com.atlassian.jira.rest.client.domain.BasicProject;
 
 public class WorklogEraserTest {
    public static final String DEFAULT_APPLICATION_CONFIGURATION = "file:src/test/resources/BeanContainerDefinition.xml";
-   private WorklogEraser worklogEraser;
+   private WorklogAnonymizator worklogEraser;
    
    @Before public void beforeEachTest(){
       PropertyConfigurator.configure( "src/test/resources/log4j.properties" );
       
       @SuppressWarnings( "resource" )
       ApplicationContext applicationContext = new ClassPathXmlApplicationContext( DEFAULT_APPLICATION_CONFIGURATION );
-      worklogEraser = applicationContext.getBean( "worklogEraser", WorklogEraser.class );
+      worklogEraser = applicationContext.getBean( "worklogEraser", WorklogAnonymizator.class );
    }
    
    @Test public void perform_InvestigatesAllProjects(){

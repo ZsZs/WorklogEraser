@@ -26,14 +26,14 @@ public abstract class EmployeeMatchingStrategy implements ApplicationContextAwar
    public static final String EXPECTED_COMPANY_NAME = "K\u00fchne + Nagel (AG & Co.) KG";
    public static final String EXPECTED_STUFF_MEMBER_VALUE = "Y";
    protected final Logger programLogger = LoggerFactory.getLogger( this.getClass() );
-   protected EraseActionLogger actionLogger;
+   protected AnonymizationActionLogger actionLogger;
    protected ApplicationContext applicationContext;
    protected JiraAdapter jiraAdapter;
    protected PdmAdapter pdmAdapter;
    protected Map<URI, Issue> subjectIssues;
    protected List<Worklog> subjectWorklogs;
    
-   public EmployeeMatchingStrategy( EraseActionLogger actionLogger ){
+   public EmployeeMatchingStrategy( AnonymizationActionLogger actionLogger ){
       this.actionLogger = actionLogger;      
    }
    

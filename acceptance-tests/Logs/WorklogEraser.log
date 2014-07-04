@@ -4596,3 +4596,688 @@ Bitte den Vorgang nach erfolgter Verifikation schließen.   ' of person: externa
 2013 Dez 18 07:29:46,128 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Project created ' of person: external.Franz.Jussen@Kuehne-Nagel.com 
 2013 Dez 18 07:29:46,521 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Tickets are now unassigned' of person: external.Franz.Jussen@Kuehne-Nagel.com 
 2013 Dez 18 07:29:46,693 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process finished
+2014 Jun 30 12:30:50,322 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 12:30:50,394 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 12:30:50,435 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 12:30:50,436 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 12:30:51,203 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 12:30:51,204 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 12:30:57,362 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process finished.
+2014 Jun 30 12:35:14,310 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 12:35:33,960 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 12:35:36,072 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 12:35:36,073 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 12:36:07,973 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 12:36:22,913 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 13:45:31,207 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 13:45:36,529 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 13:45:36,993 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 13:45:36,994 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 13:45:39,352 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 13:45:45,764 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 13:52:40,200 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 13:52:46,152 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 13:52:47,305 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 13:52:47,306 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 13:52:48,424 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 13:52:49,841 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 13:56:00,364 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 13:56:01,704 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 13:56:02,260 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 13:56:02,261 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 13:56:02,919 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 13:56:04,898 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 13:57:32,662 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 13:57:34,102 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 13:57:34,635 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 13:57:34,635 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 13:57:35,114 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 13:57:36,138 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 13:57:52,183 ERROR main com.kn.jira.worklogeraser.domain.WorklogEraser - Error occured while performing jira worklog erasure.
+java.lang.RuntimeException: java.net.SocketTimeoutException
+	at com.google.common.base.Throwables.propagate(Throwables.java:160)
+	at com.atlassian.httpclient.apache.httpcomponents.DefaultHttpClient$3.apply(DefaultHttpClient.java:256)
+	at com.atlassian.httpclient.apache.httpcomponents.DefaultHttpClient$3.apply(DefaultHttpClient.java:249)
+	at com.atlassian.util.concurrent.Promises$Of$2.apply(Promises.java:276)
+	at com.atlassian.util.concurrent.Promises$Of$2.apply(Promises.java:272)
+	at com.atlassian.util.concurrent.Promises$2.onFailure(Promises.java:167)
+	at com.google.common.util.concurrent.Futures$4.run(Futures.java:1140)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:150)
+	at com.google.common.util.concurrent.ExecutionList.execute(ExecutionList.java:135)
+	at com.google.common.util.concurrent.AbstractFuture.setException(AbstractFuture.java:203)
+	at com.google.common.util.concurrent.SettableFuture.setException(SettableFuture.java:68)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$1$2.run(SettableFuturePromiseHttpPromiseAsyncClient.java:59)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$ThreadLocalDelegateRunnable$1.run(SettableFuturePromiseHttpPromiseAsyncClient.java:197)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient.runInContext(SettableFuturePromiseHttpPromiseAsyncClient.java:90)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$ThreadLocalDelegateRunnable.run(SettableFuturePromiseHttpPromiseAsyncClient.java:192)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.net.SocketTimeoutException
+	at org.apache.http.nio.pool.RouteSpecificPool.timeout(RouteSpecificPool.java:170)
+	at org.apache.http.nio.pool.AbstractNIOConnPool.requestTimeout(AbstractNIOConnPool.java:403)
+	at org.apache.http.nio.pool.AbstractNIOConnPool$InternalSessionRequestCallback.timeout(AbstractNIOConnPool.java:593)
+	at org.apache.http.impl.nio.reactor.SessionRequestImpl.timeout(SessionRequestImpl.java:180)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processTimeouts(DefaultConnectingIOReactor.java:214)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:157)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:374)
+	at org.apache.http.impl.nio.conn.PoolingClientAsyncConnectionManager.execute(PoolingClientAsyncConnectionManager.java:108)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient.doExecute(AbstractHttpAsyncClient.java:464)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient.access$000(AbstractHttpAsyncClient.java:101)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient$1.run(AbstractHttpAsyncClient.java:485)
+2014 Jun 30 13:58:06,018 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 13:58:06,018 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 13:58:06,029 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 13:58:06,030 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 13:58:06,030 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 13:58:06,030 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 13:58:18,045 ERROR main com.kn.jira.worklogeraser.domain.WorklogEraser - Error occured while performing jira worklog erasure.
+java.lang.RuntimeException: java.net.SocketTimeoutException
+	at com.google.common.base.Throwables.propagate(Throwables.java:160)
+	at com.atlassian.httpclient.apache.httpcomponents.DefaultHttpClient$3.apply(DefaultHttpClient.java:256)
+	at com.atlassian.httpclient.apache.httpcomponents.DefaultHttpClient$3.apply(DefaultHttpClient.java:249)
+	at com.atlassian.util.concurrent.Promises$Of$2.apply(Promises.java:276)
+	at com.atlassian.util.concurrent.Promises$Of$2.apply(Promises.java:272)
+	at com.atlassian.util.concurrent.Promises$2.onFailure(Promises.java:167)
+	at com.google.common.util.concurrent.Futures$4.run(Futures.java:1140)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:150)
+	at com.google.common.util.concurrent.ExecutionList.execute(ExecutionList.java:135)
+	at com.google.common.util.concurrent.AbstractFuture.setException(AbstractFuture.java:203)
+	at com.google.common.util.concurrent.SettableFuture.setException(SettableFuture.java:68)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$1$2.run(SettableFuturePromiseHttpPromiseAsyncClient.java:59)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$ThreadLocalDelegateRunnable$1.run(SettableFuturePromiseHttpPromiseAsyncClient.java:197)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient.runInContext(SettableFuturePromiseHttpPromiseAsyncClient.java:90)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$ThreadLocalDelegateRunnable.run(SettableFuturePromiseHttpPromiseAsyncClient.java:192)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.net.SocketTimeoutException
+	at org.apache.http.nio.pool.RouteSpecificPool.timeout(RouteSpecificPool.java:170)
+	at org.apache.http.nio.pool.AbstractNIOConnPool.requestTimeout(AbstractNIOConnPool.java:403)
+	at org.apache.http.nio.pool.AbstractNIOConnPool$InternalSessionRequestCallback.timeout(AbstractNIOConnPool.java:593)
+	at org.apache.http.impl.nio.reactor.SessionRequestImpl.timeout(SessionRequestImpl.java:180)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processTimeouts(DefaultConnectingIOReactor.java:214)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:157)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:374)
+	at org.apache.http.impl.nio.conn.PoolingClientAsyncConnectionManager.execute(PoolingClientAsyncConnectionManager.java:108)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient.doExecute(AbstractHttpAsyncClient.java:464)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient.access$000(AbstractHttpAsyncClient.java:101)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient$1.run(AbstractHttpAsyncClient.java:485)
+2014 Jun 30 13:58:22,883 ERROR main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process finished.
+2014 Jun 30 13:58:39,633 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 13:58:39,634 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 13:58:39,643 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 13:58:39,643 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 13:58:39,644 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 13:58:39,644 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 13:58:49,443 ERROR main com.kn.jira.worklogeraser.domain.WorklogEraser - Error occured while performing jira worklog erasure.
+java.lang.RuntimeException: java.net.SocketTimeoutException
+	at com.google.common.base.Throwables.propagate(Throwables.java:160)
+	at com.atlassian.httpclient.apache.httpcomponents.DefaultHttpClient$3.apply(DefaultHttpClient.java:256)
+	at com.atlassian.httpclient.apache.httpcomponents.DefaultHttpClient$3.apply(DefaultHttpClient.java:249)
+	at com.atlassian.util.concurrent.Promises$Of$2.apply(Promises.java:276)
+	at com.atlassian.util.concurrent.Promises$Of$2.apply(Promises.java:272)
+	at com.atlassian.util.concurrent.Promises$2.onFailure(Promises.java:167)
+	at com.google.common.util.concurrent.Futures$4.run(Futures.java:1140)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:150)
+	at com.google.common.util.concurrent.ExecutionList.execute(ExecutionList.java:135)
+	at com.google.common.util.concurrent.AbstractFuture.setException(AbstractFuture.java:203)
+	at com.google.common.util.concurrent.SettableFuture.setException(SettableFuture.java:68)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$1$2.run(SettableFuturePromiseHttpPromiseAsyncClient.java:59)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$ThreadLocalDelegateRunnable$1.run(SettableFuturePromiseHttpPromiseAsyncClient.java:197)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient.runInContext(SettableFuturePromiseHttpPromiseAsyncClient.java:90)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$ThreadLocalDelegateRunnable.run(SettableFuturePromiseHttpPromiseAsyncClient.java:192)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.net.SocketTimeoutException
+	at org.apache.http.nio.pool.RouteSpecificPool.timeout(RouteSpecificPool.java:170)
+	at org.apache.http.nio.pool.AbstractNIOConnPool.requestTimeout(AbstractNIOConnPool.java:403)
+	at org.apache.http.nio.pool.AbstractNIOConnPool$InternalSessionRequestCallback.timeout(AbstractNIOConnPool.java:593)
+	at org.apache.http.impl.nio.reactor.SessionRequestImpl.timeout(SessionRequestImpl.java:180)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processTimeouts(DefaultConnectingIOReactor.java:214)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:157)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:374)
+	at org.apache.http.impl.nio.conn.PoolingClientAsyncConnectionManager.execute(PoolingClientAsyncConnectionManager.java:108)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient.doExecute(AbstractHttpAsyncClient.java:464)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient.access$000(AbstractHttpAsyncClient.java:101)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient$1.run(AbstractHttpAsyncClient.java:485)
+2014 Jun 30 13:58:49,470 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process finished.
+2014 Jun 30 14:20:54,343 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process started
+2014 Jun 30 14:20:55,964 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Obsolated worklog date determined as: Sun Jun 29 00:00:00 CEST 2014
+2014 Jun 30 14:20:56,628 DEBUG main com.kn.jira.worklogeraser.domain.EraseActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\acceptance-tests\Configuration\worklogeraser.log.xml
+2014 Jun 30 14:20:56,629 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Action logger is configured to log into: worklogeraser.log.xml
+2014 Jun 30 14:20:59,859 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Jira and PDM++ web service adapters are configured.
+2014 Jun 30 14:21:01,214 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all projects from Jira.
+2014 Jun 30 14:21:02,151 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of Jira Projects found is: 9
+2014 Jun 30 14:21:07,875 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all subject issues from Jira.
+2014 Jun 30 14:21:07,877 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: Administration ISC EMEA
+2014 Jun 30 14:21:11,505 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: AMER ISC Demand
+2014 Jun 30 14:21:12,682 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: Clarity Interface Test
+2014 Jun 30 14:21:13,965 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: Cross Dock Management System
+2014 Jun 30 14:21:16,637 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: Development Support
+2014 Jun 30 14:21:22,433 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: ISC EMEA Program Management Board
+2014 Jun 30 14:21:24,241 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: Jira Administration
+2014 Jun 30 14:21:26,524 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: KN Desktop Client
+2014 Jun 30 14:21:41,914 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Considering jira project: KN Desktop Deployment
+2014 Jun 30 14:21:57,368 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of subject issues found is: 121
+2014 Jun 30 14:22:02,189 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Collecting all worklogs of all subject issues.
+2014 Jun 30 14:22:02,438 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'implementation and integration' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:05,441 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:05,743 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:05,933 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'created the wiki page' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:06,203 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:06,204 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: created the wiki page of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159460 is deleted.
+2014 Jun 30 14:22:06,376 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Brainstorming Questions' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:06,638 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:06,639 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Brainstorming Questions of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/152285 is deleted.
+2014 Jun 30 14:22:06,902 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Discussed the survey content' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:07,271 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:07,447 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Created the initial version of the survey questionnaire.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:07,671 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:07,811 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '-' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:08,043 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:08,044 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: - of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/117779 is deleted.
+2014 Jun 30 14:22:08,322 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:08,567 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:08,709 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:08,909 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:08,910 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog:  of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/138739 is deleted.
+2014 Jun 30 14:22:09,024 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'created wiki page and answered email' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:09,250 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:09,251 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: created wiki page and answered email of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159461 is deleted.
+2014 Jun 30 14:22:09,386 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Investigating the background of the problem' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:09,605 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:09,718 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Fixed a bug in ServerContentProvider' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:09,915 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:10,041 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:10,243 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:10,244 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/126512 is deleted.
+2014 Jun 30 14:22:10,373 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Collected information from oracle website' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:10,579 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:10,580 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Collected information from oracle website of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/157468 is deleted.
+2014 Jun 30 14:22:10,703 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:10,962 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:11,090 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'consulting jack liang' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:11,346 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:11,347 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: consulting jack liang of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151448 is deleted.
+2014 Jun 30 14:22:11,467 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'consulting jack liang' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:11,692 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:11,693 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: consulting jack liang of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151448 is deleted.
+2014 Jun 30 14:22:11,822 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'model concurrency: activity diagrams' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:12,067 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:12,068 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: model concurrency: activity diagrams of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139572 is deleted.
+2014 Jun 30 14:22:12,193 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'model concurrency' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:12,420 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:12,421 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: model concurrency of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139572 is deleted.
+2014 Jun 30 14:22:12,539 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'model opt2' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:12,810 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:12,811 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: model opt2 of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139572 is deleted.
+2014 Jun 30 14:22:12,931 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'added concurrency model to-be opt2' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:13,123 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:13,124 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: added concurrency model to-be opt2 of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139572 is deleted.
+2014 Jun 30 14:22:13,247 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Model review' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:13,495 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:13,611 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'tried to reproduce and communication with Timo Eckhardt' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:13,823 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:13,823 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: tried to reproduce and communication with Timo Eckhardt of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/148968 is deleted.
+2014 Jun 30 14:22:13,938 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'tested installers and deployment update scenarios' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:14,161 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:14,162 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: tested installers and deployment update scenarios of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159632 is deleted.
+2014 Jun 30 14:22:14,285 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'bugfix' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:14,524 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:14,525 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: bugfix of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/147409 is deleted.
+2014 Jun 30 14:22:14,690 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:14,896 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:15,011 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:15,234 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:15,352 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Reinstall jenkins slave, setup user, configure jenkins.' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:15,544 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:15,545 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Reinstall jenkins slave, setup user, configure jenkins. of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/136897 is deleted.
+2014 Jun 30 14:22:15,666 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:15,870 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:15,985 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'analyzing logfiles' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:16,281 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:16,282 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: analyzing logfiles of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/152235 is deleted.
+2014 Jun 30 14:22:16,440 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '* assembled recipients
+* looked for a survey tool
+* requested creation of accounts' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:16,751 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:16,752 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: * assembled recipients
+* looked for a survey tool
+* requested creation of accounts of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154050 is deleted.
+2014 Jun 30 14:22:16,867 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'data migration to the survey tool' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:17,386 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:17,387 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: data migration to the survey tool of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154050 is deleted.
+2014 Jun 30 14:22:17,503 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'final assembly of recipients with thomas' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:17,783 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:17,784 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: final assembly of recipients with thomas of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154050 is deleted.
+2014 Jun 30 14:22:17,900 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'assembled email' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:18,097 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:18,097 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: assembled email of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154050 is deleted.
+2014 Jun 30 14:22:18,223 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'see comments' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:18,426 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:18,426 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: see comments of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144580 is deleted.
+2014 Jun 30 14:22:18,551 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:18,737 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:18,946 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:19,178 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:19,179 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124 is deleted.
+2014 Jun 30 14:22:19,317 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:19,584 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:19,585 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124 is deleted.
+2014 Jun 30 14:22:19,762 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:19,941 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:19,942 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124 is deleted.
+2014 Jun 30 14:22:20,068 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:20,277 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:20,278 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124 is deleted.
+2014 Jun 30 14:22:20,394 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:20,650 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:20,651 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124 is deleted.
+2014 Jun 30 14:22:20,784 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:21,015 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:21,016 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124 is deleted.
+2014 Jun 30 14:22:21,153 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:21,374 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:21,375 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124 is deleted.
+2014 Jun 30 14:22:21,492 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:21,794 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:21,794 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144124 is deleted.
+2014 Jun 30 14:22:21,917 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Reviewing' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:22,129 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:22,244 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'releasing to SVN/Nexus' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:22,561 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'packaging' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:22,941 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'packaging, testing & announcement' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:23,378 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:23,626 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:23,764 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:24,139 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:24,255 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:24,473 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:24,610 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:24,833 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:24,979 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'documentation' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:25,358 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'consulting' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:25,596 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:25,597 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: consulting of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151602 is deleted.
+2014 Jun 30 14:22:25,787 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'filled form' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:26,077 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:26,077 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: filled form of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154572 is deleted.
+2014 Jun 30 14:22:26,197 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'filled form' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:26,396 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:26,396 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: filled form of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154572 is deleted.
+2014 Jun 30 14:22:26,527 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Reviewed version 1.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:26,758 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:26,889 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'reworked review and sent out document' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:27,127 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:27,128 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: reworked review and sent out document of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154572 is deleted.
+2014 Jun 30 14:22:27,273 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'added users' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:27,559 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:27,560 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: added users of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/153755 is deleted.
+2014 Jun 30 14:22:27,700 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'align training sessions' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:28,090 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'training & support Andreas/Jing (UI Test projects, Unit Testing)' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:28,572 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'training Andreas/Jing (Building, Tycho)' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:28,926 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: ' Jenkins Test Setup' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:29,430 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'KND deployment training' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:29,869 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:29,870 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: KND deployment training of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/130590 is deleted.
+2014 Jun 30 14:22:30,073 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'training Andreas, Jing
+support Jing' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:30,695 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'training Andreas & Jing
+support Andreas & Jing' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:31,122 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'training Jing' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:31,512 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Mockito integration KND Unit Tests in preparation for the training' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:31,909 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'deployment intro' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:32,217 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:32,218 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: deployment intro of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/130590 is deleted.
+2014 Jun 30 14:22:32,370 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'deployment intro (launcher / service communication)' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:32,633 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:32,633 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: deployment intro (launcher / service communication) of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/130590 is deleted.
+2014 Jun 30 14:22:32,759 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'deployment intro: launcher (andreas only)' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:33,024 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:33,025 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: deployment intro: launcher (andreas only) of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/130590 is deleted.
+2014 Jun 30 14:22:33,145 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'menu handling' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:33,636 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'review (testing)' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:33,914 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:33,915 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: review (testing) of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/116698 is deleted.
+2014 Jun 30 14:22:34,076 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'testing' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:34,335 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:34,336 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: testing of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/116698 is deleted.
+2014 Jun 30 14:22:34,516 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'reviewed with remarks.' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:34,738 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:34,739 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: reviewed with remarks. of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/116698 is deleted.
+2014 Jun 30 14:22:34,886 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'testing' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:35,223 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:35,224 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: testing of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/116698 is deleted.
+2014 Jun 30 14:22:35,427 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'investigation' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:36,463 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'investigation' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:36,937 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:22:37,127 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:37,128 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/138542 is deleted.
+2014 Jun 30 14:22:37,255 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:37,481 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:37,636 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:37,849 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:37,966 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Call with Christian Kölle, discussion with Tõnis and Andreas Gudian' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:38,152 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:38,152 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Call with Christian Kölle, discussion with Tõnis and Andreas Gudian of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/162211 is deleted.
+2014 Jun 30 14:22:38,273 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'call with Andreas Gudian' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:38,551 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:38,552 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: call with Andreas Gudian of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/162211 is deleted.
+2014 Jun 30 14:22:38,688 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'implementation and test' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:39,030 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:39,031 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: implementation and test of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111686 is deleted.
+2014 Jun 30 14:22:39,147 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Code review.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:39,467 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:39,584 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'analyzed testOpenToolbarAndVerify Redraw' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:39,792 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:39,793 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: analyzed testOpenToolbarAndVerify Redraw of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144111 is deleted.
+2014 Jun 30 14:22:39,909 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'analyze test failures and determine candidates' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:40,149 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:40,149 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: analyze test failures and determine candidates of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144111 is deleted.
+2014 Jun 30 14:22:40,294 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'analyze openSwingDialogCloseNotConfirmed' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:40,477 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:40,478 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: analyze openSwingDialogCloseNotConfirmed of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144111 is deleted.
+2014 Jun 30 14:22:40,594 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'fixed SwingDialogsTest' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:40,827 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:40,827 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: fixed SwingDialogsTest of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144111 is deleted.
+2014 Jun 30 14:22:40,943 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:41,165 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:41,280 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:41,576 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:41,712 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:41,973 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:42,186 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '-' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:42,455 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:42,456 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: - of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806 is deleted.
+2014 Jun 30 14:22:42,570 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'talked to Tobias regarding the current client performance solution' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:42,817 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:42,818 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: talked to Tobias regarding the current client performance solution of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806 is deleted.
+2014 Jun 30 14:22:42,958 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'meeting' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:43,218 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:43,218 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: meeting of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806 is deleted.
+2014 Jun 30 14:22:43,374 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'meeting with K.W. (BI)' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:43,645 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:43,645 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: meeting with K.W. (BI) of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806 is deleted.
+2014 Jun 30 14:22:43,822 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'meeting' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:44,158 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:44,159 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: meeting of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806 is deleted.
+2014 Jun 30 14:22:44,399 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Meeting with Joachim Freund' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:44,680 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:44,681 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: Meeting with Joachim Freund of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806 is deleted.
+2014 Jun 30 14:22:44,862 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'meeting minutes' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:45,124 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:45,124 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: meeting minutes of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111806 is deleted.
+2014 Jun 30 14:22:45,239 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Meeting with Pavlos' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:45,446 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:45,447 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Meeting with Pavlos of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/119187 is deleted.
+2014 Jun 30 14:22:45,573 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'communication with pavlos' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:45,799 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:45,800 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: communication with pavlos of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/119187 is deleted.
+2014 Jun 30 14:22:45,926 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'surefire reports (findbugs, junit), jacoco coverage report integration' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:46,280 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'merge jacoco stats, jenkins integration' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:46,632 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'jacoco site & UI test integration' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:47,029 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Surefire' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:47,327 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'jacoco4uitests' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:47,766 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Reporting' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:48,172 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'integrate site build' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:48,526 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'provided requested information' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:48,760 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:48,761 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: provided requested information of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/134973 is deleted.
+2014 Jun 30 14:22:48,899 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'analyze issue' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:49,127 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:49,127 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: analyze issue of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/137620 is deleted.
+2014 Jun 30 14:22:49,256 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'started definition ("when hotfixing?")' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:49,488 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:49,489 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: started definition ("when hotfixing?") of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774 is deleted.
+2014 Jun 30 14:22:49,655 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'ready for internal review' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:49,928 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:49,929 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: ready for internal review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774 is deleted.
+2014 Jun 30 14:22:50,089 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'worked on review comments for thomas' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:50,355 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:50,356 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: worked on review comments for thomas of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774 is deleted.
+2014 Jun 30 14:22:50,583 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'sent to salog for review
+' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:50,957 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:50,958 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: sent to salog for review
+ of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774 is deleted.
+2014 Jun 30 14:22:51,127 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'set hotfix release proposal to SALOG + AconNew' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:51,417 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:51,418 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: set hotfix release proposal to SALOG + AconNew of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/145774 is deleted.
+2014 Jun 30 14:22:51,575 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Implemented a fix and a subset of tests.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:51,807 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:51,928 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:22:52,161 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:52,162 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/155819 is deleted.
+2014 Jun 30 14:22:52,287 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'tested with showcase' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:52,501 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:52,502 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: tested with showcase of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/138605 is deleted.
+2014 Jun 30 14:22:52,647 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'release building, fixing test scripts,testing' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:53,085 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Testing' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:53,300 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:53,301 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: Testing of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/109957 is deleted.
+2014 Jun 30 14:22:53,454 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'testing & verification' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:53,881 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'tested setup packages' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:54,113 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:54,114 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: tested setup packages of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/109957 is deleted.
+2014 Jun 30 14:22:54,269 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'detection & fixing' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:54,719 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'version update' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:55,143 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'splitting JRE from distro' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:55,475 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:55,720 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:55,878 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'reworked tools.jar & project structure' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:56,254 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'reworked project structure' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:56,639 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:22:56,844 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:56,997 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'sidekicking' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:22:57,338 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'server analysis' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:22:57,557 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:22:57,558 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: server analysis of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/138354 is deleted.
+2014 Jun 30 14:22:57,737 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Familiarized with tests and started refactoring the test framework to decrease the amount of test code.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:58,042 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:58,157 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Implemented test cases' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:58,414 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:58,638 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Implemented test cases.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:58,873 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:58,986 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Test implementation / improvements' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:59,289 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:59,403 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Improving the stability of tests.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:59,596 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:22:59,717 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Finalizing the initial batch of automated tests.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:22:59,939 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:00,070 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Manual Testing' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:00,410 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'validate results of automated tests' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:00,769 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'verify test errors, order installation packages' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:01,179 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'request access rights for repository' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:01,371 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:01,372 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: request access rights for repository of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151309 is deleted.
+2014 Jun 30 14:23:01,506 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'released and integrated kncoolgray 1.0.1.6' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:01,712 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:01,713 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: released and integrated kncoolgray 1.0.1.6 of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/151309 is deleted.
+2014 Jun 30 14:23:01,902 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Revuew' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:02,088 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:02,281 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Testing Win7/DE' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:02,600 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'release building' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:02,962 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:23:03,242 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:03,361 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Created a no-op MDC adapter + static binder for SLF4J to work with.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:03,628 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:03,773 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Solved build issues of 3rdparty with unit tests.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:04,058 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:04,185 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:04,407 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:04,408 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/160847 is deleted.
+2014 Jun 30 14:23:04,541 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'analysis' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:23:04,791 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:04,791 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: analysis of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139684 is deleted.
+2014 Jun 30 14:23:04,969 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'requested client management wiki page update' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:05,199 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:05,199 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: requested client management wiki page update of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159994 is deleted.
+2014 Jun 30 14:23:05,393 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'requested artifact distribution at ISC's' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:05,762 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:05,763 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: requested artifact distribution at ISC's of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159994 is deleted.
+2014 Jun 30 14:23:05,940 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'announced deployment' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:06,311 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:06,312 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: announced deployment of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159994 is deleted.
+2014 Jun 30 14:23:07,115 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Requested activation and requested ticket access to last activation, added information to the wikipage' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:07,358 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:07,359 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Requested activation and requested ticket access to last activation, added information to the wikipage of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159994 is deleted.
+2014 Jun 30 14:23:07,548 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:23:07,769 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:07,959 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:23:08,250 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:08,251 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog:  of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/141967 is deleted.
+2014 Jun 30 14:23:08,492 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Reproducing and investigating the causes of the problem' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:08,705 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:08,882 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Implementing a fix and tests.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:09,245 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:09,382 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:09,617 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:09,618 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/141967 is deleted.
+2014 Jun 30 14:23:09,767 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'discussion and commenting' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:10,033 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:10,034 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: discussion and commenting of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/153538 is deleted.
+2014 Jun 30 14:23:10,152 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Testing different methods for creating the update p2 repository / Eclipse site for the plugin.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:10,418 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:10,559 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Set up the project for releasing.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:10,805 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:10,924 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Improved the repository build and added a feature project.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:11,156 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:11,283 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Tested the deployment instructions and the Eclipse plugin.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:11,543 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:11,729 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Fixed a problem with bug reporting in Eclipse.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:11,973 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:12,095 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:12,305 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:12,305 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/134508 is deleted.
+2014 Jun 30 14:23:12,419 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:12,614 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:12,615 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/134508 is deleted.
+2014 Jun 30 14:23:12,784 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'initial implementation / discussion' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:12,977 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:12,978 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: initial implementation / discussion of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159457 is deleted.
+2014 Jun 30 14:23:13,092 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'adaption of tests' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:13,356 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:13,357 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: adaption of tests of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159457 is deleted.
+2014 Jun 30 14:23:13,494 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:13,730 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:13,864 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '-' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:23:14,070 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:14,071 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: - of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111863 is deleted.
+2014 Jun 30 14:23:14,210 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '-' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:23:14,410 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:14,411 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: - of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111863 is deleted.
+2014 Jun 30 14:23:14,530 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'see comments' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:23:14,750 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:14,751 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: see comments of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/144577 is deleted.
+2014 Jun 30 14:23:14,906 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:23:15,199 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:15,200 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103 is deleted.
+2014 Jun 30 14:23:15,327 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Code review' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:15,559 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:15,698 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:23:15,925 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:15,926 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103 is deleted.
+2014 Jun 30 14:23:16,096 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:23:16,377 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:16,378 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103 is deleted.
+2014 Jun 30 14:23:16,536 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'review sample app' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:16,838 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:16,839 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: review sample app of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103 is deleted.
+2014 Jun 30 14:23:16,976 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:23:17,207 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:17,207 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/140103 is deleted.
+2014 Jun 30 14:23:17,448 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Implementing the initial concept for a new build solution and an annotation processor for listing test classes.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:17,722 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:17,930 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Final implementation improvements and testing.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:18,180 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:18,337 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:18,613 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:18,614 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/135774 is deleted.
+2014 Jun 30 14:23:18,796 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:19,114 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:19,115 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/135774 is deleted.
+2014 Jun 30 14:23:19,277 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Finalized project structure, moved the test processor out of the product project.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:19,524 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:19,668 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Investigated the issue and possible solutions' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:19,895 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:20,047 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Implemented tests and the first iteration of the fix.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:20,314 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:20,513 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Improved the implementation and automated test cases for ServerContentProvider / ServerLocation.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:20,747 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:20,913 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Finalized the initial iteration.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:21,184 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:21,331 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Implemented tests and verified the solution, based on the ideas presented at the team meeting.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:21,675 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:21,904 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Improved tests, exception handling and Spring context structure.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:22,160 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:22,320 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Fixes based on code review.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:22,570 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:22,737 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '.' of person: jing.ge@kuehne-nagel.com
+2014 Jun 30 14:23:22,976 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: jing.ge@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:22,976 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - jing.ge@kuehne-nagel.com's worklog: . of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/120816 is deleted.
+2014 Jun 30 14:23:23,132 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'requested installers' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:23,469 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:23,469 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: requested installers of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/159463 is deleted.
+2014 Jun 30 14:23:23,689 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:23:23,988 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:24,191 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:23:24,596 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:24,827 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'review' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:25,198 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'analysis' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:25,662 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'investigation' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:26,068 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'define tasks for mac OS port' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:26,422 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:26,423 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: define tasks for mac OS port of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154125 is deleted.
+2014 Jun 30 14:23:26,569 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Define and estimate tasks' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:26,789 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:26,790 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Define and estimate tasks of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154125 is deleted.
+2014 Jun 30 14:23:26,920 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'prepare slides' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:27,153 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:27,154 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: prepare slides of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154125 is deleted.
+2014 Jun 30 14:23:27,270 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'discuss slides' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:27,605 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:27,606 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: discuss slides of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/154125 is deleted.
+2014 Jun 30 14:23:27,725 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'changed computation of width for the IToolbarContributionItem' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:28,024 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:28,024 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: changed computation of width for the IToolbarContributionItem of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/156219 is deleted.
+2014 Jun 30 14:23:28,208 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:28,416 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:28,539 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'implemented and tested the script,
+updated documentation' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:28,837 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:28,838 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: implemented and tested the script,
+updated documentation of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139027 is deleted.
+2014 Jun 30 14:23:28,989 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'reworked review remarks' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:29,198 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:29,199 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: reworked review remarks of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/139027 is deleted.
+2014 Jun 30 14:23:29,324 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:23:29,548 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:29,702 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'consolidation' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:30,101 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:23:30,415 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:30,534 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Telco, Besprechung' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:30,947 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'requirements document' of person: external.stefan.reichert@kuehne-nagel.com
+2014 Jun 30 14:23:31,425 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Investigation / tests' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:31,660 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:31,781 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:23:32,024 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:32,141 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '-' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:23:32,591 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:32,592 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: - of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/111883 is deleted.
+2014 Jun 30 14:23:32,712 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: '' of person: external.pascal.alich@kuehne-nagel.com
+2014 Jun 30 14:23:32,917 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: external.pascal.alich@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:33,044 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'intial analysis' of person: christoph.gerkens@kuehne-nagel.com
+2014 Jun 30 14:23:33,290 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: christoph.gerkens@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:33,290 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - christoph.gerkens@kuehne-nagel.com's worklog: intial analysis of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/102265 is deleted.
+2014 Jun 30 14:23:33,436 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Redesigning AuthenticationServiceImpl to fix the issue, creating a new UI test for the bug case.' of person: tonis.pihlakas@kuehne-nagel.com
+2014 Jun 30 14:23:33,665 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: tonis.pihlakas@kuehne-nagel.com in country: EE
+2014 Jun 30 14:23:33,829 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Found worklog: 'Review' of person: Andreas.Gellendin@kuehne-nagel.com
+2014 Jun 30 14:23:34,096 DEBUG main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - Verififying properties of person: andreas.gellendin@kuehne-nagel.com in country: DE
+2014 Jun 30 14:23:34,097 INFO main com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy - andreas.gellendin@kuehne-nagel.com's worklog: Review of issue: http://dcejira02.ger.win.int.kn:8080/rest/api/latest/issue/132791 is deleted.
+2014 Jun 30 14:23:34,097 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Number of subject worklogs found is: 218
+2014 Jun 30 14:24:04,433 INFO main com.kn.jira.worklogeraser.domain.WorklogEraser - Performing jira worklog erasure process finished.

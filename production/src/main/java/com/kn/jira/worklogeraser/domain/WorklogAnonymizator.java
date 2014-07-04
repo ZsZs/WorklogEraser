@@ -31,13 +31,23 @@ import com.google.common.collect.Maps;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 
-public class WorklogEraser implements ApplicationContextAware{
+public class WorklogAnonymizator implements ApplicationContextAware{
+   public static final String BEAN_NAME_ACTION_LOGGER = "anonymizationActionLog";
+   public static final String BEAN_NAME_CONFIG_PROPERTIES = "configProperties";
+   public static final String BEAN_NAME_EMPLOYEE_MATCHING_STRATEGY = "employeeMatchingStrategy";
+   public static final String BEAN_NAME_JIRA_ADAPTER = "jiraAdapter";
+   public static final String BEAN_NAME_PDM_ADAPTER = "pdmServiceClient";
+   public static final String BEAN_NAME_WORKLOG_ANONYMIZATOR = "worklogAnonymizator";
+   public static final String CONF_ANONYM_USER = "WorklogAnonymizator.jira.anonym.user.name";
+   public static final String CONF_CHANGED_ISSUE_NOTE = "WorklogAnonymizator.jira.changed.issue.note";
+   public static final String CONF_OBSOLESCENCE_TIME_PERIOD = "WorklogAnonymizator.jira.obsolescenceTimePeriod";
+   public static final String CONF_CLOSED_STATE = "WorklogAnonymizator.jira.closed.issue.status.name";
+   public static final String CONF_JIRA_USER_PASSWORD = "WorklogAnonymizator.jira.user.password";
+   public static final String CONF_JIRA_USER_NAME = "WorklogAnonymizator.jira.user.name";
    public static final String DEFAULT_APPLICATION_CONFIGURATION = "file:Configuration/BeanContainerDefinition.xml";
    public static final String DATE_FORMAT = "yyyy/MM/dd";
    public static final String ISSUE_STATUS_DEFAULT = "Closed";
-   public static final String OBSOLESCENCE_TIME_PERIOD = "worklogeraser.obsolescenceTimePeriod";
-   public static final String CLOSED_STATE_PROPERTY_KEY = "worklogeraser.closed.issue.status.name";
-   private EraseActionLogger actionLogger;
+   private AnonymizationActionLogger actionLogger;
    private List<BasicProject> allJiraProjects = Lists.newArrayList();
    private ApplicationContext applicationContext;
    private String closedIssueStatusName = ISSUE_STATUS_DEFAULT;
@@ -57,13 +67,13 @@ public class WorklogEraser implements ApplicationContextAware{
       
       @SuppressWarnings( "resource" )
       ApplicationContext applicationContext = new ClassPathXmlApplicationContext( DEFAULT_APPLICATION_CONFIGURATION );
-      WorklogEraser worklogEraser = applicationContext.getBean( "worklogEraser", WorklogEraser.class );
+      WorklogAnonymizator worklogEraser = applicationContext.getBean( BEAN_NAME_WORKLOG_ANONYMIZATOR, WorklogAnonymizator.class );
       worklogEraser.perform();
       System.exit( 0 );
    }   
    
    // Constructors
-   public WorklogEraser( Properties configurationProperties ) {
+   public WorklogAnonymizator( Properties configurationProperties ) {
       this.configurationProperties = configurationProperties;
    }
 
@@ -80,7 +90,8 @@ public class WorklogEraser implements ApplicationContextAware{
          collectAllProjects();
          collectAllSubjectIssues();
          collectAllSubjectWorklogsAndPerformErase();
-      }catch( WorklogEraserException | SAXException | IOException | ParserConfigurationException | TransformerException e ){
+      }catch( WorklogEraserException | SAXException | IOException | ParserConfigurationException | TransformerException | RuntimeException e ){
+//      }catch( Exception e ){
          programLogger.error( "Error occured while performing jira worklog erasure.", e );
       }finally{
          try{
@@ -99,7 +110,7 @@ public class WorklogEraser implements ApplicationContextAware{
    public JiraQuery getWorklogQueryStatement() { return worklogQueryStatement; }
    @Override public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException { 
       this.applicationContext = applicationContext; 
-      employeeMatchingStrategy = applicationContext.getBean( "employeeMatchingStrategy", EmployeeMatchingStrategy.class );
+      employeeMatchingStrategy = applicationContext.getBean( BEAN_NAME_EMPLOYEE_MATCHING_STRATEGY, EmployeeMatchingStrategy.class );
    }
 
    // Protected, private helper methods
@@ -113,7 +124,7 @@ public class WorklogEraser implements ApplicationContextAware{
    }
    
    protected void calculateObsolatedWorklogDate(){
-      Integer obsolescenceTimePeriod = Integer.parseInt( configurationProperties.getProperty( OBSOLESCENCE_TIME_PERIOD ));
+      Integer obsolescenceTimePeriod = Integer.parseInt( configurationProperties.getProperty( CONF_OBSOLESCENCE_TIME_PERIOD ));
       DateTime currentDate = new DateTime();
       obsolatedWorklogDate = currentDate.minusDays( obsolescenceTimePeriod ).withTimeAtStartOfDay().toDate();
       
@@ -150,24 +161,24 @@ public class WorklogEraser implements ApplicationContextAware{
          Issue jiraIssue = jiraIssueEntry.getValue();
          actionLogger.considerIssue( jiraIssue.getKey(), jiraIssue.getStatus().getName() );
          List<Worklog> worklogsAssociatedToIssue = Lists.newArrayList( jiraIssue.getWorklogs() );
-         performErase( worklogsAssociatedToIssue );
+         performAnonymization( worklogsAssociatedToIssue );
          subjectWorklogs.addAll( worklogsAssociatedToIssue );
       }
       programLogger.info( "Number of subject worklogs found is: " + subjectWorklogs.size() );
    }
 
-   protected void performErase( List<Worklog> subjectWorklogs ) throws JiraAdapterException{
+   protected void performAnonymization( List<Worklog> subjectWorklogs ) throws JiraAdapterException{
       employeeMatchingStrategy.perforErase( subjectIssues, subjectWorklogs );
    }
    
    protected void setUpActionsLog() throws SAXException, IOException, ParserConfigurationException, TransformerException {
-      actionLogger = applicationContext.getBean( "eraseActionLog", EraseActionLogger.class );
+      actionLogger = applicationContext.getBean( BEAN_NAME_ACTION_LOGGER, AnonymizationActionLogger.class );
       actionLogger.setUp();
       programLogger.info( "Action logger is configured to log into: " + actionLogger.getLogPath() );
    }   
    
    protected void setUpConnectedSystemsAdapters(){
-      jiraAdapter = applicationContext.getBean( "jiraAdapter", JiraAdapter.class );
+      jiraAdapter = applicationContext.getBean( BEAN_NAME_JIRA_ADAPTER, JiraAdapter.class );
       jiraAdapter.setUp();
       programLogger.info( "Jira and PDM++ web service adapters are configured." );
    }

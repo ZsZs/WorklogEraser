@@ -30,13 +30,13 @@ import com.kn.jira.worklogeraser.sharedresources.JiraAdapterFixture;
 import com.kn.jira.worklogeraser.sharedresources.PdmAdapterFixture;
 import com.kn.jira.worklogeraser.sharedresources.TestConfigurationWithMockAdaptersFixture;
 
-public class EraseActionLoggerTest {
+public class AnonymizationActionLoggerTest {
    public static final String DELETITION_ELEMENTS_SELECTOR = "worklogDeleted";
    public static final String EXECUTION_ELEMENTS_SELECTOR = "/worklogEraser/execution";
    public static final String ISSUE_ELEMENTS_SELECTOR = "subjectIssue";
    public static final String PROJECT_ACCESS_RESTRICTION_ELEMENTS_SELECTOR = "projectAccessRestriction";
    public static final String PROJECT_ELEMENTS_SELECTOR = "subjectProject";
-   private EraseActionLogger actionLogger;
+   private AnonymizationActionLogger actionLogger;
    protected JiraAdapterFixture jiraAdapterFixture;
    private Document log;
    protected Date obsolatedWorklogDate;
@@ -84,15 +84,15 @@ public class EraseActionLoggerTest {
       actionLogger.executionStart( new Date() );
 
       Element currentExecutionElement = Whitebox.getInternalState( actionLogger, "currentExecutionElement" );
-      String executionStart = currentExecutionElement.getAttribute( EraseActionLogger.EXECUTION_START_ATTRIBUTE_NAME );
+      String executionStart = currentExecutionElement.getAttribute( AnonymizationActionLogger.EXECUTION_START_ATTRIBUTE_NAME );
       assertThat( executionStart, not( isEmptyOrNullString() ));
    }
 
    @Test public void executionStart_logsObsolationTime() {
       actionLogger.executionStart( obsolatedWorklogDate );
-      SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogEraser.DATE_FORMAT );
+      SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogAnonymizator.DATE_FORMAT );
       
-      String obsolationData = determineExecutionElementAttribute( EraseActionLogger.OBSOLATION_ATTRIBUTE_NAME );
+      String obsolationData = determineExecutionElementAttribute( AnonymizationActionLogger.OBSOLATION_ATTRIBUTE_NAME );
       assertThat( obsolationData, equalTo( dateFormat.format( obsolatedWorklogDate )));
    }
 
@@ -101,7 +101,7 @@ public class EraseActionLoggerTest {
       actionLogger.executionEnd();
 
       Element currentExecutionElement = Whitebox.getInternalState( actionLogger, "currentExecutionElement" );
-      String executionEnd = currentExecutionElement.getAttribute( EraseActionLogger.EXECUTION_END_ATTRIBUTE_NAME );
+      String executionEnd = currentExecutionElement.getAttribute( AnonymizationActionLogger.EXECUTION_END_ATTRIBUTE_NAME );
       assertThat( executionEnd, not( isEmptyOrNullString() ));
    }
    

@@ -22,7 +22,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
-public class EraseActionLogger {
+public class AnonymizationActionLogger {
    public static final String DATE_FORMAT = "dd/MM/yyyy, HH:mm:ss";
    public static final String DELETITION_ELEMENT_NAME = "worklogDeleted";
    public static final String EXECUTION_ELEMENT_NAME = "execution";
@@ -35,7 +35,7 @@ public class EraseActionLogger {
    public static final String ROOT_ELEMENT_NAME = "worklogEraser";
    public static final String WORK_MODIFIED_ATTRIBUTE_NAME = "isWorkModified";
    private Element currentExecutionElement;
-   private Logger programLogger = LoggerFactory.getLogger( EraseActionLogger.class );
+   private Logger programLogger = LoggerFactory.getLogger( AnonymizationActionLogger.class );
    private Document logDocument;
    private Resource logResource;
    private Element rootElement;
@@ -44,7 +44,7 @@ public class EraseActionLogger {
    private SimpleDateFormat dateFormat;
 
    // Constructors
-   public EraseActionLogger( final Resource logResouce ) {
+   public AnonymizationActionLogger( final Resource logResouce ) {
       this.logResource = logResouce;
    }
 
@@ -71,7 +71,7 @@ public class EraseActionLogger {
       currentExecutionElement = logDocument.createElement( EXECUTION_ELEMENT_NAME );
       dateFormat = new SimpleDateFormat( DATE_FORMAT );
       currentExecutionElement.setAttribute( EXECUTION_START_ATTRIBUTE_NAME, dateFormat.format( new Date()));
-      currentExecutionElement.setAttribute( OBSOLATION_ATTRIBUTE_NAME, new SimpleDateFormat( WorklogEraser.DATE_FORMAT ).format( obsolationDate ));
+      currentExecutionElement.setAttribute( OBSOLATION_ATTRIBUTE_NAME, new SimpleDateFormat( WorklogAnonymizator.DATE_FORMAT ).format( obsolationDate ));
       rootElement.appendChild( currentExecutionElement );
    }
 

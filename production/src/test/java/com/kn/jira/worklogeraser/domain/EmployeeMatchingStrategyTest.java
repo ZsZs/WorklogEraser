@@ -29,7 +29,7 @@ public abstract class EmployeeMatchingStrategyTest {
    protected EmployeeMatchingStrategy employeeMatchingStrategy;
    public JiraAdapter jiraAdapter;
    protected JiraAdapterFixture jiraAdapterFixture;
-   protected EraseActionLogger mockActionLogger;
+   protected AnonymizationActionLogger mockActionLogger;
    protected PdmAdapter pdmAdapter;
    protected PdmAdapterFixture pdmAdapterFixture;
    protected Map<URI, Issue> subjectIssues;
@@ -48,7 +48,7 @@ public abstract class EmployeeMatchingStrategyTest {
       subjectIssues = jiraAdapterFixture.getExpectedSubjectIssues();
       subjectWorklogs = jiraAdapterFixture.getExpectedSubjectWorklogs();
       
-      mockActionLogger = mock( EraseActionLogger.class );
+      mockActionLogger = mock( AnonymizationActionLogger.class );
       Whitebox.setInternalState( employeeMatchingStrategy, "actionLogger", mockActionLogger );
    }
 

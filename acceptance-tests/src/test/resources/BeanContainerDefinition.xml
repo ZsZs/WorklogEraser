@@ -69,8 +69,8 @@
    
    <!-- Jira Service Client Configuration -->
    <bean id="jiraAdapter" class="com.kn.jira.worklogeraser.jiraadapter.NoEffectJiraAdapter" lazy-init="true">
-      <constructor-arg name="serverUriString" value="http://lxhamrzdb01:8080/jira"/>
-      <constructor-arg name="userName" value="worklogeraser.admin" />
-      <constructor-arg name="password" value="admin" />
+      <constructor-arg name="serverUriString" value="http://dcejira02.ger.win.int.kn:8080"/>
+      <constructor-arg name="userName" value="anonym.admin" />
+      <constructor-arg name="password" value="eAKrbm" />
    </bean>
 </beans>

@@ -18,7 +18,7 @@ import com.atlassian.jira.rest.client.domain.Issue;
 import com.atlassian.jira.rest.client.domain.User;
 import com.atlassian.jira.rest.client.domain.Worklog;
 import com.google.common.collect.Lists;
-import com.kn.jira.worklogeraser.domain.WorklogEraser;
+import com.kn.jira.worklogeraser.domain.WorklogAnonymizator;
 import com.kn.jira.worklogeraser.sharedresources.TestConfigurationFixture;
 
 public class JiraAdapterTest {
@@ -27,7 +27,7 @@ public class JiraAdapterTest {
    private static final String QUERY_CLOSED_ISSUES = "project=\"WORKLOG\" AND status=\"CLOSED\"";
    private static final String QUERY_ALL_ISSUES = "project=\"WORKLOG\"";
    private static final String STATUS_NAME = "CLOSED";
-   private SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogEraser.DATE_FORMAT );
+   private SimpleDateFormat dateFormat = new SimpleDateFormat( WorklogAnonymizator.DATE_FORMAT );
    private JiraAdapter jiraAdapter;
    private TestConfigurationFixture testConfiguration;
 

@@ -18,14 +18,14 @@ import org.w3c.dom.NodeList;
 public class PerformEraseAndAnalyzeActionLog {
    protected static final String BEAN_CONTAINER_DEFINITION_XML = "classpath:BeanContainerDefinition.xml";
    private ApplicationContext applicationContext;
-   private WorklogEraser worklogEraser;
-   private EraseActionLogger actionLogger;
+   private WorklogAnonymizator worklogEraser;
+   private AnonymizationActionLogger actionLogger;
    private XPath xPath;
    
    @Before public void beforeEachTest(){
       applicationContext = new ClassPathXmlApplicationContext( BEAN_CONTAINER_DEFINITION_XML );
-      worklogEraser = applicationContext.getBean( "worklogEraser", WorklogEraser.class );
-      actionLogger = applicationContext.getBean( "eraseActionLog", EraseActionLogger.class );
+      worklogEraser = applicationContext.getBean( "worklogEraser", WorklogAnonymizator.class );
+      actionLogger = applicationContext.getBean( "eraseActionLog", AnonymizationActionLogger.class );
       
       xPath = XPathFactory.newInstance().newXPath();
    }

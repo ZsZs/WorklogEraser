@@ -1,13 +1,14 @@
 package com.kn.jira.worklogeraser.jiraadapter;
 
 import java.net.URI;
+import java.util.Properties;
 
 import com.atlassian.jira.rest.client.domain.Worklog;
 
 public class NoEffectJiraAdapter extends JiraAdapter{
 
-   public NoEffectJiraAdapter( final String serverUriString, final String userName, final String password ) {
-      super( serverUriString, userName, password );
+   public NoEffectJiraAdapter( final Properties configurationProperties, final String serverUriString ) {
+      super( configurationProperties, serverUriString );
    }
 
    @Override
