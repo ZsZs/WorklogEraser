@@ -18,9 +18,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.powermock.reflect.Whitebox;
 
-import com.atlassian.jira.rest.client.domain.BasicProject;
-import com.atlassian.jira.rest.client.domain.Issue;
-import com.atlassian.jira.rest.client.domain.Worklog;
+import com.atlassian.jira.rest.client.api.domain.BasicProject;
+import com.atlassian.jira.rest.client.api.domain.Issue;
+import com.atlassian.jira.rest.client.api.domain.Worklog;
 import com.kn.jira.worklogeraser.sharedresources.JiraAdapterFixture;
 import com.kn.jira.worklogeraser.sharedresources.TestConfigurationWithMockAdaptersFixture;
 

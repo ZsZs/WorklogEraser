@@ -15,6 +15,7 @@ import org.junit.Test;
 import com.kn.jira.worklogeraser.sharedresources.TestConfigurationFixture;
 
 public class PdmPersonServiceClientTest {
+   private static final String TEST_EMPLOYEE = "external.zsolt.zsuffa@kuehne-nagel.com";
    private static final String SEARCH_STRING = "Zsolt";
    private TestConfigurationFixture testConfiguration;
    private PdmPersonServiceClient webServiceClient;
@@ -30,10 +31,10 @@ public class PdmPersonServiceClientTest {
    }
    
    @Test public void findEmployeeByEmail(){
-      FindEmployeeByEmailResponse response = webServiceClient.findEmployeeByEmail( "external.zsolt.zsuffa@kuehne-nagel.com" );
+      FindEmployeeByEmailResponse response = webServiceClient.findEmployeeByEmail( TEST_EMPLOYEE );
       PersonInPdm foundedPerson = response.getFoundedPerson();
       
-      assertThat( foundedPerson.getEmailAddress(), equalTo( "external.zsolt.zsuffa@kuehne-nagel.com" ));
+      assertThat( foundedPerson.getEmailAddress(), equalTo( TEST_EMPLOYEE ));
    }
    
    @Test public void findEmployeeByString(){

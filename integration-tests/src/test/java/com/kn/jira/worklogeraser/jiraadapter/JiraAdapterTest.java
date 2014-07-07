@@ -13,10 +13,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.atlassian.jira.rest.client.domain.BasicProject;
-import com.atlassian.jira.rest.client.domain.Issue;
-import com.atlassian.jira.rest.client.domain.User;
-import com.atlassian.jira.rest.client.domain.Worklog;
+import com.atlassian.jira.rest.client.api.domain.BasicProject;
+import com.atlassian.jira.rest.client.api.domain.Issue;
+import com.atlassian.jira.rest.client.api.domain.User;
+import com.atlassian.jira.rest.client.api.domain.Worklog;
 import com.google.common.collect.Lists;
 import com.kn.jira.worklogeraser.domain.WorklogAnonymizator;
 import com.kn.jira.worklogeraser.sharedresources.TestConfigurationFixture;
@@ -108,7 +108,7 @@ public class JiraAdapterTest {
       jiraAdapter.signIssueAsManipulated( subjectWorklog.getIssueUri() );
       
       //VERIFY:
-      subjectIssue = findTheFirstSubjectIssue();
+      subjectIssue = reloadIssue( subjectIssue );
       assertThat( Lists.newArrayList( subjectIssue.getComments() ).size(), greaterThan( numberOfCommentsBeforeDelete ));
    }
 

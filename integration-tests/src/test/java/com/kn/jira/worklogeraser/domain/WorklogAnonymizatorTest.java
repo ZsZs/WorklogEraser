@@ -12,9 +12,9 @@ import org.mockito.internal.util.reflection.Whitebox;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.atlassian.jira.rest.client.domain.BasicProject;
+import com.atlassian.jira.rest.client.api.domain.BasicProject;
 
-public class WorklogEraserTest {
+public class WorklogAnonymizatorTest {
    public static final String DEFAULT_APPLICATION_CONFIGURATION = "file:src/test/resources/BeanContainerDefinition.xml";
    private WorklogAnonymizator worklogEraser;
    
@@ -23,12 +23,13 @@ public class WorklogEraserTest {
       
       @SuppressWarnings( "resource" )
       ApplicationContext applicationContext = new ClassPathXmlApplicationContext( DEFAULT_APPLICATION_CONFIGURATION );
-      worklogEraser = applicationContext.getBean( "worklogEraser", WorklogAnonymizator.class );
+      worklogEraser = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_WORKLOG_ANONYMIZATOR, WorklogAnonymizator.class );
    }
    
    @Test public void perform_InvestigatesAllProjects(){
       worklogEraser.perform();
       
+      @SuppressWarnings( "unchecked" )
       List<BasicProject> allJiraProjects = (List<BasicProject>) Whitebox.getInternalState( worklogEraser, "allJiraProjects" );
       assertThat( allJiraProjects.size(), greaterThan( 0 ));
    }

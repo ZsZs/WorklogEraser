@@ -1,0 +1,9 @@
+# Create a issues and worklogs
+# Command line:
+#     jira --action run --file createTestData.txt --findReplace @project@:XYZ,@user@:automation --continue
+
+# Issues
+--action createIssue --project @project@ --type "Task" --summary "Resolved issue with current worklogs" --affectsVersions "V1, V2" --components "C2"
+--action addWork --issue @project@-5 --timeSpent "3h 30m" --date "2013/12/12" --dateFormat "YYYY/MM/DD" --comment "Pura Vida"
+
+--action progressIssue --issue @project@-5 --step "Close Issue" --resolution Fixed --date "2013/12/12" --dateFormat "YYYY/MM/DD"

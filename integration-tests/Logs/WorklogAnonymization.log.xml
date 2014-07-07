@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<worklogEraser>
+   <execution finishedOn="07/07/2014, 11:55:36" startedOn="07/07/2014, 11:55:33" worklogsObsolatedFrom="2014/07/08">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue name="WORKLOG-5" status="Closed"/>
+         <subjectIssue name="WORKLOG-1" status="Closed"/>
+         <subjectIssue name="WORKLOG-2" status="Closed"/>
+      </subjectProject>
+   </execution>
+<execution finishedOn="07/07/2014, 13:24:48" startedOn="07/07/2014, 13:24:34" worklogsObsolatedFrom="2014/07/08">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue name="WORKLOG-5" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="WORKLOG-1" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="WORKLOG-2" status="Closed"/>
+      </subjectProject>
+   </execution>
+<execution finishedOn="07/07/2014, 16:04:56" startedOn="07/07/2014, 15:38:56" worklogsObsolatedFrom="2014/07/08">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue isWorkModified="true" name="WORKLOG-1" status="Closed"/>
+         <subjectIssue name="WORKLOG-5" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="WORKLOG-2" status="Closed"/>
+      </subjectProject>
+   </execution>
+</worklogEraser>

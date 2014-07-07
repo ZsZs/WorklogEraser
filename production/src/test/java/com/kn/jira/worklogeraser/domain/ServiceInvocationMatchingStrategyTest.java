@@ -5,8 +5,8 @@ import static org.mockito.Mockito.verify;
 
 import org.junit.Test;
 
-import com.atlassian.jira.rest.client.domain.User;
-import com.atlassian.jira.rest.client.domain.Worklog;
+import com.atlassian.jira.rest.client.api.domain.User;
+import com.atlassian.jira.rest.client.api.domain.Worklog;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
 import com.kn.jira.worklogeraser.pdmadapter.PersonInPdm;
 

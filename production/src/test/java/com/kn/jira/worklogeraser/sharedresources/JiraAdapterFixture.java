@@ -15,12 +15,12 @@ import java.util.Properties;
 import org.joda.time.DateTime;
 import org.springframework.context.ApplicationContext;
 
-import com.atlassian.jira.rest.client.domain.BasicProject;
-import com.atlassian.jira.rest.client.domain.BasicStatus;
-import com.atlassian.jira.rest.client.domain.BasicUser;
-import com.atlassian.jira.rest.client.domain.Issue;
-import com.atlassian.jira.rest.client.domain.User;
-import com.atlassian.jira.rest.client.domain.Worklog;
+import com.atlassian.jira.rest.client.api.domain.BasicProject;
+import com.atlassian.jira.rest.client.api.domain.BasicUser;
+import com.atlassian.jira.rest.client.api.domain.Issue;
+import com.atlassian.jira.rest.client.api.domain.Status;
+import com.atlassian.jira.rest.client.api.domain.User;
+import com.atlassian.jira.rest.client.api.domain.Worklog;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -94,9 +94,9 @@ public class JiraAdapterFixture {
    }
    
    private void createJiraIssues() throws JiraAdapterException, URISyntaxException{
-      BasicStatus mockOpenStatus = mock( BasicStatus.class );
+      Status mockOpenStatus = mock( Status.class );
       when( mockOpenStatus.getName() ).thenReturn( "Open" );
-      BasicStatus mockClosedStatus = mock( BasicStatus.class );
+      Status mockClosedStatus = mock( Status.class );
       when( mockClosedStatus.getName() ).thenReturn( "Closed" );
       
       Issue openIssueWithoutWorklog = mock( Issue.class );

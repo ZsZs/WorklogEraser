@@ -40,12 +40,12 @@ public class TestConfigurationFixture {
 
    //Protected, private helper methods
    protected void retrieveBeans() {
-      actionLog = applicationContext.getBean( "eraseActionLog", AnonymizationActionLogger.class );
-      worklogEraser = applicationContext.getBean( "worklogEraser", WorklogAnonymizator.class );
-      configurationProperties = applicationContext.getBean( "configProperties", Properties.class );
-      jiraAdapter = applicationContext.getBean( "jiraAdapter", JiraAdapter.class );
+      actionLog = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_ACTION_LOGGER, AnonymizationActionLogger.class );
+      worklogEraser = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_WORKLOG_ANONYMIZATOR, WorklogAnonymizator.class );
+      configurationProperties = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_CONFIG_PROPERTIES, Properties.class );
+      jiraAdapter = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_JIRA_ADAPTER, JiraAdapter.class );
       jiraAdapter.setUp();
       pdmServiceClient = applicationContext.getBean( "pdmServiceClient", PdmPersonServiceClient.class );
-      employeeMatchingStrategy = applicationContext.getBean( "employeeMatchingStrategy", EmployeeMatchingStrategy.class );
+      employeeMatchingStrategy = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_EMPLOYEE_MATCHING_STRATEGY, EmployeeMatchingStrategy.class );
    }
 }
