@@ -908,3 +908,232 @@ Caused by: org.springframework.web.client.HttpClientErrorException: 403 Forbidde
 	... 31 more
 2014 Jul 07 16:04:56,439 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject worklogs found is: 6
 2014 Jul 07 16:04:56,624 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process finished.
+2014 Jul 08 12:30:13,347 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 08 12:30:13,606 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Wed Jul 09 00:00:00 CEST 2014
+2014 Jul 08 12:30:13,739 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 08 12:30:13,740 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 08 12:30:23,359 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 08 12:30:23,360 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 08 12:30:24,750 ERROR main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Error occured while performing jira worklog erasure.
+java.lang.RuntimeException: java.net.ConnectException: Connection refused: no further information
+	at com.google.common.base.Throwables.propagate(Throwables.java:160)
+	at com.atlassian.httpclient.apache.httpcomponents.DefaultHttpClient$3.apply(DefaultHttpClient.java:256)
+	at com.atlassian.httpclient.apache.httpcomponents.DefaultHttpClient$3.apply(DefaultHttpClient.java:249)
+	at com.atlassian.util.concurrent.Promises$Of$2.apply(Promises.java:276)
+	at com.atlassian.util.concurrent.Promises$Of$2.apply(Promises.java:272)
+	at com.atlassian.util.concurrent.Promises$2.onFailure(Promises.java:167)
+	at com.google.common.util.concurrent.Futures$4.run(Futures.java:1140)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:150)
+	at com.google.common.util.concurrent.ExecutionList.execute(ExecutionList.java:135)
+	at com.google.common.util.concurrent.AbstractFuture.setException(AbstractFuture.java:203)
+	at com.google.common.util.concurrent.SettableFuture.setException(SettableFuture.java:68)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$1$2.run(SettableFuturePromiseHttpPromiseAsyncClient.java:59)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$ThreadLocalDelegateRunnable$1.run(SettableFuturePromiseHttpPromiseAsyncClient.java:197)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient.runInContext(SettableFuturePromiseHttpPromiseAsyncClient.java:90)
+	at com.atlassian.httpclient.apache.httpcomponents.SettableFuturePromiseHttpPromiseAsyncClient$ThreadLocalDelegateRunnable.run(SettableFuturePromiseHttpPromiseAsyncClient.java:192)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:173)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:147)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:374)
+	at org.apache.http.impl.nio.conn.PoolingClientAsyncConnectionManager.execute(PoolingClientAsyncConnectionManager.java:108)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient.doExecute(AbstractHttpAsyncClient.java:464)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient.access$000(AbstractHttpAsyncClient.java:101)
+	at org.apache.http.impl.nio.client.AbstractHttpAsyncClient$1.run(AbstractHttpAsyncClient.java:485)
+2014 Jul 08 12:30:25,139 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process finished.
+2014 Jul 11 16:05:57,875 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 11 16:05:57,918 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Sat Jul 12 00:00:00 CEST 2014
+2014 Jul 11 16:05:57,953 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 11 16:05:57,953 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 11 16:05:57,954 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 11 16:05:57,954 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 11 16:05:58,537 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of Jira Projects found is: 1
+2014 Jul 11 16:05:58,537 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all subject issues from Jira.
+2014 Jul 11 16:05:58,537 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Considering jira project: WORKLOG test
+2014 Jul 11 16:05:59,659 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject issues found is: 3
+2014 Jul 11 16:05:59,659 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all worklogs of all subject issues.
+2014 Jul 11 16:05:59,660 ERROR main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Error occured while performing jira worklog erasure.
+java.lang.NullPointerException
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizator.analyseWorklogs(WorklogAnonymizator.java:130)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizator.perform(WorklogAnonymizator.java:96)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizatorTest.perform_InvestigatesAllProjects(WorklogAnonymizatorTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jul 11 16:05:59,789 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process finished.
+2014 Jul 11 16:07:08,813 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 11 16:07:11,479 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Sat Jul 12 00:00:00 CEST 2014
+2014 Jul 11 16:07:12,864 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 11 16:07:12,864 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 11 16:07:21,002 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 11 16:07:26,267 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 11 16:07:26,551 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of Jira Projects found is: 1
+2014 Jul 11 16:07:36,162 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all subject issues from Jira.
+2014 Jul 11 16:07:42,531 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Considering jira project: WORKLOG test
+2014 Jul 11 16:08:50,129 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject issues found is: 3
+2014 Jul 11 16:09:00,156 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all worklogs of all subject issues.
+2014 Jul 11 16:14:50,495 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 11 16:14:51,938 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Sat Jul 12 00:00:00 CEST 2014
+2014 Jul 11 16:14:52,202 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 11 16:14:52,202 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 11 16:14:52,754 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 11 16:14:53,451 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 11 16:14:53,705 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of Jira Projects found is: 1
+2014 Jul 11 16:14:54,138 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all subject issues from Jira.
+2014 Jul 11 16:14:54,138 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Considering jira project: WORKLOG test
+2014 Jul 11 16:14:54,385 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject issues found is: 3
+2014 Jul 11 16:14:57,107 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all worklogs of all subject issues.
+2014 Jul 11 16:19:02,415 ERROR main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Issue: WORKLOG-1 doesn't have 'Reopen' transtion in the current state.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Closed'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:250)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:152)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizator.performAnonymizationOnIssue(WorklogAnonymizator.java:188)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizator.analyseWorklogs(WorklogAnonymizator.java:137)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizator.perform(WorklogAnonymizator.java:96)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizatorTest.perform_InvestigatesAllProjects(WorklogAnonymizatorTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jul 11 16:19:05,276 ERROR main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Error occured while performing jira worklog erasure.
+com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException: Transtion: 'Reopen Issue' of issue: 'WORKLOG-1' is not defined in the current status: 'Closed'
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.performTransition(JiraAdapter.java:250)
+	at com.kn.jira.worklogeraser.jiraadapter.JiraAdapter.reopenIssue(JiraAdapter.java:152)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizator.performAnonymizationOnIssue(WorklogAnonymizator.java:188)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizator.analyseWorklogs(WorklogAnonymizator.java:137)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizator.perform(WorklogAnonymizator.java:96)
+	at com.kn.jira.worklogeraser.domain.WorklogAnonymizatorTest.perform_InvestigatesAllProjects(WorklogAnonymizatorTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+2014 Jul 11 16:19:10,540 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process finished.
+2014 Jul 11 16:19:42,230 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 11 16:19:43,967 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Sat Jul 12 00:00:00 CEST 2014
+2014 Jul 11 16:19:44,084 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 11 16:19:44,085 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 11 16:19:44,276 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 11 16:19:45,244 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 11 16:19:45,514 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of Jira Projects found is: 1
+2014 Jul 11 16:19:46,571 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all subject issues from Jira.
+2014 Jul 11 16:19:46,572 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Considering jira project: WORKLOG test
+2014 Jul 11 16:19:46,770 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject issues found is: 2
+2014 Jul 11 16:19:52,763 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all worklogs of all subject issues.
+2014 Jul 11 16:21:11,401 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject worklogs found is: 2
+2014 Jul 11 16:21:19,309 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process finished.
+2014 Jul 11 16:26:02,753 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 11 16:26:02,788 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Sat Jul 12 00:00:00 CEST 2014
+2014 Jul 11 16:26:02,792 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 11 16:26:02,792 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 11 16:26:02,792 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 11 16:26:02,793 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 11 16:26:02,933 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of Jira Projects found is: 1
+2014 Jul 11 16:26:02,933 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all subject issues from Jira.
+2014 Jul 11 16:26:02,934 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Considering jira project: WORKLOG test
+2014 Jul 11 16:26:03,154 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject issues found is: 3
+2014 Jul 11 16:26:03,154 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all worklogs of all subject issues.
+2014 Jul 11 16:28:16,415 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 11 16:28:16,451 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Sat Jul 12 00:00:00 CEST 2014
+2014 Jul 11 16:28:16,454 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 11 16:28:16,454 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 11 16:28:16,455 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 11 16:28:16,455 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 11 16:28:16,595 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of Jira Projects found is: 1
+2014 Jul 11 16:28:16,595 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all subject issues from Jira.
+2014 Jul 11 16:28:16,595 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Considering jira project: WORKLOG test
+2014 Jul 11 16:28:16,765 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject issues found is: 2
+2014 Jul 11 16:28:16,765 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all worklogs of all subject issues.
+2014 Jul 11 16:30:16,983 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject worklogs found is: 2
+2014 Jul 11 16:30:17,050 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process finished.
+2014 Jul 11 16:38:53,455 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 11 16:38:53,485 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Sat Jul 12 00:00:00 CEST 2014
+2014 Jul 11 16:38:53,489 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 11 16:38:53,489 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 11 16:38:53,489 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 11 16:38:53,489 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 11 16:38:53,614 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of Jira Projects found is: 1
+2014 Jul 11 16:38:53,614 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all subject issues from Jira.
+2014 Jul 11 16:38:53,614 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Considering jira project: WORKLOG test
+2014 Jul 11 16:38:53,740 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject issues found is: 1
+2014 Jul 11 16:38:53,740 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all worklogs of all subject issues.
+2014 Jul 11 16:38:53,766 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject worklogs found is: 0
+2014 Jul 11 16:38:53,821 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process finished.
+2014 Jul 11 16:40:10,318 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process started
+2014 Jul 11 16:40:10,348 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Obsolated worklog date determined as: Sat Jul 12 00:00:00 CEST 2014
+2014 Jul 11 16:40:10,351 DEBUG main com.kn.jira.worklogeraser.domain.AnonymizationActionLogger - Output file opened: C:\ZsZs\Projekte\WorklogEraser\integration-tests\Logs\WorklogAnonymization.log.xml
+2014 Jul 11 16:40:10,351 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Action logger is configured to log into: WorklogAnonymization.log.xml
+2014 Jul 11 16:40:10,352 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Jira and PDM++ web service adapters are configured.
+2014 Jul 11 16:40:10,352 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all projects from Jira.
+2014 Jul 11 16:40:10,475 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of Jira Projects found is: 1
+2014 Jul 11 16:40:10,476 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all subject issues from Jira.
+2014 Jul 11 16:40:10,476 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Considering jira project: WORKLOG test
+2014 Jul 11 16:40:10,691 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject issues found is: 3
+2014 Jul 11 16:40:10,691 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Collecting all worklogs of all subject issues.
+2014 Jul 11 16:40:11,597 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Number of subject worklogs found is: 5
+2014 Jul 11 16:40:11,672 INFO main com.kn.jira.worklogeraser.domain.WorklogAnonymizator - Performing jira worklog erasure process finished.

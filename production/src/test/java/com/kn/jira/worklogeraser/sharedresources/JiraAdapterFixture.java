@@ -1,5 +1,6 @@
 package com.kn.jira.worklogeraser.sharedresources;
 
+import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -13,6 +14,8 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.joda.time.DateTime;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
 import org.springframework.context.ApplicationContext;
 
 import com.atlassian.jira.rest.client.api.domain.BasicProject;
@@ -93,6 +96,7 @@ public class JiraAdapterFixture {
       obsolatedWorklogDate = dateFormat.format( calculatedDate ); 
    }
    
+   @SuppressWarnings( "rawtypes" )
    private void createJiraIssues() throws JiraAdapterException, URISyntaxException{
       Status mockOpenStatus = mock( Status.class );
       when( mockOpenStatus.getName() ).thenReturn( "Open" );
@@ -105,6 +109,7 @@ public class JiraAdapterFixture {
       when( openIssueWithoutWorklog.getStatus() ).thenReturn( mockOpenStatus );
       projectAissues.add( openIssueWithoutWorklog );
       projectBissues.add( openIssueWithoutWorklog );
+      when( mockJiraAdapter.findIssueByKey( openIssueWithoutWorklog.getKey() )).thenReturn( openIssueWithoutWorklog );
       
       Issue openIssueWithWorklog = mock( Issue.class );
       when( openIssueWithWorklog.getKey() ).thenReturn(  "1001" );
@@ -112,7 +117,8 @@ public class JiraAdapterFixture {
       when( openIssueWithWorklog.getStatus() ).thenReturn( mockOpenStatus );
       projectAissues.add( openIssueWithWorklog );
       projectBissues.add( openIssueWithWorklog );
-      
+      when( mockJiraAdapter.findIssueByKey( openIssueWithWorklog.getKey() )).thenReturn( openIssueWithWorklog );
+           
       Issue resolvedIssueWithoutWorklog = mock( Issue.class );
       when( resolvedIssueWithoutWorklog.getKey() ).thenReturn(  "1002" );
       when( resolvedIssueWithoutWorklog.getSelf() ).thenReturn(  new URI( JIRA_BASE_URI + "1002" ));
@@ -120,6 +126,7 @@ public class JiraAdapterFixture {
       when( resolvedIssueWithoutWorklog.getWorklogs() ).thenReturn( ImmutableList.of( noneGermanEmployeeWorklog ));
       projectAissues.add( resolvedIssueWithoutWorklog );
       projectBissues.add( resolvedIssueWithoutWorklog );
+      when( mockJiraAdapter.findIssueByKey( resolvedIssueWithoutWorklog.getKey() )).thenReturn( resolvedIssueWithoutWorklog );
       
       Issue resolvedIssueWithWorklog = mock( Issue.class );
       when( resolvedIssueWithWorklog.getKey() ).thenReturn(  "1003" );
@@ -130,6 +137,16 @@ public class JiraAdapterFixture {
       projectAexpectedIssues.add( resolvedIssueWithWorklog );
       projectBissues.add( resolvedIssueWithWorklog );
       projectBexpectedIssues.add( resolvedIssueWithWorklog );
+      when( mockJiraAdapter.findIssueByKey( resolvedIssueWithWorklog.getKey() )).thenReturn( resolvedIssueWithWorklog );
+      doAnswer( new Answer() {
+         public Object answer( InvocationOnMock invocation) {
+            Object[] args = invocation.getArguments();
+            Issue subjectIssue = (Issue) args[0];
+            Status mockReopenedStatus = mock( Status.class );
+            when( mockReopenedStatus.getName() ).thenReturn( JiraAdapter.REOPENED_STATUS_NAME );
+            when( subjectIssue.getStatus() ).thenReturn( mockReopenedStatus );
+            return null;
+         }}).when( mockJiraAdapter ).reopenIssue( resolvedIssueWithWorklog );
       
       String queryTemplate = "project=\"{0}\" AND status=\"{1}\" AND status CHANGED BEFORE \"{2}\"";
       String query = MessageFormat.format( queryTemplate, new Object[]{ "A", "Closed", obsolatedWorklogDate });

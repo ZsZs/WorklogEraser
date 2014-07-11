@@ -24,8 +24,8 @@ public class PerformEraseAndAnalyzeActionLog {
    
    @Before public void beforeEachTest(){
       applicationContext = new ClassPathXmlApplicationContext( BEAN_CONTAINER_DEFINITION_XML );
-      worklogEraser = applicationContext.getBean( "worklogEraser", WorklogAnonymizator.class );
-      actionLogger = applicationContext.getBean( "eraseActionLog", AnonymizationActionLogger.class );
+      worklogEraser = applicationContext.getBean( "worklogAnonymizator", WorklogAnonymizator.class );
+      actionLogger = applicationContext.getBean( "anonymizationActionLog", AnonymizationActionLogger.class );
       
       xPath = XPathFactory.newInstance().newXPath();
    }

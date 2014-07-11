@@ -62,7 +62,7 @@ public class TestConfigurationWithMockAdaptersFixture extends TestConfigurationF
       super.tearDown();
    }
 
-   // Properties
+   // Properties   
    public JiraAdapterFixture getJiraAdapterFixture() {
       return jiraAdapterFixture;
    }
@@ -89,6 +89,8 @@ public class TestConfigurationWithMockAdaptersFixture extends TestConfigurationF
       super.retrieveBeans();
       Whitebox.setInternalState( worklogEraser, "applicationContext", mockApplicationContext );
       Whitebox.setInternalState( employeeMatchingStrategy, "applicationContext", mockApplicationContext );
+      Whitebox.setInternalState( employeeMatchingStrategy, "jiraAdapter", mockJiraAdapter );
+      Whitebox.setInternalState( employeeMatchingStrategy, "pdmAdapter", mockPdmAdapter );
    }
 
    private void mockJiraRestClient() {

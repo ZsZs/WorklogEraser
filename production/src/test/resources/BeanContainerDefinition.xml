@@ -17,8 +17,15 @@
       <constructor-arg value="file:Logs/WorklogAnonymization.log.xml" />
    </bean>
    
+   <bean id="anonymizationStrategy" class="com.kn.jira.worklogeraser.domain.RenamePerformerStrategy">
+      <constructor-arg ref="configProperties" />
+      <constructor-arg ref="jiraAdapter" />
+   </bean>
+   
    <bean id="employeeMatchingStrategy" class="com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy">
       <constructor-arg ref="anonymizationActionLog" />
+      <constructor-arg ref="jiraAdapter" />
+      <constructor-arg ref="pdmAdapter" />
    </bean>
    
    <bean id="worklogAnonymizator" class="com.kn.jira.worklogeraser.domain.WorklogAnonymizator">

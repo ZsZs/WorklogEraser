@@ -21,4 +21,46 @@
          <subjectIssue isWorkModified="true" name="WORKLOG-2" status="Closed"/>
       </subjectProject>
    </execution>
+<execution finishedOn="08/07/2014, 12:30:24" startedOn="08/07/2014, 12:30:23" worklogsObsolatedFrom="2014/07/09"/>
+<execution finishedOn="11/07/2014, 16:05:59" startedOn="11/07/2014, 16:05:57" worklogsObsolatedFrom="2014/07/12">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue name="WORKLOG-1" status="Closed"/>
+      </subjectProject>
+   </execution>
+<execution finishedOn="11/07/2014, 16:19:06" startedOn="11/07/2014, 16:14:53" worklogsObsolatedFrom="2014/07/12">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue isWorkModified="true" name="WORKLOG-1" status="Closed"/>
+      </subjectProject>
+   </execution>
+<execution finishedOn="11/07/2014, 16:21:15" startedOn="11/07/2014, 16:19:44" worklogsObsolatedFrom="2014/07/12">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue isWorkModified="true" name="WORKLOG-2" status="Closed"/>
+         <subjectIssue name="WORKLOG-5" status="Closed"/>
+      </subjectProject>
+   </execution>
+<execution finishedOn="11/07/2014, 16:30:16" startedOn="11/07/2014, 16:28:16" worklogsObsolatedFrom="2014/07/12">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue name="WORKLOG-5" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="WORKLOG-2" status="Closed"/>
+      </subjectProject>
+   </execution>
+<execution finishedOn="11/07/2014, 16:38:53" startedOn="11/07/2014, 16:38:53" worklogsObsolatedFrom="2014/07/12">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue name="WORKLOG-5" status="Closed"/>
+      </subjectProject>
+   </execution>
+<execution finishedOn="11/07/2014, 16:40:11" startedOn="11/07/2014, 16:40:10" worklogsObsolatedFrom="2014/07/12">
+      <subjectProject name="WORKLOG test">
+         <subjectIssue name="WORKLOG-5" status="Closed"/>
+         <subjectIssue isWorkModified="true" name="WORKLOG-1" status="Closed">
+            <worklogAnonymated email="german.employee@kh.com" issueUri="http://localhost:2990/jira/rest/api/latest/issue/10010">Working hard..</worklogAnonymated>
+            <worklogAnonymated email="german.employee@kh.com" issueUri="http://localhost:2990/jira/rest/api/latest/issue/10010">Working harder.</worklogAnonymated>
+            <worklogAnonymated email="german.employee@kh.com" issueUri="http://localhost:2990/jira/rest/api/latest/issue/10010">KO</worklogAnonymated>
+         </subjectIssue>
+         <subjectIssue isWorkModified="true" name="WORKLOG-2" status="Closed">
+            <worklogAnonymated email="german.employee@kh.com" issueUri="http://localhost:2990/jira/rest/api/latest/issue/10011">Just hanging around :)</worklogAnonymated>
+            <worklogAnonymated email="german.employee@kh.com" issueUri="http://localhost:2990/jira/rest/api/latest/issue/10011">Take it easy</worklogAnonymated>
+         </subjectIssue>
+      </subjectProject>
+   </execution>
 </worklogEraser>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<worklogEraser>
+   <execution finishedOn="11/07/2014, 16:54:17" startedOn="11/07/2014, 16:53:18" worklogsObsolatedFrom="2014/06/11">
+      <subjectProject name="Administration ISC EMEA"/>
+      <subjectProject name="AMER ISC Demand"/>
+      <subjectProject name="Cross Dock Management System"/>
+      <subjectProject name="Development Support"/>
+      <subjectProject name="ISC EMEA Program Management Board"/>
+      <subjectProject name="Jira Administration"/>
+      <subjectProject name="KN Desktop Client"/>
+      <subjectProject name="KN Desktop Deployment"/>
+      <subjectProject name="Quotation Tool 2.0">
+         <subjectIssue name="RCD-243" status="Closed"/>
+         <subjectIssue name="KND-486" status="Closed"/>
+      </subjectProject>
+   </execution>
+</worklogEraser>

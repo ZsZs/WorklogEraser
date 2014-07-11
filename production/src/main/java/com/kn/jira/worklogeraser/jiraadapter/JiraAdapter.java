@@ -76,8 +76,8 @@ public class JiraAdapter {
    }
 
    public void deleteWorklog( Worklog worklog ) throws JiraAdapterException {
-      String issueId = StringUtils.substringAfterLast( worklog.getIssueUri().toString(), "/" );
-      String worklogId = StringUtils.substringAfterLast( worklog.getSelf().toString(), "/" );
+      String issueId = determineIssueKeyFromWorklog( worklog );
+      String worklogId = determineWorklogKeyFromWorklog( worklog );
       UriBuilder worklogUri = UriBuilder.fromUri( restServicesUri ).path( "issue" ).path( issueId ).path( "worklog" ).path( worklogId );
       try{
          httpClient.delete( worklogUri.build() );
@@ -110,6 +110,13 @@ public class JiraAdapter {
    public Issue findIssueByKey( String issueKey ){
       Issue foundIssue = issueClient.getIssue( issueKey ).claim();
       return foundIssue;
+   }
+   
+   public Issue findIssueByWorklog( Worklog worklog ){
+      IssueRestClient issueClient = jiraClient.getIssueClient();
+      String issueId = determineIssueKeyFromWorklog( worklog );
+      Issue issue = issueClient.getIssue( issueId ).claim();
+      return issue;
    }
 
    public List<Issue> findIssuesByQuery( String query ) throws JiraAdapterException {
@@ -145,6 +152,9 @@ public class JiraAdapter {
       performTransition( subjectIssue, REOPEN_TRANSITION_NAME, fieldInputs );
    }
 
+   public void replaceWorklogPerformer( Worklog worklog, String anonymousName ) {
+   }
+   
    public void resolveIssue( Issue subjectIssue ) throws JiraAdapterException {
       Collection<FieldInput> fieldInputs = Arrays.asList( new FieldInput( "Resolution", "Fixed" ));
       performTransition( subjectIssue, RESOLVE_TRANSITION_NAME, fieldInputs );
@@ -188,6 +198,11 @@ public class JiraAdapter {
       context.setCredentialsProvider( credentialsProvider );
    }
 
+   private String determineIssueKeyFromWorklog( Worklog worklog ) {
+      String issueId = StringUtils.substringAfterLast( worklog.getIssueUri().toString(), "/" );
+      return issueId;
+   }
+
    private Transition determineTransitionByName( Iterable<Transition> transitions, String transitionName ) {
       for( Transition transition : transitions ){
          if( transition.getName().equals( transitionName ) ){
@@ -195,6 +210,11 @@ public class JiraAdapter {
          }
       }
       return null;
+   }
+
+   private String determineWorklogKeyFromWorklog( Worklog worklog ) {
+      String worklogId = StringUtils.substringAfterLast( worklog.getSelf().toString(), "/" );
+      return worklogId;
    }
 
    private void instantiateHttpClient() {

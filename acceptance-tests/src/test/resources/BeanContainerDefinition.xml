@@ -10,18 +10,25 @@
                            http://www.springframework.org/schema/util/spring-util.xsd">
 
    <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-     <property name="location" value="classpath:worklogeraser.properties"/>
+     <property name="location" value="classpath:WorklogAnonymizator.properties"/>
    </bean>
    
-   <bean id="eraseActionLog" class="com.kn.jira.worklogeraser.domain.EraseActionLogger">
-      <constructor-arg value="file:Configuration/worklogeraser.log.xml" />
+   <bean id="anonymizationActionLog" class="com.kn.jira.worklogeraser.domain.AnonymizationActionLogger">
+      <constructor-arg value="file:Logs/WorklogAnonymization.log.xml" />
+   </bean>
+   
+   <bean id="anonymizationStrategy" class="com.kn.jira.worklogeraser.domain.RenamePerformerStrategy">
+      <constructor-arg ref="configProperties" />
+      <constructor-arg ref="jiraAdapter" />
    </bean>
    
    <bean id="employeeMatchingStrategy" class="com.kn.jira.worklogeraser.domain.ServiceInvocationMatchingStrategy">
-      <constructor-arg ref="eraseActionLog" />
+      <constructor-arg ref="anonymizationActionLog" />
+      <constructor-arg ref="jiraAdapter" />
+      <constructor-arg ref="pdmAdapter" />
    </bean>
    
-   <bean id="worklogEraser" class="com.kn.jira.worklogeraser.domain.WorklogEraser">
+   <bean id="worklogAnonymizator" class="com.kn.jira.worklogeraser.domain.WorklogAnonymizator">
       <constructor-arg ref="configProperties" />
    </bean>
    
@@ -69,8 +76,7 @@
    
    <!-- Jira Service Client Configuration -->
    <bean id="jiraAdapter" class="com.kn.jira.worklogeraser.jiraadapter.NoEffectJiraAdapter" lazy-init="true">
+      <constructor-arg ref="configProperties" />
       <constructor-arg name="serverUriString" value="http://dcejira02.ger.win.int.kn:8080"/>
-      <constructor-arg name="userName" value="anonym.admin" />
-      <constructor-arg name="password" value="eAKrbm" />
    </bean>
 </beans>

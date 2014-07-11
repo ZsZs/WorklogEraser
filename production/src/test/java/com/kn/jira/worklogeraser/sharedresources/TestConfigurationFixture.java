@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.kn.jira.worklogeraser.domain.AnonymizationStrategy;
 import com.kn.jira.worklogeraser.domain.EmployeeMatchingStrategy;
 import com.kn.jira.worklogeraser.domain.AnonymizationActionLogger;
 import com.kn.jira.worklogeraser.domain.WorklogAnonymizator;
@@ -14,6 +15,7 @@ import com.kn.jira.worklogeraser.pdmadapter.PdmPersonServiceClient;
 public abstract class TestConfigurationFixture {
    protected static final String BEAN_CONTAINER_DEFINITION_XML = "classpath:BeanContainerDefinition.xml";
    protected AnonymizationActionLogger actionLog;
+   protected AnonymizationStrategy anonymizationStrategy;
    protected ApplicationContext applicationContext;
    protected Properties configurationProperties;
    protected EmployeeMatchingStrategy employeeMatchingStrategy;
@@ -31,6 +33,7 @@ public abstract class TestConfigurationFixture {
    }
 
    public AnonymizationActionLogger getActionLog() { return actionLog; }
+   public AnonymizationStrategy getAnonymizationStrategy() { return anonymizationStrategy; }
    public ApplicationContext getApplicationContext() { return applicationContext; }
    public Properties getConfigurationProperties() { return configurationProperties; }
    public EmployeeMatchingStrategy getEmployeeMatchingStrategy() { return employeeMatchingStrategy; }
@@ -45,6 +48,7 @@ public abstract class TestConfigurationFixture {
       configurationProperties = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_CONFIG_PROPERTIES, Properties.class );
       jiraAdapter = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_JIRA_ADAPTER, JiraAdapter.class );
       pdmServiceClient = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_PDM_ADAPTER, PdmPersonServiceClient.class );
+      anonymizationStrategy = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_ANONYMIZATION_STRATEGY, AnonymizationStrategy.class );
       employeeMatchingStrategy = applicationContext.getBean( WorklogAnonymizator.BEAN_NAME_EMPLOYEE_MATCHING_STRATEGY, EmployeeMatchingStrategy.class );
    }
 }

@@ -24,7 +24,7 @@ import org.xml.sax.SAXException;
 
 public class AnonymizationActionLogger {
    public static final String DATE_FORMAT = "dd/MM/yyyy, HH:mm:ss";
-   public static final String DELETITION_ELEMENT_NAME = "worklogDeleted";
+   public static final String DELETITION_ELEMENT_NAME = "worklogAnonymated";
    public static final String EXECUTION_ELEMENT_NAME = "execution";
    public static final String EXECUTION_END_ATTRIBUTE_NAME = "finishedOn";
    public static final String EXECUTION_START_ATTRIBUTE_NAME = "startedOn";
@@ -90,7 +90,7 @@ public class AnonymizationActionLogger {
       saveLogFile();
    }
    
-   public void worklogDeleted( String issueUri, String email, String comment ) {
+   public void worklogAnonymated( String issueUri, String email, String comment ) {
       Element deletitionElement = logDocument.createElement( DELETITION_ELEMENT_NAME );
       deletitionElement.setAttribute( "issueUri", issueUri );
       deletitionElement.setAttribute( "email", email );

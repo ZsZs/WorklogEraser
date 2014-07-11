@@ -25,14 +25,17 @@ import org.xml.sax.SAXException;
 import com.atlassian.jira.rest.client.api.RestClientException;
 import com.atlassian.jira.rest.client.api.domain.BasicProject;
 import com.atlassian.jira.rest.client.api.domain.Issue;
+import com.atlassian.jira.rest.client.api.domain.User;
 import com.atlassian.jira.rest.client.api.domain.Worklog;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapter;
 import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterException;
+import com.kn.jira.worklogeraser.jiraadapter.JiraAdapterTransitionNotFoundException;
 
 public class WorklogAnonymizator implements ApplicationContextAware{
    public static final String BEAN_NAME_ACTION_LOGGER = "anonymizationActionLog";
+   public static final String BEAN_NAME_ANONYMIZATION_STRATEGY = "anonymizationStrategy";
    public static final String BEAN_NAME_CONFIG_PROPERTIES = "configProperties";
    public static final String BEAN_NAME_EMPLOYEE_MATCHING_STRATEGY = "employeeMatchingStrategy";
    public static final String BEAN_NAME_JIRA_ADAPTER = "jiraAdapter";
@@ -48,6 +51,7 @@ public class WorklogAnonymizator implements ApplicationContextAware{
    public static final String DATE_FORMAT = "yyyy/MM/dd";
    public static final String ISSUE_STATUS_DEFAULT = "Closed";
    private AnonymizationActionLogger actionLogger;
+   private AnonymizationStrategy anonymizationStrategy;
    private List<BasicProject> allJiraProjects = Lists.newArrayList();
    private ApplicationContext applicationContext;
    private String closedIssueStatusName = ISSUE_STATUS_DEFAULT;
@@ -89,7 +93,7 @@ public class WorklogAnonymizator implements ApplicationContextAware{
          actionLogger.executionStart( obsolatedWorklogDate );
          collectAllProjects();
          collectAllSubjectIssues();
-         collectAllSubjectWorklogsAndPerformErase();
+         analyseWorklogs();
       }catch( WorklogEraserException | SAXException | IOException | ParserConfigurationException | TransformerException | RuntimeException e ){
 //      }catch( Exception e ){
          programLogger.error( "Error occured while performing jira worklog erasure.", e );
@@ -111,9 +115,32 @@ public class WorklogAnonymizator implements ApplicationContextAware{
    @Override public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException { 
       this.applicationContext = applicationContext; 
       employeeMatchingStrategy = applicationContext.getBean( BEAN_NAME_EMPLOYEE_MATCHING_STRATEGY, EmployeeMatchingStrategy.class );
+      anonymizationStrategy = applicationContext.getBean( BEAN_NAME_ANONYMIZATION_STRATEGY, AnonymizationStrategy.class );
    }
 
    // Protected, private helper methods
+   protected void analyseWorklogs() throws JiraAdapterException {
+      programLogger.info( "Collecting all worklogs of all subject issues." );
+      for( Entry<URI, Issue> jiraIssueEntry : subjectIssues.entrySet() ){
+         Issue jiraIssue = jiraIssueEntry.getValue();
+         actionLogger.considerIssue( jiraIssue.getKey(), jiraIssue.getStatus().getName() );
+         List<Worklog> worklogsAssociatedToIssue = Lists.newArrayList( jiraIssue.getWorklogs() );
+         List<Worklog> subjectWorklogsOfIssue = Lists.newArrayList();
+         for( Worklog worklog : worklogsAssociatedToIssue ){
+            if( employeeMatchingStrategy.isWorklogEffected( worklog )){
+               subjectWorklogsOfIssue.add( worklog );
+               subjectWorklogs.add( worklog );
+            }
+         }
+         
+         if( subjectWorklogsOfIssue.size() > 0 ){
+            performAnonymizationOnIssue( jiraIssue, subjectWorklogsOfIssue );
+         }
+         
+      }
+      programLogger.info( "Number of subject worklogs found is: " + subjectWorklogs.size() );
+   }
+   
    protected void defineDateFormat(){
       dateFormat = new SimpleDateFormat( DATE_FORMAT );
    }
@@ -155,22 +182,39 @@ public class WorklogAnonymizator implements ApplicationContextAware{
       programLogger.info( "Number of subject issues found is: " + subjectIssues.size() );
    }
    
-   protected void collectAllSubjectWorklogsAndPerformErase() throws JiraAdapterException {
-      programLogger.info( "Collecting all worklogs of all subject issues." );
-      for( Entry<URI, Issue> jiraIssueEntry : subjectIssues.entrySet() ){
-         Issue jiraIssue = jiraIssueEntry.getValue();
-         actionLogger.considerIssue( jiraIssue.getKey(), jiraIssue.getStatus().getName() );
-         List<Worklog> worklogsAssociatedToIssue = Lists.newArrayList( jiraIssue.getWorklogs() );
-         performAnonymization( worklogsAssociatedToIssue );
-         subjectWorklogs.addAll( worklogsAssociatedToIssue );
+   protected void performAnonymizationOnIssue( final Issue issue, final List<Worklog> worklogs ) throws JiraAdapterException {
+      Issue subjectIssue = issue;
+      try{
+         jiraAdapter.reopenIssue( subjectIssue );
+         subjectIssue = reloadIssue( subjectIssue );
+         if( subjectIssue.getStatus().getName().toUpperCase().equals( JiraAdapter.REOPENED_STATUS_NAME )){
+            for( Worklog worklog : worklogs ){
+               performAnonymizationOnWorklog( worklog );
+            }
+            jiraAdapter.closeIssue( subjectIssue );
+            signIssueAsManipulated( subjectIssue.getSelf() );
+         }else{
+            programLogger.info( "Issue: '" + subjectIssue.getKey() + "' can't be reopened as the status remained: '" + subjectIssue.getStatus().getName() + "'." );
+         }
+      }catch( JiraAdapterTransitionNotFoundException exception ){
+         programLogger.error( "Issue: " + subjectIssue.getKey() + " doesn't have 'Reopen' transtion in the current state.", exception );
+         throw exception;
+      }catch( JiraAdapterException exception ){
+         //programLogger.error( person.getEmailAddress() + "'s worklog: " + worklog.getComment() + " to issue: " + subjectIssue.getKey() + " could not be deleted.", exception );
+         throw exception;
       }
-      programLogger.info( "Number of subject worklogs found is: " + subjectWorklogs.size() );
    }
 
-   protected void performAnonymization( List<Worklog> subjectWorklogs ) throws JiraAdapterException{
-      employeeMatchingStrategy.perforErase( subjectIssues, subjectWorklogs );
+   protected void performAnonymizationOnWorklog( final Worklog worklog ) throws JiraAdapterException{
+      anonymizationStrategy.perform( worklog );
+      User jiraUser = jiraAdapter.findUserDetails( worklog.getAuthor() );
+      actionLogger.worklogAnonymated( worklog.getIssueUri().toString(), jiraUser.getEmailAddress(), worklog.getComment() );
    }
-   
+
+   protected Issue reloadIssue( Issue subjectIssue ) {
+      return jiraAdapter.findIssueByKey( subjectIssue.getKey() );
+   }
+
    protected void setUpActionsLog() throws SAXException, IOException, ParserConfigurationException, TransformerException {
       actionLogger = applicationContext.getBean( BEAN_NAME_ACTION_LOGGER, AnonymizationActionLogger.class );
       actionLogger.setUp();
@@ -182,4 +226,9 @@ public class WorklogAnonymizator implements ApplicationContextAware{
       jiraAdapter.setUp();
       programLogger.info( "Jira and PDM++ web service adapters are configured." );
    }
+   
+   protected void signIssueAsManipulated( URI issueUri ) {
+      jiraAdapter.signIssueAsManipulated( issueUri );
+      actionLogger.worklogWasManipulated();
+   }   
 }

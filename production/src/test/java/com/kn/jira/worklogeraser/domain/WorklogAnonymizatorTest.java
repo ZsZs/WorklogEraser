@@ -99,9 +99,22 @@ public class WorklogAnonymizatorTest {
       
       worklogAnonymizator.perform();
       
-      Map<URI, Issue> subjectIssues = Whitebox.getInternalState( worklogAnonymizator, "subjectIssues" );
       List<Worklog> subjectWorklogs = Whitebox.getInternalState( worklogAnonymizator, "subjectWorklogs" );
-      verify( spyStrategy, times( 1 )).perforErase( subjectIssues, subjectWorklogs );
+      for( Worklog worklog : subjectWorklogs ){
+         verify( spyStrategy, times( 1 )).isWorklogEffected( worklog );
+      }
+   }
+
+   @Test public void perform_delegatesToAnonymizatioStrategy() throws Exception {
+      AnonymizationStrategy spyStrategy = spy( testConfiguration.getAnonymizationStrategy() );
+      Whitebox.setInternalState( worklogAnonymizator, "anonymizationStrategy", spyStrategy );
+      
+      worklogAnonymizator.perform();
+      
+      List<Worklog> subjectWorklogs = Whitebox.getInternalState( worklogAnonymizator, "subjectWorklogs" );
+      for( Worklog worklog : subjectWorklogs ){
+         verify( spyStrategy, times( 1 )).perform( worklog );
+      }
    }
    
    //Protected, private helper methods

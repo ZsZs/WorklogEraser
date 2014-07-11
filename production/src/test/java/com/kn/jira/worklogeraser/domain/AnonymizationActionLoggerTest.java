@@ -160,7 +160,7 @@ public class AnonymizationActionLoggerTest {
       actionLogger.considerIssue( "IssueName", "WhateverStatus" );
       
       //EXECUTION:
-      actionLogger.worklogDeleted( "http://an.issue.uri", "john.smith@kn.com", "Working hardly in this issue" );
+      actionLogger.worklogAnonymated( "http://an.issue.uri", "john.smith@kn.com", "Working hardly in this issue" );
       
       //VERIFY:
       Node deletitionElement = determineDeleteWorklogElement();
