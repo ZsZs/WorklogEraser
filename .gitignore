@@ -1,11 +1,15 @@
 .svn
 /acceptance-tests/.svn
+/acceptance-tests/Logs
 /acceptance-tests/target
 /integration-tests/.svn
+/integration-tests/Logs
 /integration-tests/target
 /local-jira/.svn
+/local-jira/amps-standalone
 /local-jira/target
 /production/.svn
+/production/Logs
 /production/target
 /Configuration
 /Logs
